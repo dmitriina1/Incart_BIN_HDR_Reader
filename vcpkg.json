@@ -1,0 +1,25 @@
+{
+  "name": "incart-bin-hdr-reader",
+  "version-string": "0.1.0",
+  "dependencies": [
+    {
+      "name": "arrow",
+      "default-features": false,
+      "features": [
+        "parquet"
+      ]
+    },
+    {
+      "name": "duckdb",
+      "features": [
+        "json"
+      ]
+    },
+    {
+      "name": "hdf5",
+      "features": [
+        "cpp"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "version": 3,
+  "configurePresets": [
+    {
+      "name": "d-vcpkg-msvc",
+      "displayName": "D: internal vcpkg MSVC Release",
+      "description": "Configure internal tests and runners with Visual Studio/MSVC and vcpkg artifacts on D:.",
+      "generator": "Visual Studio 17 2022",
+      "architecture": "x64",
+      "binaryDir": "D:/incart-bin-hdr-build/internal-${presetName}",
+      "cacheVariables": {
+        "CMAKE_TOOLCHAIN_FILE": "D:/vcpkg/scripts/buildsystems/vcpkg.cmake",
+        "VCPKG_INSTALLED_DIR": "D:/vcpkg-installed/incart-bin-hdr/d-vcpkg",
+        "VCPKG_TARGET_TRIPLET": "x64-windows-release"
+      },
+      "environment": {
+        "VCPKG_ROOT": "D:/vcpkg",
+        "VCPKG_DOWNLOADS": "D:/vcpkg-downloads",
+        "VCPKG_DEFAULT_BINARY_CACHE": "D:/vcpkg-cache",
+        "VCPKG_BINARY_SOURCES": "clear;files,D:/vcpkg-cache,readwrite",
+        "VCPKG_MAX_CONCURRENCY": "2"
+      }
+    }
+  ],
+  "buildPresets": [
+    {
+      "name": "d-vcpkg-msvc",
+      "configurePreset": "d-vcpkg-msvc",
+      "configuration": "Release"
+    }
+  ],
+  "testPresets": [
+    {
+      "name": "d-vcpkg-msvc",
+      "configurePreset": "d-vcpkg-msvc",
+      "configuration": "Release"
+    }
+  ]
+}

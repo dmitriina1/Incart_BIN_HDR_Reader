@@ -1,0 +1,10 @@
+var signal__common_8hpp =
+[
+    [ "signals::SignalHeader", "classsignals_1_1_signal_header.html", "classsignals_1_1_signal_header" ],
+    [ "signals::SignalData", "classsignals_1_1_signal_data.html", "classsignals_1_1_signal_data" ],
+    [ "signals::make_header_for_range", "group__signal__common.html#ga4e1e468e798f30a41afdc9cdce5f465f", null ],
+    [ "signals::normalize_range", "group__signal__common.html#ga9eea8e4749c86e79bc2be1b13a2d10a1", null ],
+    [ "signals::parse_json", "namespacesignals.html#a7e49df730485b6da98aa82ac0e887cf5", null ],
+    [ "signals::prepare_signal_data_window", "group__signal__common.html#ga7b93db2498973248ceb589e9a51ab46b", null ],
+    [ "signals::serialize_to_json", "namespacesignals.html#af5382d330af119d382ed41381792eb75", null ]
+];

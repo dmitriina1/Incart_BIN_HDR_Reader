@@ -1,0 +1,156 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.16.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Signal Test Converters: Файл internal/parquet/parquet_converter.cpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Signal Test Converters
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.16.1 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Поиск',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('parquet__converter_8cpp.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Файл parquet_converter.cpp</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;<a class="el" href="parquet__converter_8hpp_source.html">parquet_converter.hpp</a>&quot;</code><br />
+<code>#include &lt;limits&gt;</code><br />
+<code>#include &lt;format&gt;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Граф включаемых заголовочных файлов для parquet_converter.cpp:</div>
+<div class="dyncontent">
+<div class="center"><img src="parquet__converter_8cpp__incl.png" border="0" usemap="#ainternal_2parquet_2parquet__converter_8cpp" loading="lazy" alt=""/></div>
+</div>
+</div>
+<p><a href="parquet__converter_8cpp_source.html">См. исходные тексты.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-namespaces" class="groupheader"><a id="namespaces" name="namespaces"></a>
+Пространства имен</h2></td></tr>
+<tr class="memitem:signals" id="r_signals"><td class="memItemLeft">namespace &#160;</td><td class="memItemRight"><a class="el" href="namespacesignals.html">signals</a></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
+Функции</h2></td></tr>
+<tr class="memitem:a7dcc2d0bd513ceeb4dd9a7469510183e" id="r_a7dcc2d0bd513ceeb4dd9a7469510183e"><td class="memItemLeft">static std::shared_ptr&lt; arrow::Table &gt;&#160;</td><td class="memItemRight"><a class="el" href="namespacesignals.html#a7dcc2d0bd513ceeb4dd9a7469510183e">signals::read_row_group</a> (<a class="el" href="structsignals_1_1_parquet_reader.html">ParquetReader</a> &amp;reader, int row_group_index)</td></tr>
+<tr class="memitem:a68cc541e60cb06c67696a6633d160b98" id="r_a68cc541e60cb06c67696a6633d160b98"><td class="memItemLeft">static std::string&#160;</td><td class="memItemRight"><a class="el" href="namespacesignals.html#a68cc541e60cb06c67696a6633d160b98">signals::generate_format_version</a> ()</td></tr>
+<tr class="memitem:aa08615b914656f5c74ec7daa036e68d5" id="r_aa08615b914656f5c74ec7daa036e68d5"><td class="memItemLeft">static std::shared_ptr&lt; arrow::KeyValueMetadata &gt;&#160;</td><td class="memItemRight"><a class="el" href="namespacesignals.html#aa08615b914656f5c74ec7daa036e68d5">signals::make_file_metadata</a> (const <a class="el" href="classsignals_1_1_signal_header.html">SignalHeader</a> &amp;header)</td></tr>
+<tr class="memitem:a3050b635c5912fe7c4533d1eca09437f" id="r_a3050b635c5912fe7c4533d1eca09437f"><td class="memItemLeft">static std::shared_ptr&lt; arrow::Schema &gt;&#160;</td><td class="memItemRight"><a class="el" href="namespacesignals.html#a3050b635c5912fe7c4533d1eca09437f">signals::make_signal_schema</a> (const <a class="el" href="classsignals_1_1_signal_header.html">SignalHeader</a> &amp;header)</td></tr>
+<tr class="memitem:ad021468edf2b00696f4aecd37102a63b" id="r_ad021468edf2b00696f4aecd37102a63b"><td class="memItemLeft">static arrow::Result&lt; <a class="el" href="classsignals_1_1_signal_header.html">SignalHeader</a> &gt;&#160;</td><td class="memItemRight"><a class="el" href="namespacesignals.html#ad021468edf2b00696f4aecd37102a63b">signals::read_parquet_metadata</a> (<a class="el" href="structsignals_1_1_parquet_reader.html">ParquetReader</a> &amp;reader)</td></tr>
+<tr class="memitem:a5900e1322c30e60b077a42825018f6f8" id="r_a5900e1322c30e60b077a42825018f6f8"><td class="memItemLeft">static arrow::Status&#160;</td><td class="memItemRight"><a class="el" href="namespacesignals.html#a5900e1322c30e60b077a42825018f6f8">signals::copy_column_from_table</a> (const std::shared_ptr&lt; arrow::Table &gt; &amp;table, int channel, int64_t local_start, int64_t copy_count, int64_t out_offset, <a class="el" href="classsignals_1_1_signal_data.html">SignalData</a> &amp;data)</td></tr>
+<tr class="memitem:ga2357aefa27343d490ba4d7e2be27ce4d" id="r_ga2357aefa27343d490ba4d7e2be27ce4d"><td class="memItemLeft">arrow::Status&#160;</td><td class="memItemRight"><a class="el" href="group__parquet__converter.html#ga2357aefa27343d490ba4d7e2be27ce4d">signals::parquet_open</a> (const std::filesystem::path &amp;path, <a class="el" href="structsignals_1_1_parquet_reader.html">ParquetReader</a> &amp;reader)</td></tr>
+<tr class="memdesc:ga2357aefa27343d490ba4d7e2be27ce4d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Открывает Parquet-файл и инициализирует кэш row groups.  <br /></td></tr>
+<tr class="memitem:gaacb7143dd498be09313c17eb26cf382f" id="r_gaacb7143dd498be09313c17eb26cf382f"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="group__parquet__converter.html#gaacb7143dd498be09313c17eb26cf382f">signals::parquet_close</a> (<a class="el" href="structsignals_1_1_parquet_reader.html">ParquetReader</a> &amp;reader)</td></tr>
+<tr class="memdesc:gaacb7143dd498be09313c17eb26cf382f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Закрывает Parquet reader и очищает кэш row groups.  <br /></td></tr>
+<tr class="memitem:ga284d66229582fcdb5aaa1d0b5e192e05" id="r_ga284d66229582fcdb5aaa1d0b5e192e05"><td class="memItemLeft">arrow::Status&#160;</td><td class="memItemRight"><a class="el" href="group__parquet__converter.html#ga284d66229582fcdb5aaa1d0b5e192e05">signals::parquet_write_signals_data</a> (const std::filesystem::path &amp;bin_path, const std::filesystem::path &amp;parquet_path, int64_t point_off, int64_t point_cnt, int64_t row_group_points=100000)</td></tr>
+<tr class="memdesc:ga284d66229582fcdb5aaa1d0b5e192e05"><td class="mdescLeft">&#160;</td><td class="mdescRight">Записывает диапазон точек из .bin в Parquet.  <br /></td></tr>
+<tr class="memitem:ga8b3a97d46cdac57241a9c5ffe79b97e2" id="r_ga8b3a97d46cdac57241a9c5ffe79b97e2"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="group__parquet__converter.html#ga8b3a97d46cdac57241a9c5ffe79b97e2">signals::parquet_write_signal_data_like_stream</a> (const std::filesystem::path &amp;bin_path, const std::filesystem::path &amp;parquet_path, int64_t point_off, int64_t point_cnt, int64_t row_group_points=100000)</td></tr>
+<tr class="memdesc:ga8b3a97d46cdac57241a9c5ffe79b97e2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Обёртка над parquet_write_signals_data с исключением при ошибке.  <br /></td></tr>
+<tr class="memitem:gae12ff231f84bdfabaa912bfc32ddbdb7" id="r_gae12ff231f84bdfabaa912bfc32ddbdb7"><td class="memItemLeft">arrow::Status&#160;</td><td class="memItemRight"><a class="el" href="group__parquet__converter.html#gae12ff231f84bdfabaa912bfc32ddbdb7">signals::parquet_read_signal_data_like_stream</a> (<a class="el" href="structsignals_1_1_parquet_reader.html">ParquetReader</a> &amp;reader, <a class="el" href="classsignals_1_1_signal_data.html">SignalData</a> &amp;data, int64_t point_off, int64_t point_cnt)</td></tr>
+<tr class="memdesc:gae12ff231f84bdfabaa912bfc32ddbdb7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Потоково читает диапазон точек через <a class="el" href="structsignals_1_1_parquet_reader.html" title="Состояние открытого Parquet reader-а.">ParquetReader</a>.  <br /></td></tr>
+<tr class="memitem:gad6eb9bc0550fddecf8fca1cea1c28578" id="r_gad6eb9bc0550fddecf8fca1cea1c28578"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="group__parquet__converter.html#gad6eb9bc0550fddecf8fca1cea1c28578">signals::parquet_read_signal_data_like_stream</a> (const std::filesystem::path &amp;parquet_path, <a class="el" href="classsignals_1_1_signal_data.html">SignalData</a> &amp;data, int64_t point_off, int64_t point_cnt)</td></tr>
+<tr class="memdesc:gad6eb9bc0550fddecf8fca1cea1c28578"><td class="mdescLeft">&#160;</td><td class="mdescRight">Потоково читает диапазон точек через filepath.  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-var-members" class="groupheader"><a id="var-members" name="var-members"></a>
+Переменные</h2></td></tr>
+<tr class="memitem:adaacb760133d08844b89a1d5f240e20e" id="r_adaacb760133d08844b89a1d5f240e20e"><td class="memItemLeft">static constexpr int&#160;</td><td class="memItemRight"><a class="el" href="namespacesignals.html#adaacb760133d08844b89a1d5f240e20e">signals::PARQUET_SCHEMA_MAJOR</a> = 1</td></tr>
+<tr class="memitem:a7d1ef8efdcb5f18f9b18be542e8d01ff" id="r_a7d1ef8efdcb5f18f9b18be542e8d01ff"><td class="memItemLeft">static constexpr int&#160;</td><td class="memItemRight"><a class="el" href="namespacesignals.html#a7d1ef8efdcb5f18f9b18be542e8d01ff">signals::PARQUET_SCHEMA_MINOR</a> = 0</td></tr>
+<tr class="memitem:a7efdd13adbb59fcdd5cbf2265db6543b" id="r_a7efdd13adbb59fcdd5cbf2265db6543b"><td class="memItemLeft">static constexpr int&#160;</td><td class="memItemRight"><a class="el" href="namespacesignals.html#a7efdd13adbb59fcdd5cbf2265db6543b">signals::PARQUET_SCHEMA_PATCH</a> = 0</td></tr>
+<tr class="memitem:ab79dc56a45b144b9fe7504b8cb4c666a" id="r_ab79dc56a45b144b9fe7504b8cb4c666a"><td class="memItemLeft">static constexpr int64_t&#160;</td><td class="memItemRight"><a class="el" href="namespacesignals.html#ab79dc56a45b144b9fe7504b8cb4c666a">signals::DEFAULT_ROW_GROUP_POINTS</a> = 100000</td></tr>
+<tr class="memitem:a7be8178c1afd44fff12ddef25c6be52d" id="r_a7be8178c1afd44fff12ddef25c6be52d"><td class="memItemLeft">static constexpr size_t&#160;</td><td class="memItemRight"><a class="el" href="namespacesignals.html#a7be8178c1afd44fff12ddef25c6be52d">signals::MAX_ROW_GROUP_CACHE</a> = 8</td></tr>
+</table>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_7374381ecdb819c64ee9b6ea2bd3370d.html">internal</a></li><li class="navelem"><a href="dir_d9117f2f25650f28cbd6a1d38d94c711.html">parquet</a></li><li class="navelem"><a href="parquet__converter_8cpp.html">parquet_converter.cpp</a></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.16.1 </li>
+  </ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,279 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.16.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Signal Test Converters: Файл internal/duckdb/test_duckdb.cpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Signal Test Converters
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.16.1 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Поиск',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('test__duckdb_8cpp.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Файл test_duckdb.cpp</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;<a class="el" href="test__utils_8hpp_source.html">../common/test_utils.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="duckdb__converter_8hpp_source.html">duckdb_converter.hpp</a>&quot;</code><br />
+<code>#include &lt;cstdio&gt;</code><br />
+<code>#include &lt;cstdlib&gt;</code><br />
+<code>#include &lt;filesystem&gt;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Граф включаемых заголовочных файлов для test_duckdb.cpp:</div>
+<div class="dyncontent">
+<div class="center"><img src="test__duckdb_8cpp__incl.png" border="0" usemap="#ainternal_2duckdb_2test__duckdb_8cpp" loading="lazy" alt=""/></div>
+</div>
+</div>
+<p><a href="test__duckdb_8cpp_source.html">См. исходные тексты.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
+Функции</h2></td></tr>
+<tr class="memitem:a0ddf1224851353fc92bfbff6f499fa97" id="r_a0ddf1224851353fc92bfbff6f499fa97"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#a0ddf1224851353fc92bfbff6f499fa97">main</a> (int argc, char *argv[])</td></tr>
+</table>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Функции</h2>
+<a id="a0ddf1224851353fc92bfbff6f499fa97" name="a0ddf1224851353fc92bfbff6f499fa97"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0ddf1224851353fc92bfbff6f499fa97">&#9670;&#160;</a></span>main()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int main </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>argc</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *</td>          <td class="paramname"><span class="paramname"><em>argv</em></span>[]&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="test__duckdb_8cpp_source.html">test_duckdb.cpp</a> строка <a class="el" href="test__duckdb_8cpp_source.html#l00008">8</a></p>
+<div class="fragment"><div class="line"><span class="lineno">    8</span>                                 {</div>
+<div class="line"><span class="lineno">    9</span>    <span class="keywordflow">if</span> (argc &lt; 2) {</div>
+<div class="line"><span class="lineno">   10</span>        std::fprintf(stderr,</div>
+<div class="line"><span class="lineno">   11</span>                     <span class="stringliteral">&quot;Использование: %s &lt;file.bin|file.hdr&gt; [offset] [count] [chunk_points]\n&quot;</span>,</div>
+<div class="line"><span class="lineno">   12</span>                     argv[0]);</div>
+<div class="line"><span class="lineno">   13</span>        <span class="keywordflow">return</span> 1;</div>
+<div class="line"><span class="lineno">   14</span>    }</div>
+<div class="line"><span class="lineno">   15</span> </div>
+<div class="line"><span class="lineno">   16</span>    <span class="keyword">const</span> std::filesystem::path source_path = argv[1];</div>
+<div class="line"><span class="lineno">   17</span>    int64_t point_offset = 0;</div>
+<div class="line"><span class="lineno">   18</span>    int64_t point_count = -1;</div>
+<div class="line"><span class="lineno">   19</span>    int64_t chunk_points = 100000;</div>
+<div class="line"><span class="lineno">   20</span> </div>
+<div class="line"><span class="lineno">   21</span>    <span class="keywordtype">int</span> arg_idx = 2;</div>
+<div class="line"><span class="lineno">   22</span>    <span class="keywordflow">if</span> (argc &gt; arg_idx) {</div>
+<div class="line"><span class="lineno">   23</span>        <span class="keywordflow">if</span> (!<a class="code hl_function" href="group__test__utils.html#gae86aaff88ef0aabf646892d9867aad15">signals::try_parse_int64</a>(argv[arg_idx], point_offset)) {</div>
+<div class="line"><span class="lineno">   24</span>            std::fprintf(stderr, <span class="stringliteral">&quot;Ошибка чтения второго аргумента\n&quot;</span>);</div>
+<div class="line"><span class="lineno">   25</span>            <span class="keywordflow">return</span> 1;</div>
+<div class="line"><span class="lineno">   26</span>        }</div>
+<div class="line"><span class="lineno">   27</span>        arg_idx++;</div>
+<div class="line"><span class="lineno">   28</span>    }</div>
+<div class="line"><span class="lineno">   29</span>    <span class="keywordflow">if</span> (argc &gt; arg_idx) {</div>
+<div class="line"><span class="lineno">   30</span>        <span class="keywordflow">if</span> (!<a class="code hl_function" href="group__test__utils.html#gae86aaff88ef0aabf646892d9867aad15">signals::try_parse_int64</a>(argv[arg_idx], point_count)) {</div>
+<div class="line"><span class="lineno">   31</span>            std::fprintf(stderr, <span class="stringliteral">&quot;Ошибка чтения count\n&quot;</span>);</div>
+<div class="line"><span class="lineno">   32</span>            <span class="keywordflow">return</span> 1;</div>
+<div class="line"><span class="lineno">   33</span>        }</div>
+<div class="line"><span class="lineno">   34</span>        arg_idx++;</div>
+<div class="line"><span class="lineno">   35</span>    }</div>
+<div class="line"><span class="lineno">   36</span>    <span class="keywordflow">if</span> (argc &gt; arg_idx &amp;&amp; !<a class="code hl_function" href="group__test__utils.html#gae86aaff88ef0aabf646892d9867aad15">signals::try_parse_int64</a>(argv[arg_idx], chunk_points)) {</div>
+<div class="line"><span class="lineno">   37</span>        std::fprintf(stderr, <span class="stringliteral">&quot;Ошибка чтения chunk_points\n&quot;</span>);</div>
+<div class="line"><span class="lineno">   38</span>        <span class="keywordflow">return</span> 1;</div>
+<div class="line"><span class="lineno">   39</span>    }</div>
+<div class="line"><span class="lineno">   40</span> </div>
+<div class="line"><span class="lineno">   41</span>    <span class="keywordflow">try</span> {</div>
+<div class="line"><span class="lineno">   42</span>        <span class="keyword">auto</span> base_path = source_path;</div>
+<div class="line"><span class="lineno">   43</span>        base_path.replace_extension(<span class="stringliteral">&quot;&quot;</span>);</div>
+<div class="line"><span class="lineno">   44</span>        <span class="keyword">auto</span> bin_path = base_path;</div>
+<div class="line"><span class="lineno">   45</span>        bin_path.replace_extension(<span class="stringliteral">&quot;.bin&quot;</span>);</div>
+<div class="line"><span class="lineno">   46</span>        <span class="keyword">auto</span> header_path = base_path;</div>
+<div class="line"><span class="lineno">   47</span>        header_path.replace_extension(<span class="stringliteral">&quot;.hdr&quot;</span>);</div>
+<div class="line"><span class="lineno">   48</span> </div>
+<div class="line"><span class="lineno">   49</span>        std::filesystem::path duckdb_path = std::filesystem::path(source_path).filename();</div>
+<div class="line"><span class="lineno">   50</span>        duckdb_path.replace_extension(<span class="stringliteral">&quot;.duckdb&quot;</span>);</div>
+<div class="line"><span class="lineno">   51</span> </div>
+<div class="line"><span class="lineno">   52</span>        <span class="keywordflow">if</span> (!std::filesystem::exists(header_path) || !std::filesystem::exists(bin_path)) {</div>
+<div class="line"><span class="lineno">   53</span>            std::fprintf(stderr, <span class="stringliteral">&quot;HDR или BIN файл не найден: %s\n&quot;</span>, header_path.string().c_str());</div>
+<div class="line"><span class="lineno">   54</span>            <span class="keywordflow">return</span> 1;</div>
+<div class="line"><span class="lineno">   55</span>        }</div>
+<div class="line"><span class="lineno">   56</span> </div>
+<div class="line"><span class="lineno">   57</span>        <span class="keyword">const</span> <span class="keywordtype">size_t</span> original_total_size =</div>
+<div class="line"><span class="lineno">   58</span>            std::filesystem::file_size(bin_path) + std::filesystem::file_size(header_path);</div>
+<div class="line"><span class="lineno">   59</span>        <a class="code hl_class" href="classsignals_1_1_signal_data.html">signals::SignalData</a> original_data =</div>
+<div class="line"><span class="lineno">   60</span>            <a class="code hl_function" href="group__test__utils.html#ga9031447ea6d8038c5e22381c040857bd">signals::load_reference</a>(header_path, point_offset, point_count);</div>
+<div class="line"><span class="lineno">   61</span> </div>
+<div class="line"><span class="lineno">   62</span>        <a class="code hl_class" href="classsignals_1_1_signal_data.html">signals::SignalData</a> ref_data;</div>
+<div class="line"><span class="lineno">   63</span>        <span class="keyword">const</span> <span class="keywordtype">double</span> t_bin =</div>
+<div class="line"><span class="lineno">   64</span>            <a class="code hl_function" href="group__test__utils.html#ga9177d33fdd0f5ea5ac0e295a5f701d78">signals::lead_time</a>([&amp;header_path, &amp;point_offset, &amp;point_count, &amp;ref_data]() {</div>
+<div class="line"><span class="lineno">   65</span>                <a class="code hl_function" href="namespacesignals.html#ad4faf87f6cb1e07242d912890a374684">signals::bin_read</a>(header_path, point_offset, point_count, ref_data);</div>
+<div class="line"><span class="lineno">   66</span>            });</div>
+<div class="line"><span class="lineno">   67</span> </div>
+<div class="line"><span class="lineno">   68</span>        <a class="code hl_function" href="group__test__utils.html#ga098dc20f2c0109243fc4196e193ba292">signals::print_file_info</a>(header_path, original_data, t_bin);</div>
+<div class="line"><span class="lineno">   69</span> </div>
+<div class="line"><span class="lineno">   70</span>        <span class="keywordflow">if</span> (std::filesystem::exists(duckdb_path))</div>
+<div class="line"><span class="lineno">   71</span>            std::filesystem::remove(duckdb_path);</div>
+<div class="line"><span class="lineno">   72</span> </div>
+<div class="line"><span class="lineno">   73</span>        std::printf(<span class="stringliteral">&quot;Запись в DuckDB...\n&quot;</span>);</div>
+<div class="line"><span class="lineno">   74</span>        <span class="keyword">const</span> <span class="keywordtype">double</span> t_duckdb_write = <a class="code hl_function" href="group__test__utils.html#ga9177d33fdd0f5ea5ac0e295a5f701d78">signals::lead_time</a>(</div>
+<div class="line"><span class="lineno">   75</span>            [&amp;bin_path, &amp;duckdb_path, &amp;point_offset, &amp;point_count, &amp;chunk_points]() {</div>
+<div class="line"><span class="lineno">   76</span>                <a class="code hl_function" href="group__duckdb__converter.html#ga594b260820055430e7e623ff8a5d9255">signals::duckdb_write_signal_data_like_stream</a>(bin_path, duckdb_path, point_offset,</div>
+<div class="line"><span class="lineno">   77</span>                                                              point_count, chunk_points);</div>
+<div class="line"><span class="lineno">   78</span>            });</div>
+<div class="line"><span class="lineno">   79</span> </div>
+<div class="line"><span class="lineno">   80</span>        <span class="keyword">const</span> <span class="keywordtype">size_t</span> duckdb_file_size = std::filesystem::file_size(duckdb_path);</div>
+<div class="line"><span class="lineno">   81</span> </div>
+<div class="line"><span class="lineno">   82</span>        <a class="code hl_class" href="classsignals_1_1_signal_data.html">signals::SignalData</a> loaded_duckdb_data;</div>
+<div class="line"><span class="lineno">   83</span>        <span class="keyword">const</span> <span class="keywordtype">double</span> t_duckdb_read = <a class="code hl_function" href="group__test__utils.html#ga9177d33fdd0f5ea5ac0e295a5f701d78">signals::lead_time</a>([&amp;duckdb_path, &amp;loaded_duckdb_data]() {</div>
+<div class="line"><span class="lineno">   84</span>            <a class="code hl_function" href="group__duckdb__converter.html#ga2514c876d8aecb73269525c39e70c3e8">signals::duckdb_read_signal_data_like_stream</a>(duckdb_path, loaded_duckdb_data, 0, -1);</div>
+<div class="line"><span class="lineno">   85</span>        });</div>
+<div class="line"><span class="lineno">   86</span> </div>
+<div class="line"><span class="lineno">   87</span>        <a class="code hl_function" href="group__test__utils.html#gac538c68b5a04ea811a82ff679376bd93">signals::print_conversion_results</a>(<span class="stringliteral">&quot;DuckDB&quot;</span>, t_duckdb_write, duckdb_file_size, t_duckdb_read,</div>
+<div class="line"><span class="lineno">   88</span>                                          loaded_duckdb_data, original_total_size);</div>
+<div class="line"><span class="lineno">   89</span> </div>
+<div class="line"><span class="lineno">   90</span>        <span class="keyword">auto</span> read_signal = [](<span class="keyword">const</span> std::filesystem::path &amp;path, <a class="code hl_class" href="classsignals_1_1_signal_data.html">signals::SignalData</a> &amp;data,</div>
+<div class="line"><span class="lineno">   91</span>                              int64_t offset, int64_t count) {</div>
+<div class="line"><span class="lineno">   92</span>            <a class="code hl_function" href="group__duckdb__converter.html#ga2514c876d8aecb73269525c39e70c3e8">signals::duckdb_read_signal_data_like_stream</a>(path, data, offset, count);</div>
+<div class="line"><span class="lineno">   93</span>        };</div>
+<div class="line"><span class="lineno">   94</span> </div>
+<div class="line"><span class="lineno">   95</span>        <a class="code hl_function" href="group__test__utils.html#gaabc783a10033d1edfbe124857a332381">signals::test_serial_chunk_reading_val</a>(read_signal, duckdb_path, original_data,</div>
+<div class="line"><span class="lineno">   96</span>                                               chunk_points);</div>
+<div class="line"><span class="lineno">   97</span>        <a class="code hl_function" href="group__test__utils.html#gaa6d78e3540958f2ac783e9223c195168">signals::test_random_chunk_reading_val</a>(read_signal, duckdb_path, original_data,</div>
+<div class="line"><span class="lineno">   98</span>                                               chunk_points);</div>
+<div class="line"><span class="lineno">   99</span> </div>
+<div class="line"><span class="lineno">  100</span>        <span class="keywordflow">if</span> (<a class="code hl_function" href="group__test__utils.html#ga0b867882282f377ff650efd04e460f49">signals::compare_signal_data</a>(original_data, loaded_duckdb_data, <span class="stringliteral">&quot;BIN vs DuckDB&quot;</span>)) {</div>
+<div class="line"><span class="lineno">  101</span>            std::printf(<span class="stringliteral">&quot;Данные совпадают полностью!\n\n&quot;</span>);</div>
+<div class="line"><span class="lineno">  102</span>            <a class="code hl_function" href="group__test__utils.html#gab5a2185a87f0b5bf47e2d63318631c33">signals::print_first_rows</a>(original_data);</div>
+<div class="line"><span class="lineno">  103</span>            <span class="keywordflow">return</span> 0;</div>
+<div class="line"><span class="lineno">  104</span>        }</div>
+<div class="line"><span class="lineno">  105</span> </div>
+<div class="line"><span class="lineno">  106</span>        std::fprintf(stderr, <span class="stringliteral">&quot;Данные не совпадают!\n\n&quot;</span>);</div>
+<div class="line"><span class="lineno">  107</span>        <a class="code hl_function" href="group__test__utils.html#gab5a2185a87f0b5bf47e2d63318631c33">signals::print_first_rows</a>(original_data);</div>
+<div class="line"><span class="lineno">  108</span>        <span class="keywordflow">return</span> 1;</div>
+<div class="line"><span class="lineno">  109</span>    } <span class="keywordflow">catch</span> (<span class="keyword">const</span> std::exception &amp;e) {</div>
+<div class="line"><span class="lineno">  110</span>        std::fprintf(stderr, <span class="stringliteral">&quot;Ошибка: %s\n&quot;</span>, e.what());</div>
+<div class="line"><span class="lineno">  111</span>        <span class="keywordflow">return</span> 1;</div>
+<div class="line"><span class="lineno">  112</span>    }</div>
+<div class="line"><span class="lineno">  113</span>}</div>
+<div class="ttc" id="aclasssignals_1_1_signal_data_html"><div class="ttname"><a href="classsignals_1_1_signal_data.html">signals::SignalData</a></div><div class="ttdoc">Данные и метаданные (данные из .hdr и .bin, данные в double).</div><div class="ttdef"><b>Определения</b> <a href="signal__common_8hpp_source.html#l00062">signal_common.hpp:62</a></div></div>
+<div class="ttc" id="agroup__duckdb__converter_html_ga2514c876d8aecb73269525c39e70c3e8"><div class="ttname"><a href="group__duckdb__converter.html#ga2514c876d8aecb73269525c39e70c3e8">signals::duckdb_read_signal_data_like_stream</a></div><div class="ttdeci">void duckdb_read_signal_data_like_stream(const std::filesystem::path &amp;duckdb_path, SignalData &amp;data, int64_t point_off, int64_t point_cnt)</div><div class="ttdoc">Потоково читает диапазон точек из DuckDB через соединение.</div><div class="ttdef"><b>Определения</b> <a href="duckdb__converter_8cpp_source.html#l00125">duckdb_converter.cpp:125</a></div></div>
+<div class="ttc" id="agroup__duckdb__converter_html_ga594b260820055430e7e623ff8a5d9255"><div class="ttname"><a href="group__duckdb__converter.html#ga594b260820055430e7e623ff8a5d9255">signals::duckdb_write_signal_data_like_stream</a></div><div class="ttdeci">void duckdb_write_signal_data_like_stream(const std::filesystem::path &amp;bin_path, const std::filesystem::path &amp;duckdb_path, int64_t point_off, int64_t point_cnt, int64_t chunk_points, int64_t commit_every_n_points)</div><div class="ttdoc">Потоково записывает диапазон точек в DuckDB через filepath с периодическими commit.</div><div class="ttdef"><b>Определения</b> <a href="duckdb__converter_8cpp_source.html#l00275">duckdb_converter.cpp:275</a></div></div>
+<div class="ttc" id="agroup__test__utils_html_ga098dc20f2c0109243fc4196e193ba292"><div class="ttname"><a href="group__test__utils.html#ga098dc20f2c0109243fc4196e193ba292">signals::print_file_info</a></div><div class="ttdeci">void print_file_info(const std::filesystem::path &amp;path, const SignalData &amp;data, double read_time)</div><div class="ttdoc">Выводит информацию по исходным .bin/.hdr файлам и считанным данным.</div><div class="ttdef"><b>Определения</b> <a href="test__utils_8cpp_source.html#l00216">test_utils.cpp:216</a></div></div>
+<div class="ttc" id="agroup__test__utils_html_ga0b867882282f377ff650efd04e460f49"><div class="ttname"><a href="group__test__utils.html#ga0b867882282f377ff650efd04e460f49">signals::compare_signal_data</a></div><div class="ttdeci">bool compare_signal_data(const SignalData &amp;expected, const SignalData &amp;actual, const char *label)</div><div class="ttdoc">Сравнивает два набора сигналов по размеру, диапазону и значениям.</div><div class="ttdef"><b>Определения</b> <a href="test__utils_8cpp_source.html#l00175">test_utils.cpp:175</a></div></div>
+<div class="ttc" id="agroup__test__utils_html_ga9031447ea6d8038c5e22381c040857bd"><div class="ttname"><a href="group__test__utils.html#ga9031447ea6d8038c5e22381c040857bd">signals::load_reference</a></div><div class="ttdeci">SignalData load_reference(const std::filesystem::path &amp;source_path, int64_t point_offset, int64_t point_count)</div><div class="ttdoc">Загружает исходные данные из bin через bin_read.</div><div class="ttdef"><b>Определения</b> <a href="test__utils_8cpp_source.html#l00209">test_utils.cpp:209</a></div></div>
+<div class="ttc" id="agroup__test__utils_html_ga9177d33fdd0f5ea5ac0e295a5f701d78"><div class="ttname"><a href="group__test__utils.html#ga9177d33fdd0f5ea5ac0e295a5f701d78">signals::lead_time</a></div><div class="ttdeci">double lead_time(const std::function&lt; void()&gt; &amp;fn)</div><div class="ttdoc">Измеряет время выполнения произвольной функции.</div><div class="ttdef"><b>Определения</b> <a href="test__utils_8cpp_source.html#l00039">test_utils.cpp:39</a></div></div>
+<div class="ttc" id="agroup__test__utils_html_gaa6d78e3540958f2ac783e9223c195168"><div class="ttname"><a href="group__test__utils.html#gaa6d78e3540958f2ac783e9223c195168">signals::test_random_chunk_reading_val</a></div><div class="ttdeci">void test_random_chunk_reading_val(const std::function&lt; void(const std::filesystem::path &amp;, SignalData &amp;, int64_t, int64_t)&gt; &amp;read_signal, const std::filesystem::path &amp;source_path, const SignalData &amp;original_data, int64_t chunk_points)</div><div class="ttdoc">Запускает тест случайного чтения и выводит статистику.</div><div class="ttdef"><b>Определения</b> <a href="test__utils_8cpp_source.html#l00109">test_utils.cpp:109</a></div></div>
+<div class="ttc" id="agroup__test__utils_html_gaabc783a10033d1edfbe124857a332381"><div class="ttname"><a href="group__test__utils.html#gaabc783a10033d1edfbe124857a332381">signals::test_serial_chunk_reading_val</a></div><div class="ttdeci">void test_serial_chunk_reading_val(const std::function&lt; void(const std::filesystem::path &amp;, SignalData &amp;, int64_t, int64_t)&gt; &amp;read_signal, const std::filesystem::path &amp;source_path, const SignalData &amp;original_data, int64_t chunk_points)</div><div class="ttdoc">Запускает тест последовательного чтения и выводит статистику.</div><div class="ttdef"><b>Определения</b> <a href="test__utils_8cpp_source.html#l00080">test_utils.cpp:80</a></div></div>
+<div class="ttc" id="agroup__test__utils_html_gab5a2185a87f0b5bf47e2d63318631c33"><div class="ttname"><a href="group__test__utils.html#gab5a2185a87f0b5bf47e2d63318631c33">signals::print_first_rows</a></div><div class="ttdeci">void print_first_rows(const SignalData &amp;data, int64_t preview_points)</div><div class="ttdoc">Выводит первые и последние строки SignalData.</div><div class="ttdef"><b>Определения</b> <a href="test__utils_8cpp_source.html#l00138">test_utils.cpp:138</a></div></div>
+<div class="ttc" id="agroup__test__utils_html_gac538c68b5a04ea811a82ff679376bd93"><div class="ttname"><a href="group__test__utils.html#gac538c68b5a04ea811a82ff679376bd93">signals::print_conversion_results</a></div><div class="ttdeci">void print_conversion_results(const std::string &amp;format_name, double write_time, size_t output_size_bytes, double read_time, const SignalData &amp;data, size_t original_total_size)</div><div class="ttdoc">Выводит результаты записи/чтения конвертированного формата.</div><div class="ttdef"><b>Определения</b> <a href="test__utils_8cpp_source.html#l00239">test_utils.cpp:239</a></div></div>
+<div class="ttc" id="agroup__test__utils_html_gae86aaff88ef0aabf646892d9867aad15"><div class="ttname"><a href="group__test__utils.html#gae86aaff88ef0aabf646892d9867aad15">signals::try_parse_int64</a></div><div class="ttdeci">bool try_parse_int64(const char *text, int64_t &amp;value)</div><div class="ttdoc">Парсит строку в int64.</div><div class="ttdef"><b>Определения</b> <a href="test__utils_8cpp_source.html#l00262">test_utils.cpp:262</a></div></div>
+<div class="ttc" id="anamespacesignals_html_ad4faf87f6cb1e07242d912890a374684"><div class="ttname"><a href="namespacesignals.html#ad4faf87f6cb1e07242d912890a374684">signals::bin_read</a></div><div class="ttdeci">void bin_read(const std::filesystem::path &amp;bin_path, int64_t point_off, int64_t point_cnt, SignalData &amp;data)</div><div class="ttdoc">Полностью читает диапазон точек из bin в один SignalData.</div><div class="ttdef"><b>Определения</b> <a href="bin__reader_8cpp_source.html#l00101">bin_reader.cpp:101</a></div></div>
+</div><!-- fragment -->
+<p class="reference">Перекрестные ссылки <a class="el" href="bin__reader_8cpp_source.html#l00101">signals::bin_read()</a>, <a class="el" href="test__utils_8cpp_source.html#l00175">signals::compare_signal_data()</a>, <a class="el" href="duckdb__converter_8cpp_source.html#l00125">signals::duckdb_read_signal_data_like_stream()</a>, <a class="el" href="duckdb__converter_8cpp_source.html#l00275">signals::duckdb_write_signal_data_like_stream()</a>, <a class="el" href="test__utils_8cpp_source.html#l00039">signals::lead_time()</a>, <a class="el" href="test__utils_8cpp_source.html#l00209">signals::load_reference()</a>, <a class="el" href="test__utils_8cpp_source.html#l00239">signals::print_conversion_results()</a>, <a class="el" href="test__utils_8cpp_source.html#l00216">signals::print_file_info()</a>, <a class="el" href="test__utils_8cpp_source.html#l00138">signals::print_first_rows()</a>, <a class="el" href="test__utils_8cpp_source.html#l00109">signals::test_random_chunk_reading_val()</a>, <a class="el" href="test__utils_8cpp_source.html#l00080">signals::test_serial_chunk_reading_val()</a> и <a class="el" href="test__utils_8cpp_source.html#l00262">signals::try_parse_int64()</a>.</p>
+<div class="dynheader">
+Граф вызовов:</div>
+<div class="dyncontent">
+<div class="center"><img src="test__duckdb_8cpp_a0ddf1224851353fc92bfbff6f499fa97_cgraph.png" border="0" usemap="#atest__duckdb_8cpp_a0ddf1224851353fc92bfbff6f499fa97_cgraph" loading="lazy" alt=""/></div>
+</div>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_7374381ecdb819c64ee9b6ea2bd3370d.html">internal</a></li><li class="navelem"><a href="dir_fe8386552dac28b8761396fc0503a984.html">duckdb</a></li><li class="navelem"><a href="test__duckdb_8cpp.html">test_duckdb.cpp</a></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.16.1 </li>
+  </ul>
+</div>
+</body>
+</html>

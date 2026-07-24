@@ -1,0 +1,336 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.16.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Signal Test Converters: Исходный файл internal/bin/bin_reader.cpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Signal Test Converters
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.16.1 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Поиск',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('bin__reader_8cpp_source.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">bin_reader.cpp</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="bin__reader_8cpp.html">См. документацию.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#include &quot;<a class="code" href="bin__reader_8hpp.html">bin_reader.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &quot;<a class="code" href="hdr__reader_8hpp.html">../hdr/hdr_reader.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &lt;algorithm&gt;</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &lt;cerrno&gt;</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &lt;fstream&gt;</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &lt;stdexcept&gt;</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &lt;system_error&gt;</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="comment">// Размер блока для чтения данных из BIN файла за одну операцию.</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno"><a class="line" href="bin__reader_8cpp.html#acb1f70e5e69a0c85d98765fa0e6c5c3d">   13</a></span><span class="keyword">static</span> <span class="keyword">constexpr</span> int64_t <a class="code hl_variable" href="bin__reader_8cpp.html#acb1f70e5e69a0c85d98765fa0e6c5c3d">BIN_READ_CHUNK_SIZE</a> = 100000;</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span> </div>
+<div class="foldopen" id="foldopen00015" data-start="{" data-end="}">
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno"><a class="line" href="namespacesignals.html">   15</a></span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacesignals.html">signals</a> {</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>    <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code hl_function" href="namespacesignals.html#a75487a8f05be9fc4263a327d57e01a23">allocate_storage</a>(<a class="code hl_class" href="classsignals_1_1_signal_data.html">SignalData</a> &amp;data, int64_t len);</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>    <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code hl_function" href="namespacesignals.html#a6add23c94a862d36bf097cfb4383c44f">read_block</a>(std::ifstream &amp;file, std::vector&lt;int32_t&gt; &amp;block_buf,</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>                           int64_t points_to_read, int64_t num_channels);</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>    <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code hl_function" href="namespacesignals.html#ab6967cd19cf1de0b817aecddafc82d64">copy_raw_data</a>(<span class="keyword">const</span> std::vector&lt;int32_t&gt; &amp;block_buf, <a class="code hl_class" href="classsignals_1_1_signal_data.html">SignalData</a> &amp;data,</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>                              int64_t dest_offset, int64_t points_in_block);</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
+<div class="foldopen" id="foldopen00022" data-start="{" data-end="}">
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno"><a class="line" href="namespacesignals.html#adbe043039905491c6ed2a88556f5aeea">   22</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="namespacesignals.html#adbe043039905491c6ed2a88556f5aeea">bin_open</a>(<span class="keyword">const</span> std::filesystem::path &amp;bin_path, <a class="code hl_struct" href="structsignals_1_1_bin_reader.html">BinReader</a> &amp;reader) {</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>        reader = <a class="code hl_struct" href="structsignals_1_1_bin_reader.html">BinReader</a>{};</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>        <span class="keyword">auto</span> base = std::filesystem::path(bin_path).replace_extension(<span class="stringliteral">&quot;&quot;</span>);</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>        <span class="keyword">auto</span> header_path = base;</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>        header_path.replace_extension(<span class="stringliteral">&quot;.hdr&quot;</span>);</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>        reader.<a class="code hl_variable" href="structsignals_1_1_bin_reader.html#a980aa42987052656eb29dd9ead9693cd">bin_path</a> = base.replace_extension(<span class="stringliteral">&quot;.bin&quot;</span>);</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>        <a class="code hl_function" href="namespacesignals.html#a140f30c51aadb96e6c69e812fe102bf3">hdr_read</a>(header_path, reader.<a class="code hl_variable" href="structsignals_1_1_bin_reader.html#a8358a80bfbce1aac63bd740b3ba532d4">header</a>);</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>        reader.<a class="code hl_variable" href="structsignals_1_1_bin_reader.html#a2586bbcb7d9f6d5f8c16599a6a2108ae">file</a>.open(reader.<a class="code hl_variable" href="structsignals_1_1_bin_reader.html#a980aa42987052656eb29dd9ead9693cd">bin_path</a>, std::ios::binary);</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>        <span class="keywordflow">if</span> (!reader.<a class="code hl_variable" href="structsignals_1_1_bin_reader.html#a2586bbcb7d9f6d5f8c16599a6a2108ae">file</a>) {</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>            <span class="keywordflow">throw</span> std::system_error(errno, std::generic_category(),</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>                                    std::format(<span class="stringliteral">&quot;Не удалось открыть BIN файл для чтения: {}&quot;</span>,</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>                                                reader.<a class="code hl_variable" href="structsignals_1_1_bin_reader.html#a980aa42987052656eb29dd9ead9693cd">bin_path</a>.string()));</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>        }</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span> </div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>        <span class="keywordflow">if</span> (reader.<a class="code hl_variable" href="structsignals_1_1_bin_reader.html#a8358a80bfbce1aac63bd740b3ba532d4">header</a>.<a class="code hl_variable" href="classsignals_1_1_signal_header.html#a07229a399c52f26674d63ce93dea3631">num_channels</a> &lt;= 0) {</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>            <span class="keywordflow">throw</span> std::runtime_error(<span class="stringliteral">&quot;Количество каналов в заголовке должно быть больше нуля&quot;</span>);</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>        }</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> </div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>        reader.<a class="code hl_variable" href="structsignals_1_1_bin_reader.html#a405d0017da117244214d362644dba292">total_points</a> = reader.<a class="code hl_variable" href="structsignals_1_1_bin_reader.html#a8358a80bfbce1aac63bd740b3ba532d4">header</a>.<a class="code hl_variable" href="classsignals_1_1_signal_header.html#a4003b76fc6492f33eb80f63ae7be02d0">ilast_point</a> - reader.<a class="code hl_variable" href="structsignals_1_1_bin_reader.html#a8358a80bfbce1aac63bd740b3ba532d4">header</a>.<a class="code hl_variable" href="classsignals_1_1_signal_header.html#ac9cc61fe15af8fad1309be1295b600b8">ifirst_point</a> + 1;</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    }</div>
+</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span> </div>
+<div class="foldopen" id="foldopen00044" data-start="{" data-end="}">
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno"><a class="line" href="namespacesignals.html#a0458e133123a9cf43a72b3ae9affe3b1">   44</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="namespacesignals.html#a0458e133123a9cf43a72b3ae9affe3b1">bin_close</a>(<a class="code hl_struct" href="structsignals_1_1_bin_reader.html">BinReader</a> &amp;reader) {</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>        <span class="keywordflow">if</span> (reader.<a class="code hl_variable" href="structsignals_1_1_bin_reader.html#a2586bbcb7d9f6d5f8c16599a6a2108ae">file</a>.is_open()) {</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>            reader.<a class="code hl_variable" href="structsignals_1_1_bin_reader.html#a2586bbcb7d9f6d5f8c16599a6a2108ae">file</a>.close();</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>        }</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>        reader = <a class="code hl_struct" href="structsignals_1_1_bin_reader.html">BinReader</a>{};</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    }</div>
+</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span> </div>
+<div class="foldopen" id="foldopen00051" data-start="{" data-end="}">
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno"><a class="line" href="namespacesignals.html#aa22a3e002c3665a40014429f2e78adb3">   51</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="namespacesignals.html#aa22a3e002c3665a40014429f2e78adb3">bin_seek</a>(<a class="code hl_struct" href="structsignals_1_1_bin_reader.html">BinReader</a> &amp;reader, int64_t point_off) {</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>        <span class="keywordflow">if</span> (!reader.<a class="code hl_variable" href="structsignals_1_1_bin_reader.html#a2586bbcb7d9f6d5f8c16599a6a2108ae">file</a>.is_open()) {</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>            <span class="keywordflow">throw</span> std::logic_error(<span class="stringliteral">&quot;BIN reader не открыт&quot;</span>);</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>        }</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>        <span class="keywordflow">if</span> (point_off &lt; 0) {</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>            <span class="keywordflow">throw</span> std::invalid_argument(<span class="stringliteral">&quot;Смещение точек должно быть неотрицательным&quot;</span>);</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>        }</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>        <span class="keywordflow">if</span> (point_off &gt; reader.<a class="code hl_variable" href="structsignals_1_1_bin_reader.html#a405d0017da117244214d362644dba292">total_points</a>) {</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>            point_off = reader.<a class="code hl_variable" href="structsignals_1_1_bin_reader.html#a405d0017da117244214d362644dba292">total_points</a>;</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>        }</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span> </div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>        <span class="keyword">const</span> int64_t frame_size = <span class="keyword">static_cast&lt;</span>int64_t<span class="keyword">&gt;</span>(reader.<a class="code hl_variable" href="structsignals_1_1_bin_reader.html#a8358a80bfbce1aac63bd740b3ba532d4">header</a>.<a class="code hl_variable" href="classsignals_1_1_signal_header.html#a07229a399c52f26674d63ce93dea3631">num_channels</a>) *</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>                                   <span class="keyword">static_cast&lt;</span>int64_t<span class="keyword">&gt;</span>(<span class="keyword">sizeof</span>(int32_t));</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>        <span class="keyword">const</span> int64_t bytes_offset = point_off * frame_size;</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span> </div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>        reader.<a class="code hl_variable" href="structsignals_1_1_bin_reader.html#a2586bbcb7d9f6d5f8c16599a6a2108ae">file</a>.clear();</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>        reader.<a class="code hl_variable" href="structsignals_1_1_bin_reader.html#a2586bbcb7d9f6d5f8c16599a6a2108ae">file</a>.seekg(<span class="keyword">static_cast&lt;</span>std::streamoff<span class="keyword">&gt;</span>(bytes_offset));</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>        <span class="keywordflow">if</span> (!reader.<a class="code hl_variable" href="structsignals_1_1_bin_reader.html#a2586bbcb7d9f6d5f8c16599a6a2108ae">file</a>) {</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>            <span class="keywordflow">throw</span> std::runtime_error(</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>                std::format(<span class="stringliteral">&quot;Не удалось установить позицию чтения в BIN файле (смещение {} байт)&quot;</span>,</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>                            bytes_offset));</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>        }</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span> </div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>        reader.<a class="code hl_variable" href="structsignals_1_1_bin_reader.html#afbb7dbcc6b8121187080649fb869f277">current_point</a> = point_off;</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>    }</div>
+</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span> </div>
+<div class="foldopen" id="foldopen00077" data-start="{" data-end="}">
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno"><a class="line" href="namespacesignals.html#a57c130208856e1408e37cda0d526b9d5">   77</a></span>    int64_t <a class="code hl_function" href="namespacesignals.html#a57c130208856e1408e37cda0d526b9d5">bin_read_data_chunk</a>(<a class="code hl_struct" href="structsignals_1_1_bin_reader.html">BinReader</a> &amp;reader, int64_t point_cnt,</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>                                std::vector&lt;int32_t&gt; &amp;block_buf) {</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>        <span class="keywordflow">if</span> (!reader.<a class="code hl_variable" href="structsignals_1_1_bin_reader.html#a2586bbcb7d9f6d5f8c16599a6a2108ae">file</a>.is_open()) {</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>            <span class="keywordflow">throw</span> std::logic_error(<span class="stringliteral">&quot;BIN reader не открыт&quot;</span>);</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>        }</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>        <span class="keywordflow">if</span> (point_cnt == 0) {</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>            block_buf.clear();</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>            <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>        }</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span> </div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>        <span class="keyword">const</span> int64_t points_to_read =</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>            <a class="code hl_function" href="group__signal__common.html#ga9eea8e4749c86e79bc2be1b13a2d10a1">normalize_range</a>(reader.<a class="code hl_variable" href="structsignals_1_1_bin_reader.html#a405d0017da117244214d362644dba292">total_points</a>, reader.<a class="code hl_variable" href="structsignals_1_1_bin_reader.html#afbb7dbcc6b8121187080649fb869f277">current_point</a>, point_cnt);</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>        <span class="keywordflow">if</span> (points_to_read == 0) {</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>            block_buf.clear();</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>            <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>        }</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span> </div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>        block_buf.resize(<span class="keyword">static_cast&lt;</span><span class="keywordtype">size_t</span><span class="keyword">&gt;</span>(points_to_read) *</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>                         <span class="keyword">static_cast&lt;</span><span class="keywordtype">size_t</span><span class="keyword">&gt;</span>(reader.<a class="code hl_variable" href="structsignals_1_1_bin_reader.html#a8358a80bfbce1aac63bd740b3ba532d4">header</a>.<a class="code hl_variable" href="classsignals_1_1_signal_header.html#a07229a399c52f26674d63ce93dea3631">num_channels</a>));</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>        <a class="code hl_function" href="namespacesignals.html#a6add23c94a862d36bf097cfb4383c44f">read_block</a>(reader.<a class="code hl_variable" href="structsignals_1_1_bin_reader.html#a2586bbcb7d9f6d5f8c16599a6a2108ae">file</a>, block_buf, points_to_read, reader.<a class="code hl_variable" href="structsignals_1_1_bin_reader.html#a8358a80bfbce1aac63bd740b3ba532d4">header</a>.<a class="code hl_variable" href="classsignals_1_1_signal_header.html#a07229a399c52f26674d63ce93dea3631">num_channels</a>);</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>        reader.<a class="code hl_variable" href="structsignals_1_1_bin_reader.html#afbb7dbcc6b8121187080649fb869f277">current_point</a> += points_to_read;</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>        <span class="keywordflow">return</span> points_to_read;</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>    }</div>
+</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span> </div>
+<div class="foldopen" id="foldopen00101" data-start="{" data-end="}">
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno"><a class="line" href="namespacesignals.html#ad4faf87f6cb1e07242d912890a374684">  101</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="namespacesignals.html#ad4faf87f6cb1e07242d912890a374684">bin_read</a>(<span class="keyword">const</span> std::filesystem::path &amp;bin_path, int64_t point_off, int64_t point_cnt,</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>                  <a class="code hl_class" href="classsignals_1_1_signal_data.html">SignalData</a> &amp;data) {</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>        <a class="code hl_struct" href="structsignals_1_1_bin_reader.html">BinReader</a> reader;</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>        <a class="code hl_function" href="namespacesignals.html#adbe043039905491c6ed2a88556f5aeea">bin_open</a>(bin_path, reader);</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span> </div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>        <span class="keyword">const</span> int64_t points_to_read = <a class="code hl_function" href="group__signal__common.html#ga9eea8e4749c86e79bc2be1b13a2d10a1">normalize_range</a>(reader.<a class="code hl_variable" href="structsignals_1_1_bin_reader.html#a405d0017da117244214d362644dba292">total_points</a>, point_off, point_cnt);</div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>        <a class="code hl_function" href="namespacesignals.html#aa22a3e002c3665a40014429f2e78adb3">bin_seek</a>(reader, point_off);</div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span> </div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>        data = <a class="code hl_class" href="classsignals_1_1_signal_data.html">SignalData</a>{};</div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>        <span class="keyword">static_cast&lt;</span><a class="code hl_class" href="classsignals_1_1_signal_header.html">SignalHeader</a> &amp;<span class="keyword">&gt;</span>(data) = reader.<a class="code hl_variable" href="structsignals_1_1_bin_reader.html#a8358a80bfbce1aac63bd740b3ba532d4">header</a>;</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>        data.<a class="code hl_variable" href="classsignals_1_1_signal_header.html#ac9cc61fe15af8fad1309be1295b600b8">ifirst_point</a> = reader.<a class="code hl_variable" href="structsignals_1_1_bin_reader.html#a8358a80bfbce1aac63bd740b3ba532d4">header</a>.<a class="code hl_variable" href="classsignals_1_1_signal_header.html#ac9cc61fe15af8fad1309be1295b600b8">ifirst_point</a> + point_off;</div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>        data.<a class="code hl_variable" href="classsignals_1_1_signal_header.html#a4003b76fc6492f33eb80f63ae7be02d0">ilast_point</a> = (points_to_read &gt; 0) ? (data.<a class="code hl_variable" href="classsignals_1_1_signal_header.html#ac9cc61fe15af8fad1309be1295b600b8">ifirst_point</a> + points_to_read - 1)</div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>                                                : (data.<a class="code hl_variable" href="classsignals_1_1_signal_header.html#ac9cc61fe15af8fad1309be1295b600b8">ifirst_point</a> - 1);</div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>        data.<a class="code hl_variable" href="classsignals_1_1_signal_data.html#ae3c6a4b60f673f3c9b45e125b197a51a">num_points</a> = points_to_read;</div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span> </div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>        <span class="keywordflow">if</span> (points_to_read &gt; 0) {</div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>            <a class="code hl_function" href="namespacesignals.html#a75487a8f05be9fc4263a327d57e01a23">allocate_storage</a>(data, points_to_read);</div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span> </div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>            std::vector&lt;int32_t&gt; block_buf;</div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>            int64_t point_pos = 0;</div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>            <span class="keywordflow">while</span> (point_pos &lt; points_to_read) {</div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>                <span class="keyword">const</span> int64_t block_points =</div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>                    std::min&lt;int64_t&gt;(<a class="code hl_variable" href="bin__reader_8cpp.html#acb1f70e5e69a0c85d98765fa0e6c5c3d">BIN_READ_CHUNK_SIZE</a>, points_to_read - point_pos);</div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>                <span class="keyword">const</span> int64_t points_in_block =</div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>                    <a class="code hl_function" href="namespacesignals.html#a57c130208856e1408e37cda0d526b9d5">bin_read_data_chunk</a>(reader, block_points, block_buf);</div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>                <span class="keywordflow">if</span> (points_in_block == 0) {</div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>                    <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>                }</div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>                <a class="code hl_function" href="namespacesignals.html#ab6967cd19cf1de0b817aecddafc82d64">copy_raw_data</a>(block_buf, data, point_pos, points_in_block);</div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>                point_pos += points_in_block;</div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>            }</div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>        }</div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>        <a class="code hl_function" href="namespacesignals.html#a0458e133123a9cf43a72b3ae9affe3b1">bin_close</a>(reader);</div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>    }</div>
+</div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span> </div>
+<div class="foldopen" id="foldopen00136" data-start="{" data-end="}">
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno"><a class="line" href="namespacesignals.html#a75487a8f05be9fc4263a327d57e01a23">  136</a></span>    <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code hl_function" href="namespacesignals.html#a75487a8f05be9fc4263a327d57e01a23">allocate_storage</a>(<a class="code hl_class" href="classsignals_1_1_signal_data.html">SignalData</a> &amp;data, int64_t len) {</div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>        data.<a class="code hl_variable" href="classsignals_1_1_signal_data.html#ae3c6a4b60f673f3c9b45e125b197a51a">num_points</a> = len;</div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span> </div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span>        <span class="keywordflow">if</span> (len == 0)</div>
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span> </div>
+<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span>        <span class="keywordflow">try</span> {</div>
+<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span>            data.<a class="code hl_variable" href="classsignals_1_1_signal_data.html#a1cde6810290f14cd51f932f5ee4583f9">storage</a>.resize(<span class="keyword">static_cast&lt;</span><span class="keywordtype">size_t</span><span class="keyword">&gt;</span>(data.<a class="code hl_variable" href="classsignals_1_1_signal_header.html#a07229a399c52f26674d63ce93dea3631">num_channels</a>) * <span class="keyword">static_cast&lt;</span><span class="keywordtype">size_t</span><span class="keyword">&gt;</span>(len),</div>
+<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span>                                0);</div>
+<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span>        } <span class="keywordflow">catch</span> (<span class="keyword">const</span> std::bad_alloc &amp;) {</div>
+<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span>            <span class="keywordflow">throw</span> std::system_error(</div>
+<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span>                ENOMEM, std::generic_category(),</div>
+<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span>                std::format(<span class="stringliteral">&quot;Недостаточно памяти для хранения данных: требуется {} байт&quot;</span>,</div>
+<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span>                            <span class="keyword">static_cast&lt;</span><span class="keywordtype">size_t</span><span class="keyword">&gt;</span>(data.<a class="code hl_variable" href="classsignals_1_1_signal_header.html#a07229a399c52f26674d63ce93dea3631">num_channels</a>) * <span class="keyword">static_cast&lt;</span><span class="keywordtype">size_t</span><span class="keyword">&gt;</span>(len) *</div>
+<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span>                                <span class="keyword">sizeof</span>(int32_t)));</div>
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>        }</div>
+<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>    }</div>
+</div>
+<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span> </div>
+<div class="foldopen" id="foldopen00154" data-start="{" data-end="}">
+<div class="line"><a id="l00154" name="l00154"></a><span class="lineno"><a class="line" href="namespacesignals.html#a6add23c94a862d36bf097cfb4383c44f">  154</a></span>    <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code hl_function" href="namespacesignals.html#a6add23c94a862d36bf097cfb4383c44f">read_block</a>(std::ifstream &amp;file, std::vector&lt;int32_t&gt; &amp;block_buf,</div>
+<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span>                           int64_t points_to_read, int64_t num_channels) {</div>
+<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span>        <span class="keyword">const</span> <span class="keyword">auto</span> bytes_to_read =</div>
+<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span>            <span class="keyword">static_cast&lt;</span>std::streamsize<span class="keyword">&gt;</span>(points_to_read * num_channels * <span class="keyword">sizeof</span>(int32_t));</div>
+<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span> </div>
+<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span>        file.read(<span class="keyword">reinterpret_cast&lt;</span><span class="keywordtype">char</span> *<span class="keyword">&gt;</span>(block_buf.data()), bytes_to_read); <span class="comment">// NOSONAR</span></div>
+<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span> </div>
+<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span>        <span class="keywordflow">if</span> (file.gcount() != bytes_to_read)</div>
+<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span>            <span class="keywordflow">throw</span> std::runtime_error(std::format(</div>
+<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span>                <span class="stringliteral">&quot;Не удалось прочитать весь запрошенный блок данных из BIN файла (ожидалось {} &quot;</span></div>
+<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span>                <span class="stringliteral">&quot;байт, а получено {} байт)&quot;</span>,</div>
+<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span>                bytes_to_read, file.gcount()));</div>
+<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>    }</div>
+</div>
+<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span> </div>
+<div class="foldopen" id="foldopen00168" data-start="{" data-end="}">
+<div class="line"><a id="l00168" name="l00168"></a><span class="lineno"><a class="line" href="namespacesignals.html#ab6967cd19cf1de0b817aecddafc82d64">  168</a></span>    <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code hl_function" href="namespacesignals.html#ab6967cd19cf1de0b817aecddafc82d64">copy_raw_data</a>(<span class="keyword">const</span> std::vector&lt;int32_t&gt; &amp;block_buf, <a class="code hl_class" href="classsignals_1_1_signal_data.html">SignalData</a> &amp;data,</div>
+<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span>                              int64_t dest_offset, int64_t points_in_block) {</div>
+<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span>        <span class="keywordflow">if</span> (data.<a class="code hl_variable" href="classsignals_1_1_signal_header.html#a346ec86b954481c6c41e34ff66cc1612">lsbs</a>.empty())</div>
+<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span>            data.<a class="code hl_variable" href="classsignals_1_1_signal_header.html#a346ec86b954481c6c41e34ff66cc1612">lsbs</a>.assign(<span class="keyword">static_cast&lt;</span><span class="keywordtype">size_t</span><span class="keyword">&gt;</span>(data.<a class="code hl_variable" href="classsignals_1_1_signal_header.html#a07229a399c52f26674d63ce93dea3631">num_channels</a>), data.<a class="code hl_variable" href="classsignals_1_1_signal_header.html#adbebf166714b731faef302006864d25a">lsb_default</a>);</div>
+<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span> </div>
+<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span>        <span class="keyword">const</span> int64_t num_channels = data.<a class="code hl_variable" href="classsignals_1_1_signal_header.html#a07229a399c52f26674d63ce93dea3631">num_channels</a>;</div>
+<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span> </div>
+<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> ch = 0; ch &lt; num_channels; ch++) {</div>
+<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span>            int32_t *destptr = data.<a class="code hl_function" href="classsignals_1_1_signal_data.html#a3788f4881f848c984f3cbef31d1aaac0">raw_channel</a>(ch) + dest_offset;</div>
+<div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span>            <span class="keywordflow">for</span> (int64_t s = 0; s &lt; points_in_block; s++)</div>
+<div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span>                destptr[s] =</div>
+<div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span>                    block_buf[(<span class="keyword">static_cast&lt;</span><span class="keywordtype">size_t</span><span class="keyword">&gt;</span>(s) * <span class="keyword">static_cast&lt;</span><span class="keywordtype">size_t</span><span class="keyword">&gt;</span>(num_channels)) +</div>
+<div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span>                              <span class="keyword">static_cast&lt;</span><span class="keywordtype">size_t</span><span class="keyword">&gt;</span>(ch)];</div>
+<div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span>        }</div>
+<div class="line"><a id="l00182" name="l00182"></a><span class="lineno">  182</span>    }</div>
+</div>
+<div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span>} <span class="comment">// namespace signals</span></div>
+</div>
+<div class="ttc" id="abin__reader_8cpp_html_acb1f70e5e69a0c85d98765fa0e6c5c3d"><div class="ttname"><a href="bin__reader_8cpp.html#acb1f70e5e69a0c85d98765fa0e6c5c3d">BIN_READ_CHUNK_SIZE</a></div><div class="ttdeci">static constexpr int64_t BIN_READ_CHUNK_SIZE</div><div class="ttdef"><b>Определения</b> <a href="#l00013">bin_reader.cpp:13</a></div></div>
+<div class="ttc" id="abin__reader_8hpp_html"><div class="ttname"><a href="bin__reader_8hpp.html">bin_reader.hpp</a></div><div class="ttdoc">Чтение сигналов из файлов .hdr/.bin.</div></div>
+<div class="ttc" id="aclasssignals_1_1_signal_data_html"><div class="ttname"><a href="classsignals_1_1_signal_data.html">signals::SignalData</a></div><div class="ttdoc">Данные и метаданные (данные из .hdr и .bin, данные в double).</div><div class="ttdef"><b>Определения</b> <a href="signal__common_8hpp_source.html#l00062">signal_common.hpp:62</a></div></div>
+<div class="ttc" id="aclasssignals_1_1_signal_data_html_a1cde6810290f14cd51f932f5ee4583f9"><div class="ttname"><a href="classsignals_1_1_signal_data.html#a1cde6810290f14cd51f932f5ee4583f9">signals::SignalData::storage</a></div><div class="ttdeci">std::vector&lt; int32_t &gt; storage</div><div class="ttdef"><b>Определения</b> <a href="signal__common_8hpp_source.html#l00066">signal_common.hpp:66</a></div></div>
+<div class="ttc" id="aclasssignals_1_1_signal_data_html_a3788f4881f848c984f3cbef31d1aaac0"><div class="ttname"><a href="classsignals_1_1_signal_data.html#a3788f4881f848c984f3cbef31d1aaac0">signals::SignalData::raw_channel</a></div><div class="ttdeci">int32_t * raw_channel(int ch)</div><div class="ttdoc">Возвращает указатель на начало сырых int32 данных канала.</div><div class="ttdef"><b>Определения</b> <a href="signal__common_8hpp_source.html#l00071">signal_common.hpp:71</a></div></div>
+<div class="ttc" id="aclasssignals_1_1_signal_data_html_ae3c6a4b60f673f3c9b45e125b197a51a"><div class="ttname"><a href="classsignals_1_1_signal_data.html#ae3c6a4b60f673f3c9b45e125b197a51a">signals::SignalData::num_points</a></div><div class="ttdeci">int64_t num_points</div><div class="ttdef"><b>Определения</b> <a href="signal__common_8hpp_source.html#l00064">signal_common.hpp:64</a></div></div>
+<div class="ttc" id="aclasssignals_1_1_signal_header_html"><div class="ttname"><a href="classsignals_1_1_signal_header.html">signals::SignalHeader</a></div><div class="ttdoc">Метаданные сигнала из .hdr.</div><div class="ttdef"><b>Определения</b> <a href="signal__common_8hpp_source.html#l00032">signal_common.hpp:32</a></div></div>
+<div class="ttc" id="aclasssignals_1_1_signal_header_html_a07229a399c52f26674d63ce93dea3631"><div class="ttname"><a href="classsignals_1_1_signal_header.html#a07229a399c52f26674d63ce93dea3631">signals::SignalHeader::num_channels</a></div><div class="ttdeci">int32_t num_channels</div><div class="ttdef"><b>Определения</b> <a href="signal__common_8hpp_source.html#l00034">signal_common.hpp:34</a></div></div>
+<div class="ttc" id="aclasssignals_1_1_signal_header_html_a346ec86b954481c6c41e34ff66cc1612"><div class="ttname"><a href="classsignals_1_1_signal_header.html#a346ec86b954481c6c41e34ff66cc1612">signals::SignalHeader::lsbs</a></div><div class="ttdeci">std::vector&lt; double &gt; lsbs</div><div class="ttdef"><b>Определения</b> <a href="signal__common_8hpp_source.html#l00041">signal_common.hpp:41</a></div></div>
+<div class="ttc" id="aclasssignals_1_1_signal_header_html_a4003b76fc6492f33eb80f63ae7be02d0"><div class="ttname"><a href="classsignals_1_1_signal_header.html#a4003b76fc6492f33eb80f63ae7be02d0">signals::SignalHeader::ilast_point</a></div><div class="ttdeci">int64_t ilast_point</div><div class="ttdef"><b>Определения</b> <a href="signal__common_8hpp_source.html#l00038">signal_common.hpp:38</a></div></div>
+<div class="ttc" id="aclasssignals_1_1_signal_header_html_ac9cc61fe15af8fad1309be1295b600b8"><div class="ttname"><a href="classsignals_1_1_signal_header.html#ac9cc61fe15af8fad1309be1295b600b8">signals::SignalHeader::ifirst_point</a></div><div class="ttdeci">int64_t ifirst_point</div><div class="ttdef"><b>Определения</b> <a href="signal__common_8hpp_source.html#l00037">signal_common.hpp:37</a></div></div>
+<div class="ttc" id="aclasssignals_1_1_signal_header_html_adbebf166714b731faef302006864d25a"><div class="ttname"><a href="classsignals_1_1_signal_header.html#adbebf166714b731faef302006864d25a">signals::SignalHeader::lsb_default</a></div><div class="ttdeci">double lsb_default</div><div class="ttdef"><b>Определения</b> <a href="signal__common_8hpp_source.html#l00036">signal_common.hpp:36</a></div></div>
+<div class="ttc" id="agroup__signal__common_html_ga9eea8e4749c86e79bc2be1b13a2d10a1"><div class="ttname"><a href="group__signal__common.html#ga9eea8e4749c86e79bc2be1b13a2d10a1">signals::normalize_range</a></div><div class="ttdeci">int64_t normalize_range(int64_t total_points, int64_t point_off, int64_t point_cnt)</div><div class="ttdoc">Нормализует диапазон относительно общего числа точек.</div><div class="ttdef"><b>Определения</b> <a href="signal__common_8cpp_source.html#l00007">signal_common.cpp:7</a></div></div>
+<div class="ttc" id="ahdr__reader_8hpp_html"><div class="ttname"><a href="hdr__reader_8hpp.html">hdr_reader.hpp</a></div><div class="ttdoc">Чтение метаданных сигнала из файла .hdr.</div></div>
+<div class="ttc" id="anamespacesignals_html"><div class="ttname"><a href="namespacesignals.html">signals</a></div><div class="ttdef"><b>Определения</b> <a href="#l00015">bin_reader.cpp:15</a></div></div>
+<div class="ttc" id="anamespacesignals_html_a0458e133123a9cf43a72b3ae9affe3b1"><div class="ttname"><a href="namespacesignals.html#a0458e133123a9cf43a72b3ae9affe3b1">signals::bin_close</a></div><div class="ttdeci">void bin_close(BinReader &amp;reader)</div><div class="ttdoc">Закрывает reader и очищает его.</div><div class="ttdef"><b>Определения</b> <a href="#l00044">bin_reader.cpp:44</a></div></div>
+<div class="ttc" id="anamespacesignals_html_a140f30c51aadb96e6c69e812fe102bf3"><div class="ttname"><a href="namespacesignals.html#a140f30c51aadb96e6c69e812fe102bf3">signals::hdr_read</a></div><div class="ttdeci">void hdr_read(const std::filesystem::path &amp;bin_path, SignalHeader &amp;header)</div><div class="ttdoc">Читает .hdr и заполняет структуру метаданных сигнала.</div><div class="ttdef"><b>Определения</b> <a href="hdr__reader_8cpp_source.html#l00019">hdr_reader.cpp:19</a></div></div>
+<div class="ttc" id="anamespacesignals_html_a57c130208856e1408e37cda0d526b9d5"><div class="ttname"><a href="namespacesignals.html#a57c130208856e1408e37cda0d526b9d5">signals::bin_read_data_chunk</a></div><div class="ttdeci">int64_t bin_read_data_chunk(BinReader &amp;reader, int64_t point_cnt, std::vector&lt; int32_t &gt; &amp;block_buf)</div><div class="ttdoc">Читает чанк сырых int32-данных.</div><div class="ttdef"><b>Определения</b> <a href="#l00077">bin_reader.cpp:77</a></div></div>
+<div class="ttc" id="anamespacesignals_html_a6add23c94a862d36bf097cfb4383c44f"><div class="ttname"><a href="namespacesignals.html#a6add23c94a862d36bf097cfb4383c44f">signals::read_block</a></div><div class="ttdeci">static void read_block(std::ifstream &amp;file, std::vector&lt; int32_t &gt; &amp;block_buf, int64_t points_to_read, int64_t num_channels)</div><div class="ttdef"><b>Определения</b> <a href="#l00154">bin_reader.cpp:154</a></div></div>
+<div class="ttc" id="anamespacesignals_html_a75487a8f05be9fc4263a327d57e01a23"><div class="ttname"><a href="namespacesignals.html#a75487a8f05be9fc4263a327d57e01a23">signals::allocate_storage</a></div><div class="ttdeci">static void allocate_storage(SignalData &amp;data, int64_t len)</div><div class="ttdef"><b>Определения</b> <a href="#l00136">bin_reader.cpp:136</a></div></div>
+<div class="ttc" id="anamespacesignals_html_aa22a3e002c3665a40014429f2e78adb3"><div class="ttname"><a href="namespacesignals.html#aa22a3e002c3665a40014429f2e78adb3">signals::bin_seek</a></div><div class="ttdeci">void bin_seek(BinReader &amp;reader, int64_t point_off)</div><div class="ttdoc">Перемещает позицию чтения на заданную позицию по смещению.</div><div class="ttdef"><b>Определения</b> <a href="#l00051">bin_reader.cpp:51</a></div></div>
+<div class="ttc" id="anamespacesignals_html_ab6967cd19cf1de0b817aecddafc82d64"><div class="ttname"><a href="namespacesignals.html#ab6967cd19cf1de0b817aecddafc82d64">signals::copy_raw_data</a></div><div class="ttdeci">static void copy_raw_data(const std::vector&lt; int32_t &gt; &amp;block_buf, SignalData &amp;data, int64_t dest_offset, int64_t points_in_block)</div><div class="ttdef"><b>Определения</b> <a href="#l00168">bin_reader.cpp:168</a></div></div>
+<div class="ttc" id="anamespacesignals_html_ad4faf87f6cb1e07242d912890a374684"><div class="ttname"><a href="namespacesignals.html#ad4faf87f6cb1e07242d912890a374684">signals::bin_read</a></div><div class="ttdeci">void bin_read(const std::filesystem::path &amp;bin_path, int64_t point_off, int64_t point_cnt, SignalData &amp;data)</div><div class="ttdoc">Полностью читает диапазон точек из bin в один SignalData.</div><div class="ttdef"><b>Определения</b> <a href="#l00101">bin_reader.cpp:101</a></div></div>
+<div class="ttc" id="anamespacesignals_html_adbe043039905491c6ed2a88556f5aeea"><div class="ttname"><a href="namespacesignals.html#adbe043039905491c6ed2a88556f5aeea">signals::bin_open</a></div><div class="ttdeci">void bin_open(const std::filesystem::path &amp;bin_path, BinReader &amp;reader)</div><div class="ttdoc">Открывает reader для работы с .bin и заполняет метаданные.</div><div class="ttdef"><b>Определения</b> <a href="#l00022">bin_reader.cpp:22</a></div></div>
+<div class="ttc" id="astructsignals_1_1_bin_reader_html"><div class="ttname"><a href="structsignals_1_1_bin_reader.html">signals::BinReader</a></div><div class="ttdoc">Состояние открытого бинарного reader-а.</div><div class="ttdef"><b>Определения</b> <a href="bin__reader_8hpp_source.html#l00021">bin_reader.hpp:21</a></div></div>
+<div class="ttc" id="astructsignals_1_1_bin_reader_html_a2586bbcb7d9f6d5f8c16599a6a2108ae"><div class="ttname"><a href="structsignals_1_1_bin_reader.html#a2586bbcb7d9f6d5f8c16599a6a2108ae">signals::BinReader::file</a></div><div class="ttdeci">std::ifstream file</div><div class="ttdef"><b>Определения</b> <a href="bin__reader_8hpp_source.html#l00024">bin_reader.hpp:24</a></div></div>
+<div class="ttc" id="astructsignals_1_1_bin_reader_html_a405d0017da117244214d362644dba292"><div class="ttname"><a href="structsignals_1_1_bin_reader.html#a405d0017da117244214d362644dba292">signals::BinReader::total_points</a></div><div class="ttdeci">int64_t total_points</div><div class="ttdef"><b>Определения</b> <a href="bin__reader_8hpp_source.html#l00025">bin_reader.hpp:25</a></div></div>
+<div class="ttc" id="astructsignals_1_1_bin_reader_html_a8358a80bfbce1aac63bd740b3ba532d4"><div class="ttname"><a href="structsignals_1_1_bin_reader.html#a8358a80bfbce1aac63bd740b3ba532d4">signals::BinReader::header</a></div><div class="ttdeci">SignalHeader header</div><div class="ttdef"><b>Определения</b> <a href="bin__reader_8hpp_source.html#l00022">bin_reader.hpp:22</a></div></div>
+<div class="ttc" id="astructsignals_1_1_bin_reader_html_a980aa42987052656eb29dd9ead9693cd"><div class="ttname"><a href="structsignals_1_1_bin_reader.html#a980aa42987052656eb29dd9ead9693cd">signals::BinReader::bin_path</a></div><div class="ttdeci">std::filesystem::path bin_path</div><div class="ttdef"><b>Определения</b> <a href="bin__reader_8hpp_source.html#l00023">bin_reader.hpp:23</a></div></div>
+<div class="ttc" id="astructsignals_1_1_bin_reader_html_afbb7dbcc6b8121187080649fb869f277"><div class="ttname"><a href="structsignals_1_1_bin_reader.html#afbb7dbcc6b8121187080649fb869f277">signals::BinReader::current_point</a></div><div class="ttdeci">int64_t current_point</div><div class="ttdef"><b>Определения</b> <a href="bin__reader_8hpp_source.html#l00026">bin_reader.hpp:26</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_7374381ecdb819c64ee9b6ea2bd3370d.html">internal</a></li><li class="navelem"><a href="dir_09ed5d9d08e954e11bc42b76082bc854.html">bin</a></li><li class="navelem"><a href="bin__reader_8cpp.html">bin_reader.cpp</a></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.16.1 </li>
+  </ul>
+</div>
+</body>
+</html>

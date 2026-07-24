@@ -1,0 +1,95 @@
+{
+  "version": 3,
+  "configurePresets": [
+    {
+      "name": "d-vcpkg",
+      "displayName": "D: vcpkg Release",
+      "description": "Configure using vcpkg and all heavy build artifacts on D:.",
+      "inherits": "vcpkg",
+      "binaryDir": "D:/incart-bin-hdr-build/${presetName}",
+      "cacheVariables": {
+        "CMAKE_TOOLCHAIN_FILE": "D:/vcpkg/scripts/buildsystems/vcpkg.cmake",
+        "VCPKG_INSTALLED_DIR": "D:/vcpkg-installed/incart-bin-hdr/${presetName}"
+      },
+      "environment": {
+        "VCPKG_ROOT": "D:/vcpkg",
+        "VCPKG_DOWNLOADS": "D:/vcpkg-downloads",
+        "VCPKG_DEFAULT_BINARY_CACHE": "D:/vcpkg-cache",
+        "VCPKG_BINARY_SOURCES": "clear;files,D:/vcpkg-cache,readwrite",
+        "VCPKG_MAX_CONCURRENCY": "2"
+      }
+    },
+    {
+      "name": "d-vcpkg-debug",
+      "displayName": "D: vcpkg Debug",
+      "description": "Configure Debug using vcpkg and all heavy build artifacts on D:.",
+      "inherits": "vcpkg-debug",
+      "binaryDir": "D:/incart-bin-hdr-build/${presetName}",
+      "cacheVariables": {
+        "CMAKE_TOOLCHAIN_FILE": "D:/vcpkg/scripts/buildsystems/vcpkg.cmake",
+        "VCPKG_INSTALLED_DIR": "D:/vcpkg-installed/incart-bin-hdr/${presetName}"
+      },
+      "environment": {
+        "VCPKG_ROOT": "D:/vcpkg",
+        "VCPKG_DOWNLOADS": "D:/vcpkg-downloads",
+        "VCPKG_DEFAULT_BINARY_CACHE": "D:/vcpkg-cache",
+        "VCPKG_BINARY_SOURCES": "clear;files,D:/vcpkg-cache,readwrite",
+        "VCPKG_MAX_CONCURRENCY": "2"
+      }
+    },
+    {
+      "name": "d-vcpkg-msvc",
+      "displayName": "D: vcpkg MSVC Release",
+      "description": "Configure with Visual Studio/MSVC and vcpkg artifacts on D:.",
+      "generator": "Visual Studio 17 2022",
+      "architecture": "x64",
+      "binaryDir": "D:/incart-bin-hdr-build/${presetName}",
+      "cacheVariables": {
+        "CMAKE_TOOLCHAIN_FILE": "D:/vcpkg/scripts/buildsystems/vcpkg.cmake",
+        "VCPKG_INSTALLED_DIR": "D:/vcpkg-installed/incart-bin-hdr/d-vcpkg",
+        "VCPKG_TARGET_TRIPLET": "x64-windows-release"
+      },
+      "environment": {
+        "VCPKG_ROOT": "D:/vcpkg",
+        "VCPKG_DOWNLOADS": "D:/vcpkg-downloads",
+        "VCPKG_DEFAULT_BINARY_CACHE": "D:/vcpkg-cache",
+        "VCPKG_BINARY_SOURCES": "clear;files,D:/vcpkg-cache,readwrite",
+        "VCPKG_MAX_CONCURRENCY": "2"
+      }
+    }
+  ],
+  "buildPresets": [
+    {
+      "name": "d-vcpkg",
+      "configurePreset": "d-vcpkg",
+      "configuration": "Release"
+    },
+    {
+      "name": "d-vcpkg-debug",
+      "configurePreset": "d-vcpkg-debug",
+      "configuration": "Debug"
+    },
+    {
+      "name": "d-vcpkg-msvc",
+      "configurePreset": "d-vcpkg-msvc",
+      "configuration": "Release"
+    }
+  ],
+  "testPresets": [
+    {
+      "name": "d-vcpkg",
+      "configurePreset": "d-vcpkg",
+      "configuration": "Release"
+    },
+    {
+      "name": "d-vcpkg-debug",
+      "configurePreset": "d-vcpkg-debug",
+      "configuration": "Debug"
+    },
+    {
+      "name": "d-vcpkg-msvc",
+      "configurePreset": "d-vcpkg-msvc",
+      "configuration": "Release"
+    }
+  ]
+}

@@ -1,0 +1,423 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.16.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Signal Test Converters: DuckDB Converter</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Signal Test Converters
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.16.1 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Поиск',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('group__duckdb__converter.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">DuckDB Converter </div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Запись и чтение сигналов в формате Duckdb.  
+<a href="#details">Подробнее...</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
+Функции</h2></td></tr>
+<tr class="memitem:ga361fc7bd1572773949a5441e2be49a16" id="r_ga361fc7bd1572773949a5441e2be49a16"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ga361fc7bd1572773949a5441e2be49a16">signals::create_db_schema</a> (duckdb_connection conn, <a class="el" href="classsignals_1_1_signal_header.html">SignalHeader</a> &amp;header)</td></tr>
+<tr class="memdesc:ga361fc7bd1572773949a5441e2be49a16"><td class="mdescLeft">&#160;</td><td class="mdescRight">Создаёт схему таблиц DuckDB для хранения сигнала.  <br /></td></tr>
+<tr class="memitem:ga2514c876d8aecb73269525c39e70c3e8" id="r_ga2514c876d8aecb73269525c39e70c3e8"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ga2514c876d8aecb73269525c39e70c3e8">signals::duckdb_read_signal_data_like_stream</a> (const std::filesystem::path &amp;duckdb_path, <a class="el" href="classsignals_1_1_signal_data.html">SignalData</a> &amp;data, int64_t point_off, int64_t point_cnt)</td></tr>
+<tr class="memdesc:ga2514c876d8aecb73269525c39e70c3e8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Потоково читает диапазон точек из DuckDB через соединение.  <br /></td></tr>
+<tr class="memitem:ga594b260820055430e7e623ff8a5d9255" id="r_ga594b260820055430e7e623ff8a5d9255"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ga594b260820055430e7e623ff8a5d9255">signals::duckdb_write_signal_data_like_stream</a> (const std::filesystem::path &amp;bin_path, const std::filesystem::path &amp;duckdb_path, int64_t point_off, int64_t point_cnt, int64_t chunk_points=<a class="el" href="namespacesignals.html#a0449808e5c73bff5d901f795c123a6ec">DEFAULT_DUCKDB_CHUNK_POINTS</a>, int64_t commit_every_n_points=<a class="el" href="namespacesignals.html#ad71900a6c92981cc05bb06be4940d1c3">DEFAULT_DUCKDB_COMMIT_POINTS</a>)</td></tr>
+<tr class="memdesc:ga594b260820055430e7e623ff8a5d9255"><td class="mdescLeft">&#160;</td><td class="mdescRight">Потоково записывает диапазон точек в DuckDB через filepath с периодическими commit.  <br /></td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Подробное описание</h2>
+<div class="textblock"><p>Запись и чтение сигналов в формате Duckdb. </p>
+</div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Функции</h2>
+<a id="ga361fc7bd1572773949a5441e2be49a16" name="ga361fc7bd1572773949a5441e2be49a16"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga361fc7bd1572773949a5441e2be49a16">&#9670;&#160;</a></span>create_db_schema()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void signals::create_db_schema </td>
+          <td>(</td>
+          <td class="paramtype">duckdb_connection</td>          <td class="paramname"><span class="paramname"><em>conn</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classsignals_1_1_signal_header.html">SignalHeader</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>header</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Создаёт схему таблиц DuckDB для хранения сигнала. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">conn</td><td>Открытое DuckDB-соединение. </td></tr>
+    <tr><td class="paramname">header</td><td>Метаданные сигнала для динамического построения таблицы points.</td></tr>
+  </table>
+  </dd>
+</dl>
+<ul>
+<li><dl class="exception"><dt>Исключения</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::runtime_error</td><td>Если не удалось создать любую из таблиц схемы.</td></tr>
+  </table>
+  </dd>
+</dl>
+Последовательность работы:</li>
+</ul>
+<ol type="1">
+<li>Создаёт таблицу метаданных signals.</li>
+<li>Создаёт таблицу каналов channels.</li>
+<li>Создаёт таблицу отсчётов points с колонками Ch0..ChN-1. </li>
+</ol>
+
+<p class="definition">См. определение в файле <a class="el" href="duckdb__converter_8cpp_source.html">duckdb_converter.cpp</a> строка <a class="el" href="duckdb__converter_8cpp_source.html#l00028">28</a></p>
+<div class="fragment"><div class="line"><span class="lineno">   28</span>                                                                        {</div>
+<div class="line"><span class="lineno">   29</span>        duckdb_result res;</div>
+<div class="line"><span class="lineno">   30</span> </div>
+<div class="line"><span class="lineno">   31</span>        <span class="keywordflow">if</span> (duckdb_query(conn,</div>
+<div class="line"><span class="lineno">   32</span>                         <span class="stringliteral">&quot;CREATE TABLE IF NOT EXISTS signals (&quot;</span></div>
+<div class="line"><span class="lineno">   33</span>                         <span class="stringliteral">&quot;  frequency   DOUBLE,&quot;</span></div>
+<div class="line"><span class="lineno">   34</span>                         <span class="stringliteral">&quot;  lsb_default  DOUBLE,&quot;</span></div>
+<div class="line"><span class="lineno">   35</span>                         <span class="stringliteral">&quot;  \&quot;offset\&quot; BIGINT,&quot;</span></div>
+<div class="line"><span class="lineno">   36</span>                         <span class="stringliteral">&quot;  time_start   TIMESTAMP,&quot;</span></div>
+<div class="line"><span class="lineno">   37</span>                         <span class="stringliteral">&quot;  format_name  VARCHAR,&quot;</span></div>
+<div class="line"><span class="lineno">   38</span>                         <span class="stringliteral">&quot;  format_version VARCHAR,&quot;</span></div>
+<div class="line"><span class="lineno">   39</span>                         <span class="stringliteral">&quot;  optional_params JSON&quot;</span></div>
+<div class="line"><span class="lineno">   40</span>                         <span class="stringliteral">&quot;);&quot;</span>,</div>
+<div class="line"><span class="lineno">   41</span>                         &amp;res) != DuckDBSuccess) {</div>
+<div class="line"><span class="lineno">   42</span>            std::string error_message =</div>
+<div class="line"><span class="lineno">   43</span>                <a class="code hl_function" href="namespacesignals.html#ae7b243cf446b1a81d146047a1504dbd0">duckdb_result_error_message</a>(res, <span class="stringliteral">&quot;Не удалось создать таблицу signals&quot;</span>);</div>
+<div class="line"><span class="lineno">   44</span>            duckdb_destroy_result(&amp;res);</div>
+<div class="line"><span class="lineno">   45</span>            <span class="keywordflow">throw</span> std::runtime_error(<span class="stringliteral">&quot;Не удалось создать таблицу signals: &quot;</span> + error_message);</div>
+<div class="line"><span class="lineno">   46</span>        }</div>
+<div class="line"><span class="lineno">   47</span>        duckdb_destroy_result(&amp;res);</div>
+<div class="line"><span class="lineno">   48</span> </div>
+<div class="line"><span class="lineno">   49</span>        <span class="keywordflow">if</span> (duckdb_query(conn,</div>
+<div class="line"><span class="lineno">   50</span>                         <span class="stringliteral">&quot;CREATE TABLE IF NOT EXISTS channels (&quot;</span></div>
+<div class="line"><span class="lineno">   51</span>                         <span class="stringliteral">&quot;  name       VARCHAR,&quot;</span></div>
+<div class="line"><span class="lineno">   52</span>                         <span class="stringliteral">&quot;  lsb        DOUBLE,&quot;</span></div>
+<div class="line"><span class="lineno">   53</span>                         <span class="stringliteral">&quot;  unit       VARCHAR&quot;</span></div>
+<div class="line"><span class="lineno">   54</span>                         <span class="stringliteral">&quot;);&quot;</span>,</div>
+<div class="line"><span class="lineno">   55</span>                         &amp;res) != DuckDBSuccess) {</div>
+<div class="line"><span class="lineno">   56</span>            std::string error_message =</div>
+<div class="line"><span class="lineno">   57</span>                <a class="code hl_function" href="namespacesignals.html#ae7b243cf446b1a81d146047a1504dbd0">duckdb_result_error_message</a>(res, <span class="stringliteral">&quot;Не удалось создать таблицу channels&quot;</span>);</div>
+<div class="line"><span class="lineno">   58</span>            duckdb_destroy_result(&amp;res);</div>
+<div class="line"><span class="lineno">   59</span>            <span class="keywordflow">throw</span> std::runtime_error(<span class="stringliteral">&quot;Не удалось создать таблицу channels: &quot;</span> + error_message);</div>
+<div class="line"><span class="lineno">   60</span>        }</div>
+<div class="line"><span class="lineno">   61</span>        duckdb_destroy_result(&amp;res);</div>
+<div class="line"><span class="lineno">   62</span> </div>
+<div class="line"><span class="lineno">   63</span>        <a class="code hl_function" href="namespacesignals.html#a901dffd84ed466231cc96e8ac2ebc20b">create_bin_data_table</a>(conn, header);</div>
+<div class="line"><span class="lineno">   64</span>    }</div>
+<div class="ttc" id="anamespacesignals_html_a901dffd84ed466231cc96e8ac2ebc20b"><div class="ttname"><a href="namespacesignals.html#a901dffd84ed466231cc96e8ac2ebc20b">signals::create_bin_data_table</a></div><div class="ttdeci">static void create_bin_data_table(duckdb_connection conn, SignalHeader &amp;header)</div><div class="ttdef"><b>Определения</b> <a href="duckdb__converter_8cpp_source.html#l00300">duckdb_converter.cpp:300</a></div></div>
+<div class="ttc" id="anamespacesignals_html_ae7b243cf446b1a81d146047a1504dbd0"><div class="ttname"><a href="namespacesignals.html#ae7b243cf446b1a81d146047a1504dbd0">signals::duckdb_result_error_message</a></div><div class="ttdeci">static std::string duckdb_result_error_message(duckdb_result &amp;res, const char *fallback)</div><div class="ttdef"><b>Определения</b> <a href="duckdb__converter_8cpp_source.html#l00293">duckdb_converter.cpp:293</a></div></div>
+</div><!-- fragment -->
+<p class="reference">Перекрестные ссылки <a class="el" href="duckdb__converter_8cpp_source.html#l00300">create_bin_data_table()</a> и <a class="el" href="duckdb__converter_8cpp_source.html#l00293">duckdb_result_error_message()</a>.</p>
+
+<p class="reference">Используется в <a class="el" href="duckdb__converter_8cpp_source.html#l00153">duckdb_write_signal_data_chunked()</a>.</p>
+<div class="dynheader">
+Граф вызовов:</div>
+<div class="dyncontent">
+<div class="center"><img src="group__duckdb__converter_ga361fc7bd1572773949a5441e2be49a16_cgraph.png" border="0" usemap="#agroup__duckdb__converter_ga361fc7bd1572773949a5441e2be49a16_cgraph" loading="lazy" alt=""/></div>
+</div>
+<div class="dynheader">
+Граф вызова функции:</div>
+<div class="dyncontent">
+<div class="center"><img src="group__duckdb__converter_ga361fc7bd1572773949a5441e2be49a16_icgraph.png" border="0" usemap="#agroup__duckdb__converter_ga361fc7bd1572773949a5441e2be49a16_icgraph" loading="lazy" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="ga2514c876d8aecb73269525c39e70c3e8" name="ga2514c876d8aecb73269525c39e70c3e8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga2514c876d8aecb73269525c39e70c3e8">&#9670;&#160;</a></span>duckdb_read_signal_data_like_stream()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void signals::duckdb_read_signal_data_like_stream </td>
+          <td>(</td>
+          <td class="paramtype">const std::filesystem::path &amp;</td>          <td class="paramname"><span class="paramname"><em>duckdb_path</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classsignals_1_1_signal_data.html">SignalData</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>data</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int64_t</td>          <td class="paramname"><span class="paramname"><em>point_off</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int64_t</td>          <td class="paramname"><span class="paramname"><em>point_cnt</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Потоково читает диапазон точек из DuckDB через соединение. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">conn</td><td>Открытое DuckDB-соединение. </td></tr>
+    <tr><td class="paramname">data</td><td>Выходная структура <a class="el" href="classsignals_1_1_signal_data.html" title="Данные и метаданные (данные из .hdr и .bin, данные в double).">SignalData</a>. </td></tr>
+    <tr><td class="paramname">point_off</td><td>Смещение от начала диапазона. </td></tr>
+    <tr><td class="paramname">point_cnt</td><td>Количество точек для чтения; если &lt; 0, читается доступный диапазон. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>Исключения</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::invalid_argument</td><td>Если point_off отрицательный. </td></tr>
+    <tr><td class="paramname">std::runtime_error</td><td>При ошибках SQL, несогласованности схемы, несовпадении объёма чтения или недопустимом LSB.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Последовательность работы:</p><ol type="1">
+<li>Валидирует входные параметры.</li>
+<li>Читает метаданные и подготавливает окно чтения.</li>
+<li>Готовит SELECT по id BETWEEN ? AND ?.</li>
+<li>Потоково читает chunks и конвертирует int32 в double.</li>
+<li>Проверяет, что прочитано ровно ожидаемое число точек. </li>
+</ol>
+
+<p class="definition">См. определение в файле <a class="el" href="duckdb__converter_8cpp_source.html">duckdb_converter.cpp</a> строка <a class="el" href="duckdb__converter_8cpp_source.html#l00125">125</a></p>
+<div class="fragment"><div class="line"><span class="lineno">  127</span>                                                                {</div>
+<div class="line"><span class="lineno">  128</span>        duckdb_database db = <span class="keyword">nullptr</span>;</div>
+<div class="line"><span class="lineno">  129</span>        duckdb_connection conn = <span class="keyword">nullptr</span>;</div>
+<div class="line"><span class="lineno">  130</span> </div>
+<div class="line"><span class="lineno">  131</span>        <span class="keywordflow">if</span> (duckdb_open(duckdb_path.string().c_str(), &amp;db) == DuckDBError) {</div>
+<div class="line"><span class="lineno">  132</span>            <span class="keywordflow">throw</span> std::runtime_error(</div>
+<div class="line"><span class="lineno">  133</span>                std::format(<span class="stringliteral">&quot;Не удалось открыть DuckDB: {}&quot;</span>, duckdb_path.string()));</div>
+<div class="line"><span class="lineno">  134</span>        }</div>
+<div class="line"><span class="lineno">  135</span> </div>
+<div class="line"><span class="lineno">  136</span>        <span class="keywordflow">if</span> (duckdb_connect(db, &amp;conn) == DuckDBError) {</div>
+<div class="line"><span class="lineno">  137</span>            duckdb_close(&amp;db);</div>
+<div class="line"><span class="lineno">  138</span>            <span class="keywordflow">throw</span> std::runtime_error(<span class="stringliteral">&quot;Не удалось подключиться к DuckDB&quot;</span>);</div>
+<div class="line"><span class="lineno">  139</span>        }</div>
+<div class="line"><span class="lineno">  140</span> </div>
+<div class="line"><span class="lineno">  141</span>        <span class="keywordflow">try</span> {</div>
+<div class="line"><span class="lineno">  142</span>            <a class="code hl_function" href="namespacesignals.html#ae1372e205df2636cbbca716980fcc324">duckdb_read_signal_data_like_stream_conn</a>(conn, data, point_off, point_cnt);</div>
+<div class="line"><span class="lineno">  143</span>        } <span class="keywordflow">catch</span> (...) {</div>
+<div class="line"><span class="lineno">  144</span>            duckdb_disconnect(&amp;conn);</div>
+<div class="line"><span class="lineno">  145</span>            duckdb_close(&amp;db);</div>
+<div class="line"><span class="lineno">  146</span>            <span class="keywordflow">throw</span>;</div>
+<div class="line"><span class="lineno">  147</span>        }</div>
+<div class="line"><span class="lineno">  148</span> </div>
+<div class="line"><span class="lineno">  149</span>        duckdb_disconnect(&amp;conn);</div>
+<div class="line"><span class="lineno">  150</span>        duckdb_close(&amp;db);</div>
+<div class="line"><span class="lineno">  151</span>    }</div>
+<div class="ttc" id="anamespacesignals_html_ae1372e205df2636cbbca716980fcc324"><div class="ttname"><a href="namespacesignals.html#ae1372e205df2636cbbca716980fcc324">signals::duckdb_read_signal_data_like_stream_conn</a></div><div class="ttdeci">static void duckdb_read_signal_data_like_stream_conn(duckdb_connection conn, SignalData &amp;data, int64_t point_off, int64_t point_cnt)</div><div class="ttdef"><b>Определения</b> <a href="duckdb__converter_8cpp_source.html#l00066">duckdb_converter.cpp:66</a></div></div>
+</div><!-- fragment -->
+<p class="reference">Перекрестные ссылки <a class="el" href="duckdb__converter_8cpp_source.html#l00066">duckdb_read_signal_data_like_stream_conn()</a>.</p>
+
+<p class="reference">Используется в <a class="el" href="test__duckdb_8cpp_source.html#l00008">main()</a>.</p>
+<div class="dynheader">
+Граф вызовов:</div>
+<div class="dyncontent">
+<div class="center"><img src="group__duckdb__converter_ga2514c876d8aecb73269525c39e70c3e8_cgraph.png" border="0" usemap="#agroup__duckdb__converter_ga2514c876d8aecb73269525c39e70c3e8_cgraph" loading="lazy" alt=""/></div>
+</div>
+<div class="dynheader">
+Граф вызова функции:</div>
+<div class="dyncontent">
+<div class="center"><img src="group__duckdb__converter_ga2514c876d8aecb73269525c39e70c3e8_icgraph.png" border="0" usemap="#agroup__duckdb__converter_ga2514c876d8aecb73269525c39e70c3e8_icgraph" loading="lazy" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="ga594b260820055430e7e623ff8a5d9255" name="ga594b260820055430e7e623ff8a5d9255"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga594b260820055430e7e623ff8a5d9255">&#9670;&#160;</a></span>duckdb_write_signal_data_like_stream()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void signals::duckdb_write_signal_data_like_stream </td>
+          <td>(</td>
+          <td class="paramtype">const std::filesystem::path &amp;</td>          <td class="paramname"><span class="paramname"><em>bin_path</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::filesystem::path &amp;</td>          <td class="paramname"><span class="paramname"><em>duckdb_path</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int64_t</td>          <td class="paramname"><span class="paramname"><em>point_off</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int64_t</td>          <td class="paramname"><span class="paramname"><em>point_cnt</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int64_t</td>          <td class="paramname"><span class="paramname"><em>chunk_points</em></span><span class="paramdefsep"> = </span><span class="paramdefval"><a class="el" href="namespacesignals.html#a0449808e5c73bff5d901f795c123a6ec">DEFAULT_DUCKDB_CHUNK_POINTS</a></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int64_t</td>          <td class="paramname"><span class="paramname"><em>commit_every_n_points</em></span><span class="paramdefsep"> = </span><span class="paramdefval"><a class="el" href="namespacesignals.html#ad71900a6c92981cc05bb06be4940d1c3">DEFAULT_DUCKDB_COMMIT_POINTS</a></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Потоково записывает диапазон точек в DuckDB через filepath с периодическими commit. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">bin_path</td><td>Путь к .hdr/.bin источнику. </td></tr>
+    <tr><td class="paramname">duckdb_path</td><td>Путь к DuckDB-файлу назначения. </td></tr>
+    <tr><td class="paramname">point_off</td><td>Смещение от начала диапазона. </td></tr>
+    <tr><td class="paramname">point_cnt</td><td>Количество точек для чтения; если &lt; 0, читается доступный диапазон. </td></tr>
+    <tr><td class="paramname">chunk_points</td><td>Размер чтения/записи чанка в точках. </td></tr>
+    <tr><td class="paramname">commit_every_n_points</td><td>Количество точек между промежуточными commit. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>Исключения</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::invalid_argument</td><td>Если chunk_points &lt;= 0 или point_off &lt; 0. </td></tr>
+    <tr><td class="paramname">std::runtime_error</td><td>При ошибках чтения BIN, транзакций, appender-а или подключения DuckDB.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Последовательность работы:</p><ol type="1">
+<li>Открывает .bin и DuckDB (с попыткой задать лимит памяти).</li>
+<li>Создаёт схему и записывает метаданные сигнала.</li>
+<li>Запускает транзакцию и appender для таблицы points.</li>
+<li>Читает BIN чанками и вставляет строки.</li>
+<li>При достижении порога commit_every_n_points делает commit и открывает новую транзакцию.</li>
+<li>Выполняет финальный commit и закрывает ресурсы. </li>
+</ol>
+
+<p class="definition">См. определение в файле <a class="el" href="duckdb__converter_8cpp_source.html">duckdb_converter.cpp</a> строка <a class="el" href="duckdb__converter_8cpp_source.html#l00275">275</a></p>
+<div class="fragment"><div class="line"><span class="lineno">  278</span>                                                                                                   {</div>
+<div class="line"><span class="lineno">  279</span>        <span class="keywordflow">try</span> {</div>
+<div class="line"><span class="lineno">  280</span>            <a class="code hl_function" href="namespacesignals.html#a137be4478776f05eca946eae5b73be48">duckdb_write_signal_data_chunked</a>(bin_path, duckdb_path, point_off, point_cnt,</div>
+<div class="line"><span class="lineno">  281</span>                                             chunk_points, commit_every_n_points);</div>
+<div class="line"><span class="lineno">  282</span>        } <span class="keywordflow">catch</span> (<span class="keyword">const</span> std::invalid_argument &amp;) {</div>
+<div class="line"><span class="lineno">  283</span>            <span class="keywordflow">throw</span>;</div>
+<div class="line"><span class="lineno">  284</span>        } <span class="keywordflow">catch</span> (<span class="keyword">const</span> std::logic_error &amp;) {</div>
+<div class="line"><span class="lineno">  285</span>            <span class="keywordflow">throw</span>;</div>
+<div class="line"><span class="lineno">  286</span>        } <span class="keywordflow">catch</span> (<span class="keyword">const</span> std::exception &amp;ex) {</div>
+<div class="line"><span class="lineno">  287</span>            <span class="keywordflow">throw</span> std::runtime_error(</div>
+<div class="line"><span class="lineno">  288</span>                std::format(<span class="stringliteral">&quot;Не удалось записать данные в DuckDB: {}&quot;</span>, std::string(ex.what())));</div>
+<div class="line"><span class="lineno">  289</span>        }</div>
+<div class="line"><span class="lineno">  290</span>    }</div>
+<div class="ttc" id="anamespacesignals_html_a137be4478776f05eca946eae5b73be48"><div class="ttname"><a href="namespacesignals.html#a137be4478776f05eca946eae5b73be48">signals::duckdb_write_signal_data_chunked</a></div><div class="ttdeci">static void duckdb_write_signal_data_chunked(const std::filesystem::path &amp;bin_path, const std::filesystem::path &amp;duckdb_path, int64_t point_off, int64_t point_cnt, int64_t chunk_points, int64_t commit_every_n_points)</div><div class="ttdef"><b>Определения</b> <a href="duckdb__converter_8cpp_source.html#l00153">duckdb_converter.cpp:153</a></div></div>
+</div><!-- fragment -->
+<p class="reference">Перекрестные ссылки <a class="el" href="duckdb__converter_8cpp_source.html#l00153">duckdb_write_signal_data_chunked()</a>.</p>
+
+<p class="reference">Используется в <a class="el" href="test__duckdb_8cpp_source.html#l00008">main()</a>.</p>
+<div class="dynheader">
+Граф вызовов:</div>
+<div class="dyncontent">
+<div class="center"><img src="group__duckdb__converter_ga594b260820055430e7e623ff8a5d9255_cgraph.png" border="0" usemap="#agroup__duckdb__converter_ga594b260820055430e7e623ff8a5d9255_cgraph" loading="lazy" alt=""/></div>
+</div>
+<div class="dynheader">
+Граф вызова функции:</div>
+<div class="dyncontent">
+<div class="center"><img src="group__duckdb__converter_ga594b260820055430e7e623ff8a5d9255_icgraph.png" border="0" usemap="#agroup__duckdb__converter_ga594b260820055430e7e623ff8a5d9255_icgraph" loading="lazy" alt=""/></div>
+</div>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.16.1 </li>
+  </ul>
+</div>
+</body>
+</html>

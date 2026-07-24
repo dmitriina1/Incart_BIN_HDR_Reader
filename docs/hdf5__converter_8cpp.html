@@ -1,0 +1,160 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.16.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Signal Test Converters: Файл internal/hdf5/hdf5_converter.cpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Signal Test Converters
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.16.1 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Поиск',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('hdf5__converter_8cpp.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Файл hdf5_converter.cpp</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;<a class="el" href="hdf5__converter_8hpp_source.html">hdf5_converter.hpp</a>&quot;</code><br />
+<code>#include &lt;H5Cpp.h&gt;</code><br />
+<code>#include &lt;limits&gt;</code><br />
+<code>#include &lt;unordered_set&gt;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Граф включаемых заголовочных файлов для hdf5_converter.cpp:</div>
+<div class="dyncontent">
+<div class="center"><img src="hdf5__converter_8cpp__incl.png" border="0" usemap="#ainternal_2hdf5_2hdf5__converter_8cpp" loading="lazy" alt=""/></div>
+</div>
+</div>
+<p><a href="hdf5__converter_8cpp_source.html">См. исходные тексты.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-namespaces" class="groupheader"><a id="namespaces" name="namespaces"></a>
+Пространства имен</h2></td></tr>
+<tr class="memitem:signals" id="r_signals"><td class="memItemLeft">namespace &#160;</td><td class="memItemRight"><a class="el" href="namespacesignals.html">signals</a></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
+Функции</h2></td></tr>
+<tr class="memitem:ad5868d3b86fc024ae73e6a6186d82ea5" id="r_ad5868d3b86fc024ae73e6a6186d82ea5"><td class="memItemLeft">static H5::FileAccPropList&#160;</td><td class="memItemRight"><a class="el" href="namespacesignals.html#ad5868d3b86fc024ae73e6a6186d82ea5">signals::make_access_props</a> ()</td></tr>
+<tr class="memitem:a70bf040390f5ecab7cca772d1e6e9332" id="r_a70bf040390f5ecab7cca772d1e6e9332"><td class="memItemLeft">static H5::H5File *&#160;</td><td class="memItemRight"><a class="el" href="namespacesignals.html#a70bf040390f5ecab7cca772d1e6e9332">signals::get_open_hdf5_file</a> (void *reader_handle)</td></tr>
+<tr class="memitem:a68cc541e60cb06c67696a6633d160b98" id="r_a68cc541e60cb06c67696a6633d160b98"><td class="memItemLeft">static std::string&#160;</td><td class="memItemRight"><a class="el" href="namespacesignals.html#a68cc541e60cb06c67696a6633d160b98">signals::generate_format_version</a> ()</td></tr>
+<tr class="memitem:gaa41a46324af49a6e33c5d190942d2513" id="r_gaa41a46324af49a6e33c5d190942d2513"><td class="memItemLeft">void *&#160;</td><td class="memItemRight"><a class="el" href="group__hdf5__converter.html#gaa41a46324af49a6e33c5d190942d2513">signals::hdf5_open</a> (const std::filesystem::path &amp;hdf5_path)</td></tr>
+<tr class="memdesc:gaa41a46324af49a6e33c5d190942d2513"><td class="mdescLeft">&#160;</td><td class="mdescRight">Открывает HDF5-файл для потокового чтения.  <br /></td></tr>
+<tr class="memitem:ga4469342a4de51b740895f7ea726825b8" id="r_ga4469342a4de51b740895f7ea726825b8"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="group__hdf5__converter.html#ga4469342a4de51b740895f7ea726825b8">signals::hdf5_close</a> (void *&amp;reader_handle)</td></tr>
+<tr class="memdesc:ga4469342a4de51b740895f7ea726825b8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Закрывает ранее открытый HDF5-handle.  <br /></td></tr>
+<tr class="memitem:ga89de9f55b7386a8192b1fd3c3f917b98" id="r_ga89de9f55b7386a8192b1fd3c3f917b98"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="group__hdf5__converter.html#ga89de9f55b7386a8192b1fd3c3f917b98">signals::hdf5_read_signal_data_like_stream</a> (void *reader_handle, <a class="el" href="classsignals_1_1_signal_data.html">SignalData</a> &amp;data, int64_t point_off, int64_t point_cnt, int64_t chunk_points)</td></tr>
+<tr class="memdesc:ga89de9f55b7386a8192b1fd3c3f917b98"><td class="mdescLeft">&#160;</td><td class="mdescRight">Потоково читает диапазон точек через ранее открытый handle.  <br /></td></tr>
+<tr class="memitem:a93365da95641d1c8317589b3546c6fd9" id="r_a93365da95641d1c8317589b3546c6fd9"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="namespacesignals.html#a93365da95641d1c8317589b3546c6fd9">signals::hdf5_write_signal_header</a> (const H5::H5File &amp;file, const <a class="el" href="classsignals_1_1_signal_header.html">SignalHeader</a> &amp;header)</td></tr>
+<tr class="memitem:ae7c03a84f2f2a36487ff826945c9d686" id="r_ae7c03a84f2f2a36487ff826945c9d686"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="namespacesignals.html#ae7c03a84f2f2a36487ff826945c9d686">signals::hdf5_write_bin_data</a> (const H5::H5File &amp;file, <a class="el" href="structsignals_1_1_bin_reader.html">BinReader</a> &amp;reader, int64_t point_off, int64_t point_cnt)</td></tr>
+<tr class="memitem:gabde096e8626c40139bab33c18102eea1" id="r_gabde096e8626c40139bab33c18102eea1"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="group__hdf5__converter.html#gabde096e8626c40139bab33c18102eea1">signals::hdf5_write_signals_data</a> (const std::filesystem::path &amp;bin_path, const std::filesystem::path &amp;hdf5_path, int64_t point_off, int64_t point_cnt)</td></tr>
+<tr class="memdesc:gabde096e8626c40139bab33c18102eea1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Конвертирует диапазон точек из .bin в HDF5.  <br /></td></tr>
+<tr class="memitem:adc1ab27971904ef1964c94e3c879cf95" id="r_adc1ab27971904ef1964c94e3c879cf95"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="namespacesignals.html#adc1ab27971904ef1964c94e3c879cf95">signals::hdf5_read_signal_header_metadata</a> (const H5::H5File &amp;file, <a class="el" href="classsignals_1_1_signal_header.html">SignalHeader</a> &amp;metadata)</td></tr>
+<tr class="memitem:a4e2bbc696f721b59218d30d25182d149" id="r_a4e2bbc696f721b59218d30d25182d149"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="namespacesignals.html#a4e2bbc696f721b59218d30d25182d149">signals::is_field_optional</a> (const std::string &amp;key)</td></tr>
+<tr class="memitem:a9c37b912c92ba88155addd9531fb68d9" id="r_a9c37b912c92ba88155addd9531fb68d9"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="namespacesignals.html#a9c37b912c92ba88155addd9531fb68d9">signals::hdf5_read_signal_header_optional_params</a> (const H5::H5File &amp;file, <a class="el" href="classsignals_1_1_signal_header.html">SignalHeader</a> &amp;metadata)</td></tr>
+<tr class="memitem:af5e6cdd99157cc61bfe6f28342bbaf67" id="r_af5e6cdd99157cc61bfe6f28342bbaf67"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="namespacesignals.html#af5e6cdd99157cc61bfe6f28342bbaf67">signals::hdf5_read_channels_metadata</a> (const H5::H5File &amp;file, <a class="el" href="classsignals_1_1_signal_header.html">SignalHeader</a> &amp;metadata)</td></tr>
+<tr class="memitem:ga565e49442fc4b42a8322412512e71b9a" id="r_ga565e49442fc4b42a8322412512e71b9a"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="group__hdf5__converter.html#ga565e49442fc4b42a8322412512e71b9a">signals::hdf5_read_signal_data_like_stream</a> (const H5::H5File &amp;file, <a class="el" href="classsignals_1_1_signal_data.html">SignalData</a> &amp;data, int64_t point_off, int64_t point_cnt, int64_t chunk_points)</td></tr>
+<tr class="memdesc:ga565e49442fc4b42a8322412512e71b9a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Потоково читает диапазон точек из открытого HDF5-файла через H5::H5File.  <br /></td></tr>
+<tr class="memitem:ga543fb8bc81c504bd9f41373d375b90d4" id="r_ga543fb8bc81c504bd9f41373d375b90d4"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="group__hdf5__converter.html#ga543fb8bc81c504bd9f41373d375b90d4">signals::hdf5_read_signal_data_like_stream</a> (const std::filesystem::path &amp;hdf5_path, <a class="el" href="classsignals_1_1_signal_data.html">SignalData</a> &amp;data, int64_t point_off, int64_t point_cnt, int64_t chunk_points)</td></tr>
+<tr class="memdesc:ga543fb8bc81c504bd9f41373d375b90d4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Потоково читает диапазон точек из HDF5 через filepath.  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-var-members" class="groupheader"><a id="var-members" name="var-members"></a>
+Переменные</h2></td></tr>
+<tr class="memitem:ad5f213591868a0edb663c5d25acde219" id="r_ad5f213591868a0edb663c5d25acde219"><td class="memItemLeft">static constexpr int&#160;</td><td class="memItemRight"><a class="el" href="namespacesignals.html#ad5f213591868a0edb663c5d25acde219">signals::H5F_SCHEMA_MAJOR</a> = 1</td></tr>
+<tr class="memitem:acb909145a64d678276a1900b9f2bcc9a" id="r_acb909145a64d678276a1900b9f2bcc9a"><td class="memItemLeft">static constexpr int&#160;</td><td class="memItemRight"><a class="el" href="namespacesignals.html#acb909145a64d678276a1900b9f2bcc9a">signals::H5F_SCHEMA_MINOR</a> = 0</td></tr>
+<tr class="memitem:a0551d15474ceaa7952814db6c6dd1c4f" id="r_a0551d15474ceaa7952814db6c6dd1c4f"><td class="memItemLeft">static constexpr int&#160;</td><td class="memItemRight"><a class="el" href="namespacesignals.html#a0551d15474ceaa7952814db6c6dd1c4f">signals::H5F_SCHEMA_PATCH</a> = 0</td></tr>
+<tr class="memitem:ac5d27ba9fa528682921f29ed6224e655" id="r_ac5d27ba9fa528682921f29ed6224e655"><td class="memItemLeft">const int&#160;</td><td class="memItemRight"><a class="el" href="namespacesignals.html#ac5d27ba9fa528682921f29ed6224e655">signals::HDF5_DEFLATE_LEVEL</a> = 1</td></tr>
+<tr class="memitem:a96510093ce25d014c3f83e90c6b9d2c8" id="r_a96510093ce25d014c3f83e90c6b9d2c8"><td class="memItemLeft">const int64_t&#160;</td><td class="memItemRight"><a class="el" href="namespacesignals.html#a96510093ce25d014c3f83e90c6b9d2c8">signals::HDF5_CHUNK_POINTS</a> = 100000</td></tr>
+</table>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_7374381ecdb819c64ee9b6ea2bd3370d.html">internal</a></li><li class="navelem"><a href="dir_c7b213aa52000cda36e13e2d6dcd22e4.html">hdf5</a></li><li class="navelem"><a href="hdf5__converter_8cpp.html">hdf5_converter.cpp</a></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.16.1 </li>
+  </ul>
+</div>
+</body>
+</html>

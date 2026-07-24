@@ -1,0 +1,11 @@
+digraph "signals::make_header_for_range"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname=Helvetica,fontsize=10,labelfontname=Helvetica,labelfontsize=10];
+  node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
+  rankdir="LR";
+  Node1 [id="Node000001",label="signals::make_header\l_for_range",height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip="Формирует заголовок для заданного диапазона точек (реальный диапазон)."];
+  Node1 -> Node2 [id="edge1_Node000001_Node000002",color="steelblue1",style="solid",tooltip=" "];
+  Node2 [id="Node000002",label="signals::normalize\l_range",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$group__signal__common.html#ga9eea8e4749c86e79bc2be1b13a2d10a1",tooltip="Нормализует диапазон относительно общего числа точек."];
+}

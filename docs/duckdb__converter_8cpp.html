@@ -1,0 +1,154 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.16.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Signal Test Converters: Файл internal/duckdb/duckdb_converter.cpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Signal Test Converters
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.16.1 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Поиск',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('duckdb__converter_8cpp.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Файл duckdb_converter.cpp</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;<a class="el" href="duckdb__converter_8hpp_source.html">duckdb_converter.hpp</a>&quot;</code><br />
+<code>#include &lt;limits&gt;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Граф включаемых заголовочных файлов для duckdb_converter.cpp:</div>
+<div class="dyncontent">
+<div class="center"><img src="duckdb__converter_8cpp__incl.png" border="0" usemap="#ainternal_2duckdb_2duckdb__converter_8cpp" loading="lazy" alt=""/></div>
+</div>
+</div>
+<p><a href="duckdb__converter_8cpp_source.html">См. исходные тексты.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-namespaces" class="groupheader"><a id="namespaces" name="namespaces"></a>
+Пространства имен</h2></td></tr>
+<tr class="memitem:signals" id="r_signals"><td class="memItemLeft">namespace &#160;</td><td class="memItemRight"><a class="el" href="namespacesignals.html">signals</a></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
+Функции</h2></td></tr>
+<tr class="memitem:ae7b243cf446b1a81d146047a1504dbd0" id="r_ae7b243cf446b1a81d146047a1504dbd0"><td class="memItemLeft">static std::string&#160;</td><td class="memItemRight"><a class="el" href="namespacesignals.html#ae7b243cf446b1a81d146047a1504dbd0">signals::duckdb_result_error_message</a> (duckdb_result &amp;res, const char *fallback)</td></tr>
+<tr class="memitem:a901dffd84ed466231cc96e8ac2ebc20b" id="r_a901dffd84ed466231cc96e8ac2ebc20b"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="namespacesignals.html#a901dffd84ed466231cc96e8ac2ebc20b">signals::create_bin_data_table</a> (duckdb_connection conn, <a class="el" href="classsignals_1_1_signal_header.html">SignalHeader</a> &amp;header)</td></tr>
+<tr class="memitem:a9814717706805707ff79bc812883a648" id="r_a9814717706805707ff79bc812883a648"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="namespacesignals.html#a9814717706805707ff79bc812883a648">signals::duckdb_append_signal_header</a> (duckdb_connection conn, const <a class="el" href="classsignals_1_1_signal_header.html">SignalHeader</a> &amp;header)</td></tr>
+<tr class="memitem:a65004ed95619c8fed6a30f179b1f4b47" id="r_a65004ed95619c8fed6a30f179b1f4b47"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="namespacesignals.html#a65004ed95619c8fed6a30f179b1f4b47">signals::duckdb_append_channels_data</a> (duckdb_connection conn, const <a class="el" href="classsignals_1_1_signal_header.html">SignalHeader</a> &amp;header)</td></tr>
+<tr class="memitem:aa38262c986003de8bbbe473b23ce636b" id="r_aa38262c986003de8bbbe473b23ce636b"><td class="memItemLeft">static std::string&#160;</td><td class="memItemRight"><a class="el" href="namespacesignals.html#aa38262c986003de8bbbe473b23ce636b">signals::create_select_query_for_signal_data</a> (const <a class="el" href="classsignals_1_1_signal_data.html">SignalData</a> &amp;data)</td></tr>
+<tr class="memitem:aefb54eb9a52f2f1f0d3e021be698fbac" id="r_aefb54eb9a52f2f1f0d3e021be698fbac"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="namespacesignals.html#aefb54eb9a52f2f1f0d3e021be698fbac">signals::append_points_block</a> (duckdb_appender points_appender, const std::vector&lt; int32_t &gt; &amp;chunk_buffer, int64_t points_in_block, int32_t num_channels, int64_t first_point_id_in_block)</td></tr>
+<tr class="memitem:a5b30c05741650a3a65ad7629d6d7ec00" id="r_a5b30c05741650a3a65ad7629d6d7ec00"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="namespacesignals.html#a5b30c05741650a3a65ad7629d6d7ec00">signals::duckdb_read_signal_metadata</a> (duckdb_connection conn, <a class="el" href="classsignals_1_1_signal_header.html">SignalHeader</a> &amp;metadata)</td></tr>
+<tr class="memitem:aef79c9eb3fbfed25afc544f598cb889c" id="r_aef79c9eb3fbfed25afc544f598cb889c"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="namespacesignals.html#aef79c9eb3fbfed25afc544f598cb889c">signals::open_and_set_config</a> (duckdb_config &amp;config, const std::filesystem::path &amp;duckdb_path, duckdb_database &amp;db, <a class="el" href="structsignals_1_1_bin_reader.html">signals::BinReader</a> &amp;reader, duckdb_connection &amp;conn)</td></tr>
+<tr class="memitem:ae084afcf197377810674f56982606b98" id="r_ae084afcf197377810674f56982606b98"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="namespacesignals.html#ae084afcf197377810674f56982606b98">signals::transfer_chunk_to_channel_data</a> (duckdb_data_chunk &amp;chunk, duckdb_result &amp;res, <a class="el" href="classsignals_1_1_signal_data.html">signals::SignalData</a> &amp;data, duckdb_prepared_statement &amp;stmt, int64_t &amp;offset, const int64_t points_to_read)</td></tr>
+<tr class="memitem:ga361fc7bd1572773949a5441e2be49a16" id="r_ga361fc7bd1572773949a5441e2be49a16"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="group__duckdb__converter.html#ga361fc7bd1572773949a5441e2be49a16">signals::create_db_schema</a> (duckdb_connection conn, <a class="el" href="classsignals_1_1_signal_header.html">SignalHeader</a> &amp;header)</td></tr>
+<tr class="memdesc:ga361fc7bd1572773949a5441e2be49a16"><td class="mdescLeft">&#160;</td><td class="mdescRight">Создаёт схему таблиц DuckDB для хранения сигнала.  <br /></td></tr>
+<tr class="memitem:ae1372e205df2636cbbca716980fcc324" id="r_ae1372e205df2636cbbca716980fcc324"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="namespacesignals.html#ae1372e205df2636cbbca716980fcc324">signals::duckdb_read_signal_data_like_stream_conn</a> (duckdb_connection conn, <a class="el" href="classsignals_1_1_signal_data.html">SignalData</a> &amp;data, int64_t point_off, int64_t point_cnt)</td></tr>
+<tr class="memitem:ga2514c876d8aecb73269525c39e70c3e8" id="r_ga2514c876d8aecb73269525c39e70c3e8"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="group__duckdb__converter.html#ga2514c876d8aecb73269525c39e70c3e8">signals::duckdb_read_signal_data_like_stream</a> (const std::filesystem::path &amp;duckdb_path, <a class="el" href="classsignals_1_1_signal_data.html">SignalData</a> &amp;data, int64_t point_off, int64_t point_cnt)</td></tr>
+<tr class="memdesc:ga2514c876d8aecb73269525c39e70c3e8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Потоково читает диапазон точек из DuckDB через соединение.  <br /></td></tr>
+<tr class="memitem:a137be4478776f05eca946eae5b73be48" id="r_a137be4478776f05eca946eae5b73be48"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="namespacesignals.html#a137be4478776f05eca946eae5b73be48">signals::duckdb_write_signal_data_chunked</a> (const std::filesystem::path &amp;bin_path, const std::filesystem::path &amp;duckdb_path, int64_t point_off, int64_t point_cnt, int64_t chunk_points, int64_t commit_every_n_points)</td></tr>
+<tr class="memitem:ga594b260820055430e7e623ff8a5d9255" id="r_ga594b260820055430e7e623ff8a5d9255"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="group__duckdb__converter.html#ga594b260820055430e7e623ff8a5d9255">signals::duckdb_write_signal_data_like_stream</a> (const std::filesystem::path &amp;bin_path, const std::filesystem::path &amp;duckdb_path, int64_t point_off, int64_t point_cnt, int64_t chunk_points=<a class="el" href="namespacesignals.html#a0449808e5c73bff5d901f795c123a6ec">DEFAULT_DUCKDB_CHUNK_POINTS</a>, int64_t commit_every_n_points=<a class="el" href="namespacesignals.html#ad71900a6c92981cc05bb06be4940d1c3">DEFAULT_DUCKDB_COMMIT_POINTS</a>)</td></tr>
+<tr class="memdesc:ga594b260820055430e7e623ff8a5d9255"><td class="mdescLeft">&#160;</td><td class="mdescRight">Потоково записывает диапазон точек в DuckDB через filepath с периодическими commit.  <br /></td></tr>
+<tr class="memitem:a68cc541e60cb06c67696a6633d160b98" id="r_a68cc541e60cb06c67696a6633d160b98"><td class="memItemLeft">static std::string&#160;</td><td class="memItemRight"><a class="el" href="namespacesignals.html#a68cc541e60cb06c67696a6633d160b98">signals::generate_format_version</a> ()</td></tr>
+<tr class="memitem:ac338801ea89e13e267cc122f4d4b2498" id="r_ac338801ea89e13e267cc122f4d4b2498"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="namespacesignals.html#ac338801ea89e13e267cc122f4d4b2498">signals::process_column</a> (duckdb_vector vec, int32_t *target, size_t chunk_size)</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-var-members" class="groupheader"><a id="var-members" name="var-members"></a>
+Переменные</h2></td></tr>
+<tr class="memitem:af308058a020f699e62d7b5ba9ca76deb" id="r_af308058a020f699e62d7b5ba9ca76deb"><td class="memItemLeft">static constexpr int&#160;</td><td class="memItemRight"><a class="el" href="namespacesignals.html#af308058a020f699e62d7b5ba9ca76deb">signals::DUCKDB_SCHEMA_MAJOR</a> = 1</td></tr>
+<tr class="memitem:a6ebcd561ec9593226d7a7ca9c3299db5" id="r_a6ebcd561ec9593226d7a7ca9c3299db5"><td class="memItemLeft">static constexpr int&#160;</td><td class="memItemRight"><a class="el" href="namespacesignals.html#a6ebcd561ec9593226d7a7ca9c3299db5">signals::DUCKDB_SCHEMA_MINOR</a> = 0</td></tr>
+<tr class="memitem:ab08d201f5e448e3747661e33a32eb275" id="r_ab08d201f5e448e3747661e33a32eb275"><td class="memItemLeft">static constexpr int&#160;</td><td class="memItemRight"><a class="el" href="namespacesignals.html#ab08d201f5e448e3747661e33a32eb275">signals::DUCKDB_SCHEMA_PATCH</a> = 0</td></tr>
+</table>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_7374381ecdb819c64ee9b6ea2bd3370d.html">internal</a></li><li class="navelem"><a href="dir_fe8386552dac28b8761396fc0503a984.html">duckdb</a></li><li class="navelem"><a href="duckdb__converter_8cpp.html">duckdb_converter.cpp</a></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.16.1 </li>
+  </ul>
+</div>
+</body>
+</html>

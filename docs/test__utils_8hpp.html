@@ -1,0 +1,221 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.16.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Signal Test Converters: Файл internal/common/test_utils.hpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Signal Test Converters
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.16.1 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Поиск',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('test__utils_8hpp.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Файл test_utils.hpp</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Вспомогательные методы для тестов, валидации и вывода данных.  
+<a href="#details">Подробнее...</a></p>
+<div class="textblock"><code>#include &quot;<a class="el" href="bin__reader_8hpp_source.html">../bin/bin_reader.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="signal__common_8hpp_source.html">../common/signal_common.hpp</a>&quot;</code><br />
+<code>#include &lt;chrono&gt;</code><br />
+<code>#include &lt;filesystem&gt;</code><br />
+<code>#include &lt;functional&gt;</code><br />
+<code>#include &lt;string&gt;</code><br />
+<code>#include &lt;vector&gt;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Граф включаемых заголовочных файлов для test_utils.hpp:</div>
+<div class="dyncontent">
+<div class="center"><img src="test__utils_8hpp__incl.png" border="0" usemap="#ainternal_2common_2test__utils_8hpp" loading="lazy" alt=""/></div>
+</div>
+</div><div class="textblock"><div class="dynheader">
+Граф файлов, в которые включается этот файл:</div>
+<div class="dyncontent">
+<div class="center"><img src="test__utils_8hpp__dep__incl.png" border="0" usemap="#ainternal_2common_2test__utils_8hppdep" loading="lazy" alt=""/></div>
+</div>
+</div>
+<p><a href="test__utils_8hpp_source.html">См. исходные тексты.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-namespaces" class="groupheader"><a id="namespaces" name="namespaces"></a>
+Пространства имен</h2></td></tr>
+<tr class="memitem:signals" id="r_signals"><td class="memItemLeft">namespace &#160;</td><td class="memItemRight"><a class="el" href="namespacesignals.html">signals</a></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
+Функции</h2></td></tr>
+<tr class="memitem:ga002dece84fa9ae9969687bcfb178af16" id="r_ga002dece84fa9ae9969687bcfb178af16"><td class="memItemLeft">double&#160;</td><td class="memItemRight"><a class="el" href="group__test__utils.html#ga002dece84fa9ae9969687bcfb178af16">signals::test_serial_chunk_reading</a> (const std::function&lt; void(const std::filesystem::path &amp;, <a class="el" href="classsignals_1_1_signal_data.html">SignalData</a> &amp;, int64_t, int64_t)&gt; &amp;read_signal, const std::filesystem::path &amp;source_path, const <a class="el" href="classsignals_1_1_signal_data.html">SignalData</a> &amp;reference, int64_t chunk_points)</td></tr>
+<tr class="memdesc:ga002dece84fa9ae9969687bcfb178af16"><td class="mdescLeft">&#160;</td><td class="mdescRight">Тест последовательного чтения диапазона чанками.  <br /></td></tr>
+<tr class="memitem:gaa09de34aa31f12f3bc81ae37e6181c4a" id="r_gaa09de34aa31f12f3bc81ae37e6181c4a"><td class="memItemLeft">double&#160;</td><td class="memItemRight"><a class="el" href="group__test__utils.html#gaa09de34aa31f12f3bc81ae37e6181c4a">signals::test_random_chunk_reading</a> (const std::function&lt; void(const std::filesystem::path &amp;, <a class="el" href="classsignals_1_1_signal_data.html">SignalData</a> &amp;, int64_t, int64_t)&gt; &amp;read_signal, const std::filesystem::path &amp;source_path, const <a class="el" href="classsignals_1_1_signal_data.html">SignalData</a> &amp;reference, int64_t chunk_points)</td></tr>
+<tr class="memdesc:gaa09de34aa31f12f3bc81ae37e6181c4a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Тест чтения чанков в случайном порядке.  <br /></td></tr>
+<tr class="memitem:ga6f442e7b1e92faa55787adf80826936f" id="r_ga6f442e7b1e92faa55787adf80826936f"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="group__test__utils.html#ga6f442e7b1e92faa55787adf80826936f">signals::validate_serial_chunk_reading</a> (const std::function&lt; void(const std::filesystem::path &amp;, <a class="el" href="classsignals_1_1_signal_data.html">SignalData</a> &amp;, int64_t, int64_t)&gt; &amp;read_signal, const std::filesystem::path &amp;source_path, const <a class="el" href="classsignals_1_1_signal_data.html">SignalData</a> &amp;reference, int64_t chunk_points)</td></tr>
+<tr class="memdesc:ga6f442e7b1e92faa55787adf80826936f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Проверяет корректность последовательного чтения чанков.  <br /></td></tr>
+<tr class="memitem:ga4309c17a6f3dddadcc45ee0408670afc" id="r_ga4309c17a6f3dddadcc45ee0408670afc"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="group__test__utils.html#ga4309c17a6f3dddadcc45ee0408670afc">signals::validate_random_chunk_reading</a> (const std::function&lt; void(const std::filesystem::path &amp;, <a class="el" href="classsignals_1_1_signal_data.html">SignalData</a> &amp;, int64_t, int64_t)&gt; &amp;read_signal, const std::filesystem::path &amp;source_path, const <a class="el" href="classsignals_1_1_signal_data.html">SignalData</a> &amp;reference, int64_t chunk_points)</td></tr>
+<tr class="memdesc:ga4309c17a6f3dddadcc45ee0408670afc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Проверяет корректность чтения чанков в случайном порядке.  <br /></td></tr>
+<tr class="memitem:gaabc783a10033d1edfbe124857a332381" id="r_gaabc783a10033d1edfbe124857a332381"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="group__test__utils.html#gaabc783a10033d1edfbe124857a332381">signals::test_serial_chunk_reading_val</a> (const std::function&lt; void(const std::filesystem::path &amp;, <a class="el" href="classsignals_1_1_signal_data.html">SignalData</a> &amp;, int64_t, int64_t)&gt; &amp;read_signal, const std::filesystem::path &amp;source_path, const <a class="el" href="classsignals_1_1_signal_data.html">SignalData</a> &amp;original_data, int64_t chunk_points)</td></tr>
+<tr class="memdesc:gaabc783a10033d1edfbe124857a332381"><td class="mdescLeft">&#160;</td><td class="mdescRight">Запускает тест последовательного чтения и выводит статистику.  <br /></td></tr>
+<tr class="memitem:gaa6d78e3540958f2ac783e9223c195168" id="r_gaa6d78e3540958f2ac783e9223c195168"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="group__test__utils.html#gaa6d78e3540958f2ac783e9223c195168">signals::test_random_chunk_reading_val</a> (const std::function&lt; void(const std::filesystem::path &amp;, <a class="el" href="classsignals_1_1_signal_data.html">SignalData</a> &amp;, int64_t, int64_t)&gt; &amp;read_signal, const std::filesystem::path &amp;source_path, const <a class="el" href="classsignals_1_1_signal_data.html">SignalData</a> &amp;original_data, int64_t chunk_points)</td></tr>
+<tr class="memdesc:gaa6d78e3540958f2ac783e9223c195168"><td class="mdescLeft">&#160;</td><td class="mdescRight">Запускает тест случайного чтения и выводит статистику.  <br /></td></tr>
+<tr class="memitem:ga9177d33fdd0f5ea5ac0e295a5f701d78" id="r_ga9177d33fdd0f5ea5ac0e295a5f701d78"><td class="memItemLeft">double&#160;</td><td class="memItemRight"><a class="el" href="group__test__utils.html#ga9177d33fdd0f5ea5ac0e295a5f701d78">signals::lead_time</a> (const std::function&lt; void()&gt; &amp;fn)</td></tr>
+<tr class="memdesc:ga9177d33fdd0f5ea5ac0e295a5f701d78"><td class="mdescLeft">&#160;</td><td class="mdescRight">Измеряет время выполнения произвольной функции.  <br /></td></tr>
+<tr class="memitem:gab5a2185a87f0b5bf47e2d63318631c33" id="r_gab5a2185a87f0b5bf47e2d63318631c33"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="group__test__utils.html#gab5a2185a87f0b5bf47e2d63318631c33">signals::print_first_rows</a> (const <a class="el" href="classsignals_1_1_signal_data.html">SignalData</a> &amp;data, int64_t preview_points=<a class="el" href="test__utils_8cpp.html#a619e5bf8722bd84fc200a18f0cf7e639">TEST_UTILS_PREVIEW_POINTS</a>)</td></tr>
+<tr class="memdesc:gab5a2185a87f0b5bf47e2d63318631c33"><td class="mdescLeft">&#160;</td><td class="mdescRight">Выводит первые и последние строки <a class="el" href="classsignals_1_1_signal_data.html" title="Данные и метаданные (данные из .hdr и .bin, данные в double).">SignalData</a>.  <br /></td></tr>
+<tr class="memitem:ga0b867882282f377ff650efd04e460f49" id="r_ga0b867882282f377ff650efd04e460f49"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="group__test__utils.html#ga0b867882282f377ff650efd04e460f49">signals::compare_signal_data</a> (const <a class="el" href="classsignals_1_1_signal_data.html">SignalData</a> &amp;expected, const <a class="el" href="classsignals_1_1_signal_data.html">SignalData</a> &amp;actual, const char *label)</td></tr>
+<tr class="memdesc:ga0b867882282f377ff650efd04e460f49"><td class="mdescLeft">&#160;</td><td class="mdescRight">Сравнивает два набора сигналов по размеру, диапазону и значениям.  <br /></td></tr>
+<tr class="memitem:ga9031447ea6d8038c5e22381c040857bd" id="r_ga9031447ea6d8038c5e22381c040857bd"><td class="memItemLeft"><a class="el" href="classsignals_1_1_signal_data.html">SignalData</a>&#160;</td><td class="memItemRight"><a class="el" href="group__test__utils.html#ga9031447ea6d8038c5e22381c040857bd">signals::load_reference</a> (const std::filesystem::path &amp;source_path, int64_t point_offset=0, int64_t point_count=-1)</td></tr>
+<tr class="memdesc:ga9031447ea6d8038c5e22381c040857bd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Загружает исходные данные из bin через bin_read.  <br /></td></tr>
+<tr class="memitem:ga098dc20f2c0109243fc4196e193ba292" id="r_ga098dc20f2c0109243fc4196e193ba292"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="group__test__utils.html#ga098dc20f2c0109243fc4196e193ba292">signals::print_file_info</a> (const std::filesystem::path &amp;path, const <a class="el" href="classsignals_1_1_signal_data.html">SignalData</a> &amp;data, double read_time)</td></tr>
+<tr class="memdesc:ga098dc20f2c0109243fc4196e193ba292"><td class="mdescLeft">&#160;</td><td class="mdescRight">Выводит информацию по исходным .bin/.hdr файлам и считанным данным.  <br /></td></tr>
+<tr class="memitem:gac538c68b5a04ea811a82ff679376bd93" id="r_gac538c68b5a04ea811a82ff679376bd93"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="group__test__utils.html#gac538c68b5a04ea811a82ff679376bd93">signals::print_conversion_results</a> (const std::string &amp;format_name, double write_time, size_t output_size_bytes, double read_time, const <a class="el" href="classsignals_1_1_signal_data.html">SignalData</a> &amp;data, size_t original_total_size)</td></tr>
+<tr class="memdesc:gac538c68b5a04ea811a82ff679376bd93"><td class="mdescLeft">&#160;</td><td class="mdescRight">Выводит результаты записи/чтения конвертированного формата.  <br /></td></tr>
+<tr class="memitem:gae86aaff88ef0aabf646892d9867aad15" id="r_gae86aaff88ef0aabf646892d9867aad15"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="group__test__utils.html#gae86aaff88ef0aabf646892d9867aad15">signals::try_parse_int64</a> (const char *text, int64_t &amp;value)</td></tr>
+<tr class="memdesc:gae86aaff88ef0aabf646892d9867aad15"><td class="mdescLeft">&#160;</td><td class="mdescRight">Парсит строку в int64.  <br /></td></tr>
+<tr class="memitem:a7c849ba8b5a26873527649fd4ef9dd0f" id="r_a7c849ba8b5a26873527649fd4ef9dd0f"><td class="memItemLeft">std::filesystem::path&#160;</td><td class="memItemRight"><a class="el" href="namespacesignals.html#a7c849ba8b5a26873527649fd4ef9dd0f">signals::test_signal_base_path</a> (const char *test_name)</td></tr>
+<tr class="memdesc:a7c849ba8b5a26873527649fd4ef9dd0f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Предоставляет базовый путь для тестовых сигналов.  <br /></td></tr>
+<tr class="memitem:aacf3adfcaeb2a06d7ead95f232da7e52" id="r_aacf3adfcaeb2a06d7ead95f232da7e52"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="namespacesignals.html#aacf3adfcaeb2a06d7ead95f232da7e52">signals::create_test_signal_files</a> (const std::filesystem::path &amp;base_path)</td></tr>
+<tr class="memdesc:aacf3adfcaeb2a06d7ead95f232da7e52"><td class="mdescLeft">&#160;</td><td class="mdescRight">Создает и заполняет тестовые .hdr и .bin файлы для заданного базового пути.  <br /></td></tr>
+<tr class="memitem:a928a3078437f99b089a1cd9e8af91ddc" id="r_a928a3078437f99b089a1cd9e8af91ddc"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="namespacesignals.html#a928a3078437f99b089a1cd9e8af91ddc">signals::validate_test_signal_header</a> (const <a class="el" href="classsignals_1_1_signal_header.html">SignalHeader</a> &amp;header)</td></tr>
+<tr class="memdesc:a928a3078437f99b089a1cd9e8af91ddc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Проверяет корректность заголовочного файла (hdr) тестового сигнала.  <br /></td></tr>
+<tr class="memitem:ac4533bc7281e1df2acf4020a1660ab3d" id="r_ac4533bc7281e1df2acf4020a1660ab3d"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="namespacesignals.html#ac4533bc7281e1df2acf4020a1660ab3d">signals::validate_test_signal_data</a> (const <a class="el" href="classsignals_1_1_signal_data.html">SignalData</a> &amp;data, int64_t first_point, int64_t point_count)</td></tr>
+<tr class="memdesc:ac4533bc7281e1df2acf4020a1660ab3d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Проверяет корректность данных тестового сигнала.  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-var-members" class="groupheader"><a id="var-members" name="var-members"></a>
+Переменные</h2></td></tr>
+<tr class="memitem:a619e5bf8722bd84fc200a18f0cf7e639" id="r_a619e5bf8722bd84fc200a18f0cf7e639"><td class="memItemLeft">const int64_t&#160;</td><td class="memItemRight"><a class="el" href="#a619e5bf8722bd84fc200a18f0cf7e639">TEST_UTILS_PREVIEW_POINTS</a></td></tr>
+<tr class="memdesc:a619e5bf8722bd84fc200a18f0cf7e639"><td class="mdescLeft">&#160;</td><td class="mdescRight">Количество строк для предпросмотра в print_first_rows.  <br /></td></tr>
+<tr class="memitem:aa58b6522a425505f48ec91250da84b2e" id="r_aa58b6522a425505f48ec91250da84b2e"><td class="memItemLeft">constexpr int&#160;</td><td class="memItemRight"><a class="el" href="namespacesignals.html#aa58b6522a425505f48ec91250da84b2e">signals::TEST_SIGNAL_CHANNELS</a> = 8</td></tr>
+<tr class="memitem:a7fe318014ca6934090cf56a68afea481" id="r_a7fe318014ca6934090cf56a68afea481"><td class="memItemLeft">constexpr int64_t&#160;</td><td class="memItemRight"><a class="el" href="namespacesignals.html#a7fe318014ca6934090cf56a68afea481">signals::TEST_SIGNAL_POINTS</a> = 100</td></tr>
+<tr class="memitem:a46d5ad46ca75f332fdb2bce0659a5ec3" id="r_a46d5ad46ca75f332fdb2bce0659a5ec3"><td class="memItemLeft">constexpr double&#160;</td><td class="memItemRight"><a class="el" href="namespacesignals.html#a46d5ad46ca75f332fdb2bce0659a5ec3">signals::TEST_SIGNAL_FREQUENCY</a> = 250.0</td></tr>
+<tr class="memitem:a48420da6d93eabe3e0b880a7401484de" id="r_a48420da6d93eabe3e0b880a7401484de"><td class="memItemLeft">constexpr double&#160;</td><td class="memItemRight"><a class="el" href="namespacesignals.html#a48420da6d93eabe3e0b880a7401484de">signals::TEST_SIGNAL_LSB</a> = 2.29885</td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Подробное описание</h2>
+<div class="textblock"><p>Вспомогательные методы для тестов, валидации и вывода данных. </p>
+<p>Содержит методы для:</p><ul>
+<li>последовательного и случайного чтения;</li>
+<li>проверки корректности чтения данных;</li>
+<li>замера времени и вывода статистики. </li>
+</ul>
+
+<p class="definition">См. определение в файле <a class="el" href="test__utils_8hpp_source.html">test_utils.hpp</a></p>
+</div><a name="doc-var-members" id="doc-var-members"></a><h2 id="header-doc-var-members" class="groupheader">Переменные</h2>
+<a id="a619e5bf8722bd84fc200a18f0cf7e639" name="a619e5bf8722bd84fc200a18f0cf7e639"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a619e5bf8722bd84fc200a18f0cf7e639">&#9670;&#160;</a></span>TEST_UTILS_PREVIEW_POINTS</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const int64_t TEST_UTILS_PREVIEW_POINTS</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel extern">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Количество строк для предпросмотра в print_first_rows. </p>
+
+<p class="definition">См. определение в файле <a class="el" href="test__utils_8cpp_source.html">test_utils.cpp</a> строка <a class="el" href="test__utils_8cpp_source.html#l00018">18</a></p>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_7374381ecdb819c64ee9b6ea2bd3370d.html">internal</a></li><li class="navelem"><a href="dir_606840a963236321efb37be2559de8df.html">common</a></li><li class="navelem"><a href="test__utils_8hpp.html">test_utils.hpp</a></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.16.1 </li>
+  </ul>
+</div>
+</body>
+</html>

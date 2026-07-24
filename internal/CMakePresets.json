@@ -1,0 +1,68 @@
+{
+    "version": 3,
+    "cmakeMinimumRequired": {
+        "major": 3,
+        "minor": 21,
+        "patch": 0
+    },
+    "configurePresets": [
+        {
+            "name": "vcpkg",
+            "displayName": "internal vcpkg Release",
+            "description": "Configure internal tests and runners with vcpkg dependencies.",
+            "generator": "Ninja",
+            "binaryDir": "${sourceDir}/../build/internal-${presetName}",
+            "cacheVariables": {
+                "CMAKE_BUILD_TYPE": "Release",
+                "CMAKE_TOOLCHAIN_FILE": "$env{VCPKG_ROOT}/scripts/buildsystems/vcpkg.cmake"
+            }
+        },
+        {
+            "name": "vcpkg-debug",
+            "displayName": "internal vcpkg Debug",
+            "description": "Configure internal tests and runners in Debug with vcpkg dependencies.",
+            "generator": "Ninja",
+            "binaryDir": "${sourceDir}/../build/internal-${presetName}",
+            "cacheVariables": {
+                "CMAKE_BUILD_TYPE": "Debug",
+                "CMAKE_TOOLCHAIN_FILE": "$env{VCPKG_ROOT}/scripts/buildsystems/vcpkg.cmake"
+            }
+        },
+        {
+            "name": "Configure preset using toolchain file",
+            "displayName": "Configure preset using toolchain file",
+            "description": "Sets Ninja generator, build and install directory",
+            "generator": "Ninja",
+            "binaryDir": "${sourceDir}/out/build/${presetName}",
+            "cacheVariables": {
+                "CMAKE_BUILD_TYPE": "Debug",
+                "CMAKE_TOOLCHAIN_FILE": "",
+                "CMAKE_INSTALL_PREFIX": "${sourceDir}/out/install/${presetName}"
+            }
+        }
+    ],
+    "buildPresets": [
+        {
+            "name": "vcpkg",
+            "configurePreset": "vcpkg",
+            "configuration": "Release"
+        },
+        {
+            "name": "vcpkg-debug",
+            "configurePreset": "vcpkg-debug",
+            "configuration": "Debug"
+        }
+    ],
+    "testPresets": [
+        {
+            "name": "vcpkg",
+            "configurePreset": "vcpkg",
+            "configuration": "Release"
+        },
+        {
+            "name": "vcpkg-debug",
+            "configurePreset": "vcpkg-debug",
+            "configuration": "Debug"
+        }
+    ]
+}

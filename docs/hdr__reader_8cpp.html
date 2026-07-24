@@ -1,0 +1,142 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.16.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Signal Test Converters: Файл internal/hdr/hdr_reader.cpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Signal Test Converters
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.16.1 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Поиск',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('hdr__reader_8cpp.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Файл hdr_reader.cpp</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;<a class="el" href="hdr__reader_8hpp_source.html">hdr_reader.hpp</a>&quot;</code><br />
+<code>#include &lt;cerrno&gt;</code><br />
+<code>#include &lt;iostream&gt;</code><br />
+<code>#include &lt;system_error&gt;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Граф включаемых заголовочных файлов для hdr_reader.cpp:</div>
+<div class="dyncontent">
+<div class="center"><img src="hdr__reader_8cpp__incl.png" border="0" usemap="#ainternal_2hdr_2hdr__reader_8cpp" loading="lazy" alt=""/></div>
+</div>
+</div>
+<p><a href="hdr__reader_8cpp_source.html">См. исходные тексты.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-namespaces" class="groupheader"><a id="namespaces" name="namespaces"></a>
+Пространства имен</h2></td></tr>
+<tr class="memitem:signals" id="r_signals"><td class="memItemLeft">namespace &#160;</td><td class="memItemRight"><a class="el" href="namespacesignals.html">signals</a></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
+Функции</h2></td></tr>
+<tr class="memitem:a2fd40997b1ae31673251dce9e1441d54" id="r_a2fd40997b1ae31673251dce9e1441d54"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="namespacesignals.html#a2fd40997b1ae31673251dce9e1441d54">signals::bom_skip</a> (std::ifstream &amp;file)</td></tr>
+<tr class="memitem:a8ffc1ae36e949eba898cfe9117b98b9d" id="r_a8ffc1ae36e949eba898cfe9117b98b9d"><td class="memItemLeft">static std::vector&lt; std::string &gt;&#160;</td><td class="memItemRight"><a class="el" href="namespacesignals.html#a8ffc1ae36e949eba898cfe9117b98b9d">signals::split_line</a> (const std::string &amp;line)</td></tr>
+<tr class="memitem:aaaff7891051571b016a43ac927991930" id="r_aaaff7891051571b016a43ac927991930"><td class="memItemLeft">static std::vector&lt; std::string &gt;&#160;</td><td class="memItemRight"><a class="el" href="namespacesignals.html#aaaff7891051571b016a43ac927991930">signals::read_data_line</a> (std::istream &amp;in)</td></tr>
+<tr class="memitem:ac3ca0c0b5d1d46bd35ddbf49b3cd1915" id="r_ac3ca0c0b5d1d46bd35ddbf49b3cd1915"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="namespacesignals.html#ac3ca0c0b5d1d46bd35ddbf49b3cd1915">signals::parse_numchan_fs_lsb</a> (std::ifstream &amp;file, <a class="el" href="classsignals_1_1_signal_header.html">SignalHeader</a> &amp;header)</td></tr>
+<tr class="memitem:a7df4a96f64c0e0e6777b1d3e9bd8c627" id="r_a7df4a96f64c0e0e6777b1d3e9bd8c627"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="namespacesignals.html#a7df4a96f64c0e0e6777b1d3e9bd8c627">signals::parse_range_timestamp</a> (std::ifstream &amp;file, <a class="el" href="classsignals_1_1_signal_header.html">SignalHeader</a> &amp;header)</td></tr>
+<tr class="memitem:acbfa9a79f0402a22faf20f9b9a0309df" id="r_acbfa9a79f0402a22faf20f9b9a0309df"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="namespacesignals.html#acbfa9a79f0402a22faf20f9b9a0309df">signals::parse_channel_names</a> (std::ifstream &amp;file, <a class="el" href="classsignals_1_1_signal_header.html">SignalHeader</a> &amp;header)</td></tr>
+<tr class="memitem:a2114ebea035bd3ec2c9a72765a8c33ac" id="r_a2114ebea035bd3ec2c9a72765a8c33ac"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="namespacesignals.html#a2114ebea035bd3ec2c9a72765a8c33ac">signals::parse_lsbs</a> (std::ifstream &amp;file, <a class="el" href="classsignals_1_1_signal_header.html">SignalHeader</a> &amp;header)</td></tr>
+<tr class="memitem:afc77c8daad015ab96496aace08fe631f" id="r_afc77c8daad015ab96496aace08fe631f"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="namespacesignals.html#afc77c8daad015ab96496aace08fe631f">signals::parse_units</a> (std::ifstream &amp;file, <a class="el" href="classsignals_1_1_signal_header.html">SignalHeader</a> &amp;header)</td></tr>
+<tr class="memitem:a5e04e5eef1ef5ea82f348b19f17fb56c" id="r_a5e04e5eef1ef5ea82f348b19f17fb56c"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="namespacesignals.html#a5e04e5eef1ef5ea82f348b19f17fb56c">signals::parse_optional_params</a> (std::ifstream &amp;file, <a class="el" href="classsignals_1_1_signal_header.html">SignalHeader</a> &amp;header)</td></tr>
+<tr class="memitem:a140f30c51aadb96e6c69e812fe102bf3" id="r_a140f30c51aadb96e6c69e812fe102bf3"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="namespacesignals.html#a140f30c51aadb96e6c69e812fe102bf3">signals::hdr_read</a> (const std::filesystem::path &amp;bin_path, <a class="el" href="classsignals_1_1_signal_header.html">SignalHeader</a> &amp;header)</td></tr>
+<tr class="memdesc:a140f30c51aadb96e6c69e812fe102bf3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Читает .hdr и заполняет структуру метаданных сигнала.  <br /></td></tr>
+</table>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_7374381ecdb819c64ee9b6ea2bd3370d.html">internal</a></li><li class="navelem"><a href="dir_4207c75294deb79fad674a88cdf96f2d.html">hdr</a></li><li class="navelem"><a href="hdr__reader_8cpp.html">hdr_reader.cpp</a></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.16.1 </li>
+  </ul>
+</div>
+</body>
+</html>

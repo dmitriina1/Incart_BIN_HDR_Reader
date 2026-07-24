@@ -1,0 +1,149 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.16.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Signal Test Converters: Исходный файл internal/hdf5/hdf5_converter.hpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Signal Test Converters
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.16.1 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Поиск',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('hdf5__converter_8hpp_source.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">hdf5_converter.hpp</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="hdf5__converter_8hpp.html">См. документацию.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &quot;<a class="code" href="bin__reader_8hpp.html">../bin/bin_reader.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &quot;<a class="code" href="signal__common_8hpp.html">../common/signal_common.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &quot;<a class="code" href="hdr__reader_8hpp.html">../hdr/hdr_reader.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span> </div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &lt;H5Cpp.h&gt;</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &lt;algorithm&gt;</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &lt;cstdio&gt;</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#include &lt;filesystem&gt;</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#include &lt;iostream&gt;</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#include &lt;stdexcept&gt;</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span></div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacesignals.html">signals</a> {</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    <span class="keywordtype">void</span> *<a class="code hl_function" href="group__hdf5__converter.html#gaa41a46324af49a6e33c5d190942d2513">hdf5_open</a>(<span class="keyword">const</span> std::filesystem::path &amp;hdf5_path);</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span></div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="group__hdf5__converter.html#ga4469342a4de51b740895f7ea726825b8">hdf5_close</a>(<span class="keywordtype">void</span> *&amp;reader_handle);</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span></div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="group__hdf5__converter.html#ga89de9f55b7386a8192b1fd3c3f917b98">hdf5_read_signal_data_like_stream</a>(<span class="keywordtype">void</span> *reader_handle, <a class="code hl_class" href="classsignals_1_1_signal_data.html">SignalData</a> &amp;data, int64_t point_off,</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>                                           int64_t point_cnt, int64_t chunk_points);</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span></div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="group__hdf5__converter.html#gabde096e8626c40139bab33c18102eea1">hdf5_write_signals_data</a>(<span class="keyword">const</span> std::filesystem::path &amp;bin_path,</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>                                 <span class="keyword">const</span> std::filesystem::path &amp;hdf5_path, int64_t point_off,</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>                                 int64_t point_cnt);</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span></div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="group__hdf5__converter.html#ga89de9f55b7386a8192b1fd3c3f917b98">hdf5_read_signal_data_like_stream</a>(<span class="keyword">const</span> H5::H5File &amp;file, <a class="code hl_class" href="classsignals_1_1_signal_data.html">SignalData</a> &amp;data,</div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>                                           int64_t point_off, int64_t point_cnt,</div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>                                           int64_t chunk_points);</div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span></div>
+<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="group__hdf5__converter.html#ga89de9f55b7386a8192b1fd3c3f917b98">hdf5_read_signal_data_like_stream</a>(<span class="keyword">const</span> std::filesystem::path &amp;hdf5_path, <a class="code hl_class" href="classsignals_1_1_signal_data.html">SignalData</a> &amp;data,</div>
+<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span>                                           int64_t point_off, int64_t point_cnt,</div>
+<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span>                                           int64_t chunk_points);</div>
+<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span>} <span class="comment">// namespace signals</span></div>
+<div class="ttc" id="abin__reader_8hpp_html"><div class="ttname"><a href="bin__reader_8hpp.html">bin_reader.hpp</a></div><div class="ttdoc">Чтение сигналов из файлов .hdr/.bin.</div></div>
+<div class="ttc" id="aclasssignals_1_1_signal_data_html"><div class="ttname"><a href="classsignals_1_1_signal_data.html">signals::SignalData</a></div><div class="ttdoc">Данные и метаданные (данные из .hdr и .bin, данные в double).</div><div class="ttdef"><b>Определения</b> <a href="signal__common_8hpp_source.html#l00062">signal_common.hpp:62</a></div></div>
+<div class="ttc" id="agroup__hdf5__converter_html_ga4469342a4de51b740895f7ea726825b8"><div class="ttname"><a href="group__hdf5__converter.html#ga4469342a4de51b740895f7ea726825b8">signals::hdf5_close</a></div><div class="ttdeci">void hdf5_close(void *&amp;reader_handle)</div><div class="ttdoc">Закрывает ранее открытый HDF5-handle.</div><div class="ttdef"><b>Определения</b> <a href="hdf5__converter_8cpp_source.html#l00031">hdf5_converter.cpp:31</a></div></div>
+<div class="ttc" id="agroup__hdf5__converter_html_ga89de9f55b7386a8192b1fd3c3f917b98"><div class="ttname"><a href="group__hdf5__converter.html#ga89de9f55b7386a8192b1fd3c3f917b98">signals::hdf5_read_signal_data_like_stream</a></div><div class="ttdeci">void hdf5_read_signal_data_like_stream(void *reader_handle, SignalData &amp;data, int64_t point_off, int64_t point_cnt, int64_t chunk_points)</div><div class="ttdoc">Потоково читает диапазон точек через ранее открытый handle.</div><div class="ttdef"><b>Определения</b> <a href="hdf5__converter_8cpp_source.html#l00042">hdf5_converter.cpp:42</a></div></div>
+<div class="ttc" id="agroup__hdf5__converter_html_gaa41a46324af49a6e33c5d190942d2513"><div class="ttname"><a href="group__hdf5__converter.html#gaa41a46324af49a6e33c5d190942d2513">signals::hdf5_open</a></div><div class="ttdeci">void * hdf5_open(const std::filesystem::path &amp;hdf5_path)</div><div class="ttdoc">Открывает HDF5-файл для потокового чтения.</div><div class="ttdef"><b>Определения</b> <a href="hdf5__converter_8cpp_source.html#l00022">hdf5_converter.cpp:22</a></div></div>
+<div class="ttc" id="agroup__hdf5__converter_html_gabde096e8626c40139bab33c18102eea1"><div class="ttname"><a href="group__hdf5__converter.html#gabde096e8626c40139bab33c18102eea1">signals::hdf5_write_signals_data</a></div><div class="ttdeci">void hdf5_write_signals_data(const std::filesystem::path &amp;bin_path, const std::filesystem::path &amp;hdf5_path, int64_t point_off, int64_t point_cnt)</div><div class="ttdoc">Конвертирует диапазон точек из .bin в HDF5.</div><div class="ttdef"><b>Определения</b> <a href="hdf5__converter_8cpp_source.html#l00202">hdf5_converter.cpp:202</a></div></div>
+<div class="ttc" id="ahdr__reader_8hpp_html"><div class="ttname"><a href="hdr__reader_8hpp.html">hdr_reader.hpp</a></div><div class="ttdoc">Чтение метаданных сигнала из файла .hdr.</div></div>
+<div class="ttc" id="anamespacesignals_html"><div class="ttname"><a href="namespacesignals.html">signals</a></div><div class="ttdef"><b>Определения</b> <a href="bin__reader_8cpp_source.html#l00015">bin_reader.cpp:15</a></div></div>
+<div class="ttc" id="asignal__common_8hpp_html"><div class="ttname"><a href="signal__common_8hpp.html">signal_common.hpp</a></div><div class="ttdoc">Общие структуры и методы для работы с сигналами</div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_7374381ecdb819c64ee9b6ea2bd3370d.html">internal</a></li><li class="navelem"><a href="dir_c7b213aa52000cda36e13e2d6dcd22e4.html">hdf5</a></li><li class="navelem"><a href="hdf5__converter_8hpp.html">hdf5_converter.hpp</a></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.16.1 </li>
+  </ul>
+</div>
+</body>
+</html>

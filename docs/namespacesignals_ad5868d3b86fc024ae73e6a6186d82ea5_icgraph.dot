@@ -1,0 +1,17 @@
+digraph "signals::make_access_props"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname=Helvetica,fontsize=10,labelfontname=Helvetica,labelfontsize=10];
+  node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
+  rankdir="RL";
+  Node1 [id="Node000001",label="signals::make_access\l_props",height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [id="edge1_Node000001_Node000002",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node2 [id="Node000002",label="signals::hdf5_open",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$group__hdf5__converter.html#gaa41a46324af49a6e33c5d190942d2513",tooltip="Открывает HDF5-файл для потокового чтения."];
+  Node2 -> Node3 [id="edge2_Node000002_Node000003",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node3 [id="Node000003",label="signals::hdf5_read\l_signal_data_like_stream",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$group__hdf5__converter.html#ga543fb8bc81c504bd9f41373d375b90d4",tooltip="Потоково читает диапазон точек из HDF5 через filepath."];
+  Node1 -> Node4 [id="edge3_Node000001_Node000004",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node4 [id="Node000004",label="signals::hdf5_write\l_signals_data",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$group__hdf5__converter.html#gabde096e8626c40139bab33c18102eea1",tooltip="Конвертирует диапазон точек из .bin в HDF5."];
+  Node4 -> Node5 [id="edge4_Node000004_Node000005",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node5 [id="Node000005",label="main",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$test__hdf5__converter_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97",tooltip=" "];
+}

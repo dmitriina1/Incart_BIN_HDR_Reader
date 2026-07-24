@@ -1,0 +1,175 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.16.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Signal Test Converters: Исходный файл internal/parquet/parquet_converter.hpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Signal Test Converters
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.16.1 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Поиск',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('parquet__converter_8hpp_source.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">parquet_converter.hpp</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="parquet__converter_8hpp.html">См. документацию.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &quot;<a class="code" href="bin__reader_8hpp.html">../bin/bin_reader.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &quot;<a class="code" href="signal__common_8hpp.html">../common/signal_common.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span> </div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &lt;algorithm&gt;</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &lt;arrow/api.h&gt;</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &lt;arrow/io/api.h&gt;</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &lt;filesystem&gt;</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#include &lt;parquet/arrow/reader.h&gt;</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#include &lt;parquet/arrow/writer.h&gt;</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#include &lt;parquet/properties.h&gt;</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#include &lt;unordered_map&gt;</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span></div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacesignals.html">signals</a> {</div>
+<div class="foldopen" id="foldopen00034" data-start="{" data-end="};">
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno"><a class="line" href="structsignals_1_1_parquet_reader.html">   34</a></span>    <span class="keyword">struct </span><a class="code hl_struct" href="structsignals_1_1_parquet_reader.html">ParquetReader</a> {</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno"><a class="line" href="structsignals_1_1_parquet_reader.html#a124146e28b4079b2c89e65b5c633456b">   35</a></span>        std::shared_ptr&lt;arrow::io::ReadableFile&gt; <a class="code hl_variable" href="structsignals_1_1_parquet_reader.html#a124146e28b4079b2c89e65b5c633456b">file</a>; <span class="comment">//&lt; Открытый parquet-файл.</span></div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>        std::unique_ptr&lt;parquet::arrow::FileReader&gt;</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno"><a class="line" href="structsignals_1_1_parquet_reader.html#ac6c07c60c7908a2311d5fa0534d3d504">   37</a></span>            <a class="code hl_variable" href="structsignals_1_1_parquet_reader.html#ac6c07c60c7908a2311d5fa0534d3d504">reader</a>; <span class="comment">//&lt; Reader для чтения row groups и колонок.</span></div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>        std::unordered_map&lt;int, std::shared_ptr&lt;arrow::Table&gt;&gt;</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno"><a class="line" href="structsignals_1_1_parquet_reader.html#a64103f25b91bdd62e26ea50c03b074b5">   39</a></span>            <a class="code hl_variable" href="structsignals_1_1_parquet_reader.html#a64103f25b91bdd62e26ea50c03b074b5">row_group_cache</a>; <span class="comment">//&lt; Кэш row group: индекс -&gt; таблица.</span></div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>        std::vector&lt;int&gt;</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno"><a class="line" href="structsignals_1_1_parquet_reader.html#a46fd4033c0d2893577804e3e3d0d6701">   41</a></span>            <a class="code hl_variable" href="structsignals_1_1_parquet_reader.html#a46fd4033c0d2893577804e3e3d0d6701">row_group_cache_order</a>; <span class="comment">//&lt; Порядок LRU для управления размером row_group_cache.</span></div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno"><a class="line" href="structsignals_1_1_parquet_reader.html#a3357113a4ae8285265dd66808ccec8e6">   42</a></span>        std::vector&lt;int64_t&gt; <a class="code hl_variable" href="structsignals_1_1_parquet_reader.html#a3357113a4ae8285265dd66808ccec8e6">row_group_first_row</a>; <span class="comment">//&lt; Первая строка каждой row group.</span></div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno"><a class="line" href="structsignals_1_1_parquet_reader.html#a13ffb71e461b23f4ff8e266a42e97283">   43</a></span>        std::vector&lt;int64_t&gt; <a class="code hl_variable" href="structsignals_1_1_parquet_reader.html#a13ffb71e461b23f4ff8e266a42e97283">row_group_row_count</a>; <span class="comment">//&lt; Количество строк в каждой row group.</span></div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno"><a class="line" href="structsignals_1_1_parquet_reader.html#a32d1e7f5383c6c11b05d25fd4b017bfc">   44</a></span>        <span class="keywordtype">int</span> <a class="code hl_variable" href="structsignals_1_1_parquet_reader.html#a32d1e7f5383c6c11b05d25fd4b017bfc">num_row_groups</a> = 0; <span class="comment">//&lt; Общее количество row groups в файле.</span></div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    };</div>
+</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span></div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>    arrow::Status <a class="code hl_function" href="group__parquet__converter.html#ga2357aefa27343d490ba4d7e2be27ce4d">parquet_open</a>(<span class="keyword">const</span> std::filesystem::path &amp;path, <a class="code hl_struct" href="structsignals_1_1_parquet_reader.html">ParquetReader</a> &amp;reader);</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span></div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="group__parquet__converter.html#gaacb7143dd498be09313c17eb26cf382f">parquet_close</a>(<a class="code hl_struct" href="structsignals_1_1_parquet_reader.html">ParquetReader</a> &amp;reader);</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span></div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>    arrow::Status <a class="code hl_function" href="group__parquet__converter.html#ga284d66229582fcdb5aaa1d0b5e192e05">parquet_write_signals_data</a>(<span class="keyword">const</span> std::filesystem::path &amp;bin_path,</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>                                             <span class="keyword">const</span> std::filesystem::path &amp;parquet_path,</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>                                             int64_t point_off, int64_t point_cnt,</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>                                             int64_t row_group_points = 100000);</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span></div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>    arrow::Status <a class="code hl_function" href="group__parquet__converter.html#gae12ff231f84bdfabaa912bfc32ddbdb7">parquet_read_signal_data_like_stream</a>(<a class="code hl_struct" href="structsignals_1_1_parquet_reader.html">ParquetReader</a> &amp;reader, <a class="code hl_class" href="classsignals_1_1_signal_data.html">SignalData</a> &amp;data,</div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>                                                       int64_t point_off, int64_t point_cnt);</div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span></div>
+<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="group__parquet__converter.html#gae12ff231f84bdfabaa912bfc32ddbdb7">parquet_read_signal_data_like_stream</a>(<span class="keyword">const</span> std::filesystem::path &amp;parquet_path,</div>
+<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span>                                              <a class="code hl_class" href="classsignals_1_1_signal_data.html">SignalData</a> &amp;data, int64_t point_off,</div>
+<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span>                                              int64_t point_cnt);</div>
+<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span></div>
+<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="group__parquet__converter.html#ga8b3a97d46cdac57241a9c5ffe79b97e2">parquet_write_signal_data_like_stream</a>(<span class="keyword">const</span> std::filesystem::path &amp;bin_path,</div>
+<div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span>                                               <span class="keyword">const</span> std::filesystem::path &amp;parquet_path,</div>
+<div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span>                                               int64_t point_off, int64_t point_cnt,</div>
+<div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span>                                               int64_t row_group_points = 100000);</div>
+<div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span>} <span class="comment">// namespace signals</span></div>
+<div class="ttc" id="abin__reader_8hpp_html"><div class="ttname"><a href="bin__reader_8hpp.html">bin_reader.hpp</a></div><div class="ttdoc">Чтение сигналов из файлов .hdr/.bin.</div></div>
+<div class="ttc" id="aclasssignals_1_1_signal_data_html"><div class="ttname"><a href="classsignals_1_1_signal_data.html">signals::SignalData</a></div><div class="ttdoc">Данные и метаданные (данные из .hdr и .bin, данные в double).</div><div class="ttdef"><b>Определения</b> <a href="signal__common_8hpp_source.html#l00062">signal_common.hpp:62</a></div></div>
+<div class="ttc" id="agroup__parquet__converter_html_ga2357aefa27343d490ba4d7e2be27ce4d"><div class="ttname"><a href="group__parquet__converter.html#ga2357aefa27343d490ba4d7e2be27ce4d">signals::parquet_open</a></div><div class="ttdeci">arrow::Status parquet_open(const std::filesystem::path &amp;path, ParquetReader &amp;reader)</div><div class="ttdoc">Открывает Parquet-файл и инициализирует кэш row groups.</div><div class="ttdef"><b>Определения</b> <a href="parquet__converter_8cpp_source.html#l00027">parquet_converter.cpp:27</a></div></div>
+<div class="ttc" id="agroup__parquet__converter_html_ga284d66229582fcdb5aaa1d0b5e192e05"><div class="ttname"><a href="group__parquet__converter.html#ga284d66229582fcdb5aaa1d0b5e192e05">signals::parquet_write_signals_data</a></div><div class="ttdeci">arrow::Status parquet_write_signals_data(const std::filesystem::path &amp;bin_path, const std::filesystem::path &amp;parquet_path, int64_t point_off, int64_t point_cnt, int64_t row_group_points)</div><div class="ttdoc">Записывает диапазон точек из .bin в Parquet.</div><div class="ttdef"><b>Определения</b> <a href="parquet__converter_8cpp_source.html#l00065">parquet_converter.cpp:65</a></div></div>
+<div class="ttc" id="agroup__parquet__converter_html_ga8b3a97d46cdac57241a9c5ffe79b97e2"><div class="ttname"><a href="group__parquet__converter.html#ga8b3a97d46cdac57241a9c5ffe79b97e2">signals::parquet_write_signal_data_like_stream</a></div><div class="ttdeci">void parquet_write_signal_data_like_stream(const std::filesystem::path &amp;bin_path, const std::filesystem::path &amp;parquet_path, int64_t point_off, int64_t point_cnt, int64_t row_group_points)</div><div class="ttdoc">Обёртка над parquet_write_signals_data с исключением при ошибке.</div><div class="ttdef"><b>Определения</b> <a href="parquet__converter_8cpp_source.html#l00154">parquet_converter.cpp:154</a></div></div>
+<div class="ttc" id="agroup__parquet__converter_html_gaacb7143dd498be09313c17eb26cf382f"><div class="ttname"><a href="group__parquet__converter.html#gaacb7143dd498be09313c17eb26cf382f">signals::parquet_close</a></div><div class="ttdeci">void parquet_close(ParquetReader &amp;reader)</div><div class="ttdoc">Закрывает Parquet reader и очищает кэш row groups.</div><div class="ttdef"><b>Определения</b> <a href="parquet__converter_8cpp_source.html#l00055">parquet_converter.cpp:55</a></div></div>
+<div class="ttc" id="agroup__parquet__converter_html_gae12ff231f84bdfabaa912bfc32ddbdb7"><div class="ttname"><a href="group__parquet__converter.html#gae12ff231f84bdfabaa912bfc32ddbdb7">signals::parquet_read_signal_data_like_stream</a></div><div class="ttdeci">arrow::Status parquet_read_signal_data_like_stream(ParquetReader &amp;reader, SignalData &amp;data, int64_t point_off, int64_t point_cnt)</div><div class="ttdoc">Потоково читает диапазон точек через ParquetReader.</div><div class="ttdef"><b>Определения</b> <a href="parquet__converter_8cpp_source.html#l00166">parquet_converter.cpp:166</a></div></div>
+<div class="ttc" id="anamespacesignals_html"><div class="ttname"><a href="namespacesignals.html">signals</a></div><div class="ttdef"><b>Определения</b> <a href="bin__reader_8cpp_source.html#l00015">bin_reader.cpp:15</a></div></div>
+<div class="ttc" id="asignal__common_8hpp_html"><div class="ttname"><a href="signal__common_8hpp.html">signal_common.hpp</a></div><div class="ttdoc">Общие структуры и методы для работы с сигналами</div></div>
+<div class="ttc" id="astructsignals_1_1_parquet_reader_html"><div class="ttname"><a href="structsignals_1_1_parquet_reader.html">signals::ParquetReader</a></div><div class="ttdoc">Состояние открытого Parquet reader-а.</div><div class="ttdef"><b>Определения</b> <a href="#l00034">parquet_converter.hpp:34</a></div></div>
+<div class="ttc" id="astructsignals_1_1_parquet_reader_html_a124146e28b4079b2c89e65b5c633456b"><div class="ttname"><a href="structsignals_1_1_parquet_reader.html#a124146e28b4079b2c89e65b5c633456b">signals::ParquetReader::file</a></div><div class="ttdeci">std::shared_ptr&lt; arrow::io::ReadableFile &gt; file</div><div class="ttdef"><b>Определения</b> <a href="#l00035">parquet_converter.hpp:35</a></div></div>
+<div class="ttc" id="astructsignals_1_1_parquet_reader_html_a13ffb71e461b23f4ff8e266a42e97283"><div class="ttname"><a href="structsignals_1_1_parquet_reader.html#a13ffb71e461b23f4ff8e266a42e97283">signals::ParquetReader::row_group_row_count</a></div><div class="ttdeci">std::vector&lt; int64_t &gt; row_group_row_count</div><div class="ttdef"><b>Определения</b> <a href="#l00043">parquet_converter.hpp:43</a></div></div>
+<div class="ttc" id="astructsignals_1_1_parquet_reader_html_a32d1e7f5383c6c11b05d25fd4b017bfc"><div class="ttname"><a href="structsignals_1_1_parquet_reader.html#a32d1e7f5383c6c11b05d25fd4b017bfc">signals::ParquetReader::num_row_groups</a></div><div class="ttdeci">int num_row_groups</div><div class="ttdef"><b>Определения</b> <a href="#l00044">parquet_converter.hpp:44</a></div></div>
+<div class="ttc" id="astructsignals_1_1_parquet_reader_html_a3357113a4ae8285265dd66808ccec8e6"><div class="ttname"><a href="structsignals_1_1_parquet_reader.html#a3357113a4ae8285265dd66808ccec8e6">signals::ParquetReader::row_group_first_row</a></div><div class="ttdeci">std::vector&lt; int64_t &gt; row_group_first_row</div><div class="ttdef"><b>Определения</b> <a href="#l00042">parquet_converter.hpp:42</a></div></div>
+<div class="ttc" id="astructsignals_1_1_parquet_reader_html_a46fd4033c0d2893577804e3e3d0d6701"><div class="ttname"><a href="structsignals_1_1_parquet_reader.html#a46fd4033c0d2893577804e3e3d0d6701">signals::ParquetReader::row_group_cache_order</a></div><div class="ttdeci">std::vector&lt; int &gt; row_group_cache_order</div><div class="ttdef"><b>Определения</b> <a href="#l00041">parquet_converter.hpp:41</a></div></div>
+<div class="ttc" id="astructsignals_1_1_parquet_reader_html_a64103f25b91bdd62e26ea50c03b074b5"><div class="ttname"><a href="structsignals_1_1_parquet_reader.html#a64103f25b91bdd62e26ea50c03b074b5">signals::ParquetReader::row_group_cache</a></div><div class="ttdeci">std::unordered_map&lt; int, std::shared_ptr&lt; arrow::Table &gt; &gt; row_group_cache</div><div class="ttdef"><b>Определения</b> <a href="#l00039">parquet_converter.hpp:39</a></div></div>
+<div class="ttc" id="astructsignals_1_1_parquet_reader_html_ac6c07c60c7908a2311d5fa0534d3d504"><div class="ttname"><a href="structsignals_1_1_parquet_reader.html#ac6c07c60c7908a2311d5fa0534d3d504">signals::ParquetReader::reader</a></div><div class="ttdeci">std::unique_ptr&lt; parquet::arrow::FileReader &gt; reader</div><div class="ttdef"><b>Определения</b> <a href="#l00037">parquet_converter.hpp:37</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_7374381ecdb819c64ee9b6ea2bd3370d.html">internal</a></li><li class="navelem"><a href="dir_d9117f2f25650f28cbd6a1d38d94c711.html">parquet</a></li><li class="navelem"><a href="parquet__converter_8hpp.html">parquet_converter.hpp</a></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.16.1 </li>
+  </ul>
+</div>
+</body>
+</html>

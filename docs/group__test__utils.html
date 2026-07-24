@@ -1,0 +1,1185 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.16.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Signal Test Converters: Test Utils</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Signal Test Converters
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.16.1 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Поиск',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('group__test__utils.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Test Utils </div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Вспомогательные методы для тестов, валидации и вывода данных.  
+<a href="#details">Подробнее...</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
+Функции</h2></td></tr>
+<tr class="memitem:ga002dece84fa9ae9969687bcfb178af16" id="r_ga002dece84fa9ae9969687bcfb178af16"><td class="memItemLeft">double&#160;</td><td class="memItemRight"><a class="el" href="#ga002dece84fa9ae9969687bcfb178af16">signals::test_serial_chunk_reading</a> (const std::function&lt; void(const std::filesystem::path &amp;, <a class="el" href="classsignals_1_1_signal_data.html">SignalData</a> &amp;, int64_t, int64_t)&gt; &amp;read_signal, const std::filesystem::path &amp;source_path, const <a class="el" href="classsignals_1_1_signal_data.html">SignalData</a> &amp;reference, int64_t chunk_points)</td></tr>
+<tr class="memdesc:ga002dece84fa9ae9969687bcfb178af16"><td class="mdescLeft">&#160;</td><td class="mdescRight">Тест последовательного чтения диапазона чанками.  <br /></td></tr>
+<tr class="memitem:gaa09de34aa31f12f3bc81ae37e6181c4a" id="r_gaa09de34aa31f12f3bc81ae37e6181c4a"><td class="memItemLeft">double&#160;</td><td class="memItemRight"><a class="el" href="#gaa09de34aa31f12f3bc81ae37e6181c4a">signals::test_random_chunk_reading</a> (const std::function&lt; void(const std::filesystem::path &amp;, <a class="el" href="classsignals_1_1_signal_data.html">SignalData</a> &amp;, int64_t, int64_t)&gt; &amp;read_signal, const std::filesystem::path &amp;source_path, const <a class="el" href="classsignals_1_1_signal_data.html">SignalData</a> &amp;reference, int64_t chunk_points)</td></tr>
+<tr class="memdesc:gaa09de34aa31f12f3bc81ae37e6181c4a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Тест чтения чанков в случайном порядке.  <br /></td></tr>
+<tr class="memitem:ga6f442e7b1e92faa55787adf80826936f" id="r_ga6f442e7b1e92faa55787adf80826936f"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#ga6f442e7b1e92faa55787adf80826936f">signals::validate_serial_chunk_reading</a> (const std::function&lt; void(const std::filesystem::path &amp;, <a class="el" href="classsignals_1_1_signal_data.html">SignalData</a> &amp;, int64_t, int64_t)&gt; &amp;read_signal, const std::filesystem::path &amp;source_path, const <a class="el" href="classsignals_1_1_signal_data.html">SignalData</a> &amp;reference, int64_t chunk_points)</td></tr>
+<tr class="memdesc:ga6f442e7b1e92faa55787adf80826936f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Проверяет корректность последовательного чтения чанков.  <br /></td></tr>
+<tr class="memitem:ga4309c17a6f3dddadcc45ee0408670afc" id="r_ga4309c17a6f3dddadcc45ee0408670afc"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#ga4309c17a6f3dddadcc45ee0408670afc">signals::validate_random_chunk_reading</a> (const std::function&lt; void(const std::filesystem::path &amp;, <a class="el" href="classsignals_1_1_signal_data.html">SignalData</a> &amp;, int64_t, int64_t)&gt; &amp;read_signal, const std::filesystem::path &amp;source_path, const <a class="el" href="classsignals_1_1_signal_data.html">SignalData</a> &amp;reference, int64_t chunk_points)</td></tr>
+<tr class="memdesc:ga4309c17a6f3dddadcc45ee0408670afc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Проверяет корректность чтения чанков в случайном порядке.  <br /></td></tr>
+<tr class="memitem:gaabc783a10033d1edfbe124857a332381" id="r_gaabc783a10033d1edfbe124857a332381"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#gaabc783a10033d1edfbe124857a332381">signals::test_serial_chunk_reading_val</a> (const std::function&lt; void(const std::filesystem::path &amp;, <a class="el" href="classsignals_1_1_signal_data.html">SignalData</a> &amp;, int64_t, int64_t)&gt; &amp;read_signal, const std::filesystem::path &amp;source_path, const <a class="el" href="classsignals_1_1_signal_data.html">SignalData</a> &amp;original_data, int64_t chunk_points)</td></tr>
+<tr class="memdesc:gaabc783a10033d1edfbe124857a332381"><td class="mdescLeft">&#160;</td><td class="mdescRight">Запускает тест последовательного чтения и выводит статистику.  <br /></td></tr>
+<tr class="memitem:gaa6d78e3540958f2ac783e9223c195168" id="r_gaa6d78e3540958f2ac783e9223c195168"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#gaa6d78e3540958f2ac783e9223c195168">signals::test_random_chunk_reading_val</a> (const std::function&lt; void(const std::filesystem::path &amp;, <a class="el" href="classsignals_1_1_signal_data.html">SignalData</a> &amp;, int64_t, int64_t)&gt; &amp;read_signal, const std::filesystem::path &amp;source_path, const <a class="el" href="classsignals_1_1_signal_data.html">SignalData</a> &amp;original_data, int64_t chunk_points)</td></tr>
+<tr class="memdesc:gaa6d78e3540958f2ac783e9223c195168"><td class="mdescLeft">&#160;</td><td class="mdescRight">Запускает тест случайного чтения и выводит статистику.  <br /></td></tr>
+<tr class="memitem:ga9177d33fdd0f5ea5ac0e295a5f701d78" id="r_ga9177d33fdd0f5ea5ac0e295a5f701d78"><td class="memItemLeft">double&#160;</td><td class="memItemRight"><a class="el" href="#ga9177d33fdd0f5ea5ac0e295a5f701d78">signals::lead_time</a> (const std::function&lt; void()&gt; &amp;fn)</td></tr>
+<tr class="memdesc:ga9177d33fdd0f5ea5ac0e295a5f701d78"><td class="mdescLeft">&#160;</td><td class="mdescRight">Измеряет время выполнения произвольной функции.  <br /></td></tr>
+<tr class="memitem:gab5a2185a87f0b5bf47e2d63318631c33" id="r_gab5a2185a87f0b5bf47e2d63318631c33"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#gab5a2185a87f0b5bf47e2d63318631c33">signals::print_first_rows</a> (const <a class="el" href="classsignals_1_1_signal_data.html">SignalData</a> &amp;data, int64_t preview_points=<a class="el" href="test__utils_8cpp.html#a619e5bf8722bd84fc200a18f0cf7e639">TEST_UTILS_PREVIEW_POINTS</a>)</td></tr>
+<tr class="memdesc:gab5a2185a87f0b5bf47e2d63318631c33"><td class="mdescLeft">&#160;</td><td class="mdescRight">Выводит первые и последние строки <a class="el" href="classsignals_1_1_signal_data.html" title="Данные и метаданные (данные из .hdr и .bin, данные в double).">SignalData</a>.  <br /></td></tr>
+<tr class="memitem:ga0b867882282f377ff650efd04e460f49" id="r_ga0b867882282f377ff650efd04e460f49"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#ga0b867882282f377ff650efd04e460f49">signals::compare_signal_data</a> (const <a class="el" href="classsignals_1_1_signal_data.html">SignalData</a> &amp;expected, const <a class="el" href="classsignals_1_1_signal_data.html">SignalData</a> &amp;actual, const char *label)</td></tr>
+<tr class="memdesc:ga0b867882282f377ff650efd04e460f49"><td class="mdescLeft">&#160;</td><td class="mdescRight">Сравнивает два набора сигналов по размеру, диапазону и значениям.  <br /></td></tr>
+<tr class="memitem:ga9031447ea6d8038c5e22381c040857bd" id="r_ga9031447ea6d8038c5e22381c040857bd"><td class="memItemLeft"><a class="el" href="classsignals_1_1_signal_data.html">SignalData</a>&#160;</td><td class="memItemRight"><a class="el" href="#ga9031447ea6d8038c5e22381c040857bd">signals::load_reference</a> (const std::filesystem::path &amp;source_path, int64_t point_offset=0, int64_t point_count=-1)</td></tr>
+<tr class="memdesc:ga9031447ea6d8038c5e22381c040857bd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Загружает исходные данные из bin через bin_read.  <br /></td></tr>
+<tr class="memitem:ga098dc20f2c0109243fc4196e193ba292" id="r_ga098dc20f2c0109243fc4196e193ba292"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ga098dc20f2c0109243fc4196e193ba292">signals::print_file_info</a> (const std::filesystem::path &amp;path, const <a class="el" href="classsignals_1_1_signal_data.html">SignalData</a> &amp;data, double read_time)</td></tr>
+<tr class="memdesc:ga098dc20f2c0109243fc4196e193ba292"><td class="mdescLeft">&#160;</td><td class="mdescRight">Выводит информацию по исходным .bin/.hdr файлам и считанным данным.  <br /></td></tr>
+<tr class="memitem:gac538c68b5a04ea811a82ff679376bd93" id="r_gac538c68b5a04ea811a82ff679376bd93"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#gac538c68b5a04ea811a82ff679376bd93">signals::print_conversion_results</a> (const std::string &amp;format_name, double write_time, size_t output_size_bytes, double read_time, const <a class="el" href="classsignals_1_1_signal_data.html">SignalData</a> &amp;data, size_t original_total_size)</td></tr>
+<tr class="memdesc:gac538c68b5a04ea811a82ff679376bd93"><td class="mdescLeft">&#160;</td><td class="mdescRight">Выводит результаты записи/чтения конвертированного формата.  <br /></td></tr>
+<tr class="memitem:gae86aaff88ef0aabf646892d9867aad15" id="r_gae86aaff88ef0aabf646892d9867aad15"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#gae86aaff88ef0aabf646892d9867aad15">signals::try_parse_int64</a> (const char *text, int64_t &amp;value)</td></tr>
+<tr class="memdesc:gae86aaff88ef0aabf646892d9867aad15"><td class="mdescLeft">&#160;</td><td class="mdescRight">Парсит строку в int64.  <br /></td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Подробное описание</h2>
+<div class="textblock"><p>Вспомогательные методы для тестов, валидации и вывода данных. </p>
+</div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Функции</h2>
+<a id="ga0b867882282f377ff650efd04e460f49" name="ga0b867882282f377ff650efd04e460f49"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga0b867882282f377ff650efd04e460f49">&#9670;&#160;</a></span>compare_signal_data()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool signals::compare_signal_data </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classsignals_1_1_signal_data.html">SignalData</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>expected</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classsignals_1_1_signal_data.html">SignalData</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>actual</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>label</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Сравнивает два набора сигналов по размеру, диапазону и значениям. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">expected</td><td>Исходные данные (из .bin). </td></tr>
+    <tr><td class="paramname">actual</td><td>Сравниваемые данные (из parquet/duckdb/hdf5). </td></tr>
+    <tr><td class="paramname">label</td><td>Название источника. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>true Если данные полностью совпадают. </dd>
+<dd>
+false Если найдено несоответствие.</dd></dl>
+<p>Последовательность работы:</p><ol type="1">
+<li>Сравнивает num_points и num_channels.</li>
+<li>Сравнивает ifirst_point/ilast_point.</li>
+<li>Поэлементно сравнивает значения всех каналов.</li>
+<li>При ошибке выводит сообщение и возвращает false. </li>
+</ol>
+
+<p class="definition">См. определение в файле <a class="el" href="test__utils_8cpp_source.html">test_utils.cpp</a> строка <a class="el" href="test__utils_8cpp_source.html#l00175">175</a></p>
+<div class="fragment"><div class="line"><span class="lineno">  176</span>                                                {</div>
+<div class="line"><span class="lineno">  177</span>        <span class="keywordflow">if</span> (expected.<a class="code hl_variable" href="classsignals_1_1_signal_data.html#ae3c6a4b60f673f3c9b45e125b197a51a">num_points</a> != actual.<a class="code hl_variable" href="classsignals_1_1_signal_data.html#ae3c6a4b60f673f3c9b45e125b197a51a">num_points</a> ||</div>
+<div class="line"><span class="lineno">  178</span>            expected.<a class="code hl_variable" href="classsignals_1_1_signal_header.html#a07229a399c52f26674d63ce93dea3631">num_channels</a> != actual.<a class="code hl_variable" href="classsignals_1_1_signal_header.html#a07229a399c52f26674d63ce93dea3631">num_channels</a>) {</div>
+<div class="line"><span class="lineno">  179</span>            std::fprintf(stderr, <span class="stringliteral">&quot;Ошибка (%s): точек или каналов не совпадает: %lld vs %lld\n&quot;</span>,</div>
+<div class="line"><span class="lineno">  180</span>                         label, <span class="keyword">static_cast&lt;</span><span class="keywordtype">long</span> <span class="keywordtype">long</span><span class="keyword">&gt;</span>(expected.<a class="code hl_variable" href="classsignals_1_1_signal_data.html#ae3c6a4b60f673f3c9b45e125b197a51a">num_points</a>),</div>
+<div class="line"><span class="lineno">  181</span>                         <span class="keyword">static_cast&lt;</span><span class="keywordtype">long</span> <span class="keywordtype">long</span><span class="keyword">&gt;</span>(actual.<a class="code hl_variable" href="classsignals_1_1_signal_data.html#ae3c6a4b60f673f3c9b45e125b197a51a">num_points</a>));</div>
+<div class="line"><span class="lineno">  182</span>            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  183</span>        }</div>
+<div class="line"><span class="lineno">  184</span> </div>
+<div class="line"><span class="lineno">  185</span>        <span class="keywordflow">if</span> (expected.<a class="code hl_variable" href="classsignals_1_1_signal_header.html#ac9cc61fe15af8fad1309be1295b600b8">ifirst_point</a> != actual.<a class="code hl_variable" href="classsignals_1_1_signal_header.html#ac9cc61fe15af8fad1309be1295b600b8">ifirst_point</a> ||</div>
+<div class="line"><span class="lineno">  186</span>            expected.<a class="code hl_variable" href="classsignals_1_1_signal_header.html#a4003b76fc6492f33eb80f63ae7be02d0">ilast_point</a> != actual.<a class="code hl_variable" href="classsignals_1_1_signal_header.html#a4003b76fc6492f33eb80f63ae7be02d0">ilast_point</a>) {</div>
+<div class="line"><span class="lineno">  187</span>            std::fprintf(stderr, <span class="stringliteral">&quot;Ошибка (%s): диапазоны не совпадают: %lld..%lld vs %lld..%lld\n&quot;</span>,</div>
+<div class="line"><span class="lineno">  188</span>                         label, <span class="keyword">static_cast&lt;</span><span class="keywordtype">long</span> <span class="keywordtype">long</span><span class="keyword">&gt;</span>(expected.<a class="code hl_variable" href="classsignals_1_1_signal_header.html#ac9cc61fe15af8fad1309be1295b600b8">ifirst_point</a>),</div>
+<div class="line"><span class="lineno">  189</span>                         <span class="keyword">static_cast&lt;</span><span class="keywordtype">long</span> <span class="keywordtype">long</span><span class="keyword">&gt;</span>(expected.<a class="code hl_variable" href="classsignals_1_1_signal_header.html#a4003b76fc6492f33eb80f63ae7be02d0">ilast_point</a>),</div>
+<div class="line"><span class="lineno">  190</span>                         <span class="keyword">static_cast&lt;</span><span class="keywordtype">long</span> <span class="keywordtype">long</span><span class="keyword">&gt;</span>(actual.<a class="code hl_variable" href="classsignals_1_1_signal_header.html#ac9cc61fe15af8fad1309be1295b600b8">ifirst_point</a>),</div>
+<div class="line"><span class="lineno">  191</span>                         <span class="keyword">static_cast&lt;</span><span class="keywordtype">long</span> <span class="keywordtype">long</span><span class="keyword">&gt;</span>(actual.<a class="code hl_variable" href="classsignals_1_1_signal_header.html#a4003b76fc6492f33eb80f63ae7be02d0">ilast_point</a>));</div>
+<div class="line"><span class="lineno">  192</span>            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  193</span>        }</div>
+<div class="line"><span class="lineno">  194</span> </div>
+<div class="line"><span class="lineno">  195</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> ch = 0; ch &lt; expected.<a class="code hl_variable" href="classsignals_1_1_signal_header.html#a07229a399c52f26674d63ce93dea3631">num_channels</a>; ch++) {</div>
+<div class="line"><span class="lineno">  196</span>            <span class="keywordflow">for</span> (int64_t p = 0; p &lt; expected.<a class="code hl_variable" href="classsignals_1_1_signal_data.html#ae3c6a4b60f673f3c9b45e125b197a51a">num_points</a>; p++) {</div>
+<div class="line"><span class="lineno">  197</span>                <span class="keywordflow">if</span> (expected.<a class="code hl_function" href="classsignals_1_1_signal_data.html#a3788f4881f848c984f3cbef31d1aaac0">raw_channel</a>(ch)[p] != actual.<a class="code hl_function" href="classsignals_1_1_signal_data.html#a3788f4881f848c984f3cbef31d1aaac0">raw_channel</a>(ch)[p]) {</div>
+<div class="line"><span class="lineno">  198</span>                    std::fprintf(stderr,</div>
+<div class="line"><span class="lineno">  199</span>                                 <span class="stringliteral">&quot;Ошибка (%s): несовпадение на канале %d, точка %lld: %f vs %f\n&quot;</span>,</div>
+<div class="line"><span class="lineno">  200</span>                                 label, ch, <span class="keyword">static_cast&lt;</span><span class="keywordtype">long</span> <span class="keywordtype">long</span><span class="keyword">&gt;</span>(p), expected.<a class="code hl_function" href="classsignals_1_1_signal_data.html#a46f2f5f6e2e515d487f2661f2962269e">value</a>(ch, p),</div>
+<div class="line"><span class="lineno">  201</span>                                 actual.<a class="code hl_function" href="classsignals_1_1_signal_data.html#a46f2f5f6e2e515d487f2661f2962269e">value</a>(ch, p));</div>
+<div class="line"><span class="lineno">  202</span>                    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  203</span>                }</div>
+<div class="line"><span class="lineno">  204</span>            }</div>
+<div class="line"><span class="lineno">  205</span>        }</div>
+<div class="line"><span class="lineno">  206</span>        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  207</span>    }</div>
+<div class="ttc" id="aclasssignals_1_1_signal_data_html_a3788f4881f848c984f3cbef31d1aaac0"><div class="ttname"><a href="classsignals_1_1_signal_data.html#a3788f4881f848c984f3cbef31d1aaac0">signals::SignalData::raw_channel</a></div><div class="ttdeci">int32_t * raw_channel(int ch)</div><div class="ttdoc">Возвращает указатель на начало сырых int32 данных канала.</div><div class="ttdef"><b>Определения</b> <a href="signal__common_8hpp_source.html#l00071">signal_common.hpp:71</a></div></div>
+<div class="ttc" id="aclasssignals_1_1_signal_data_html_a46f2f5f6e2e515d487f2661f2962269e"><div class="ttname"><a href="classsignals_1_1_signal_data.html#a46f2f5f6e2e515d487f2661f2962269e">signals::SignalData::value</a></div><div class="ttdeci">double value(int ch, int64_t point) const</div><div class="ttdoc">Возвращает физическое значение точки канала: raw * lsb.</div><div class="ttdef"><b>Определения</b> <a href="signal__common_8hpp_source.html#l00086">signal_common.hpp:86</a></div></div>
+<div class="ttc" id="aclasssignals_1_1_signal_data_html_ae3c6a4b60f673f3c9b45e125b197a51a"><div class="ttname"><a href="classsignals_1_1_signal_data.html#ae3c6a4b60f673f3c9b45e125b197a51a">signals::SignalData::num_points</a></div><div class="ttdeci">int64_t num_points</div><div class="ttdef"><b>Определения</b> <a href="signal__common_8hpp_source.html#l00064">signal_common.hpp:64</a></div></div>
+<div class="ttc" id="aclasssignals_1_1_signal_header_html_a07229a399c52f26674d63ce93dea3631"><div class="ttname"><a href="classsignals_1_1_signal_header.html#a07229a399c52f26674d63ce93dea3631">signals::SignalHeader::num_channels</a></div><div class="ttdeci">int32_t num_channels</div><div class="ttdef"><b>Определения</b> <a href="signal__common_8hpp_source.html#l00034">signal_common.hpp:34</a></div></div>
+<div class="ttc" id="aclasssignals_1_1_signal_header_html_a4003b76fc6492f33eb80f63ae7be02d0"><div class="ttname"><a href="classsignals_1_1_signal_header.html#a4003b76fc6492f33eb80f63ae7be02d0">signals::SignalHeader::ilast_point</a></div><div class="ttdeci">int64_t ilast_point</div><div class="ttdef"><b>Определения</b> <a href="signal__common_8hpp_source.html#l00038">signal_common.hpp:38</a></div></div>
+<div class="ttc" id="aclasssignals_1_1_signal_header_html_ac9cc61fe15af8fad1309be1295b600b8"><div class="ttname"><a href="classsignals_1_1_signal_header.html#ac9cc61fe15af8fad1309be1295b600b8">signals::SignalHeader::ifirst_point</a></div><div class="ttdeci">int64_t ifirst_point</div><div class="ttdef"><b>Определения</b> <a href="signal__common_8hpp_source.html#l00037">signal_common.hpp:37</a></div></div>
+</div><!-- fragment -->
+<p class="reference">Перекрестные ссылки <a class="el" href="signal__common_8hpp_source.html#l00037">signals::SignalHeader::ifirst_point</a>, <a class="el" href="signal__common_8hpp_source.html#l00038">signals::SignalHeader::ilast_point</a>, <a class="el" href="signal__common_8hpp_source.html#l00034">signals::SignalHeader::num_channels</a>, <a class="el" href="signal__common_8hpp_source.html#l00064">signals::SignalData::num_points</a>, <a class="el" href="signal__common_8hpp_source.html#l00071">signals::SignalData::raw_channel()</a> и <a class="el" href="signal__common_8hpp_source.html#l00086">signals::SignalData::value()</a>.</p>
+
+<p class="reference">Используется в <a class="el" href="test__duckdb_8cpp_source.html#l00008">main()</a>.</p>
+<div class="dynheader">
+Граф вызовов:</div>
+<div class="dyncontent">
+<div class="center"><img src="group__test__utils_ga0b867882282f377ff650efd04e460f49_cgraph.png" border="0" usemap="#agroup__test__utils_ga0b867882282f377ff650efd04e460f49_cgraph" loading="lazy" alt=""/></div>
+</div>
+<div class="dynheader">
+Граф вызова функции:</div>
+<div class="dyncontent">
+<div class="center"><img src="group__test__utils_ga0b867882282f377ff650efd04e460f49_icgraph.png" border="0" usemap="#agroup__test__utils_ga0b867882282f377ff650efd04e460f49_icgraph" loading="lazy" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="ga9177d33fdd0f5ea5ac0e295a5f701d78" name="ga9177d33fdd0f5ea5ac0e295a5f701d78"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga9177d33fdd0f5ea5ac0e295a5f701d78">&#9670;&#160;</a></span>lead_time()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double signals::lead_time </td>
+          <td>(</td>
+          <td class="paramtype">const std::function&lt; void()&gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>fn</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Измеряет время выполнения произвольной функции. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">fn</td><td>Функция без аргументов. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>double Длительность выполнения в секундах. </dd></dl>
+<dl class="exception"><dt>Исключения</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">Любые</td><td>исключения, которые бросает <code class="param">fn</code>.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Последовательность работы:</p><ol type="1">
+<li>Сохраняет время начала.</li>
+<li>Вызывает функцию <code class="param">fn</code>.</li>
+<li>Вычисляет и возвращает потраченное время в секундах. </li>
+</ol>
+
+<p class="definition">См. определение в файле <a class="el" href="test__utils_8cpp_source.html">test_utils.cpp</a> строка <a class="el" href="test__utils_8cpp_source.html#l00039">39</a></p>
+<div class="fragment"><div class="line"><span class="lineno">   39</span>                                                    {</div>
+<div class="line"><span class="lineno">   40</span>        <span class="keyword">const</span> <span class="keyword">auto</span> t0 = std::chrono::steady_clock::now();</div>
+<div class="line"><span class="lineno">   41</span>        fn();</div>
+<div class="line"><span class="lineno">   42</span>        <span class="keywordflow">return</span> std::chrono::duration&lt;double&gt;(std::chrono::steady_clock::now() - t0).count();</div>
+<div class="line"><span class="lineno">   43</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">Используется в <a class="el" href="test__duckdb_8cpp_source.html#l00008">main()</a>.</p>
+<div class="dynheader">
+Граф вызова функции:</div>
+<div class="dyncontent">
+<div class="center"><img src="group__test__utils_ga9177d33fdd0f5ea5ac0e295a5f701d78_icgraph.png" border="0" usemap="#agroup__test__utils_ga9177d33fdd0f5ea5ac0e295a5f701d78_icgraph" loading="lazy" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="ga9031447ea6d8038c5e22381c040857bd" name="ga9031447ea6d8038c5e22381c040857bd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga9031447ea6d8038c5e22381c040857bd">&#9670;&#160;</a></span>load_reference()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classsignals_1_1_signal_data.html">SignalData</a> signals::load_reference </td>
+          <td>(</td>
+          <td class="paramtype">const std::filesystem::path &amp;</td>          <td class="paramname"><span class="paramname"><em>source_path</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int64_t</td>          <td class="paramname"><span class="paramname"><em>point_offset</em></span><span class="paramdefsep"> = </span><span class="paramdefval">0</span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int64_t</td>          <td class="paramname"><span class="paramname"><em>point_count</em></span><span class="paramdefsep"> = </span><span class="paramdefval">-1</span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Загружает исходные данные из bin через bin_read. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">source_path</td><td>Путь к .hdr или .bin. </td></tr>
+    <tr><td class="paramname">point_offset</td><td>Смещение от начала диапазона. </td></tr>
+    <tr><td class="paramname">point_count</td><td>Количество точек; если &lt; 0, читается доступный диапазон. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd><a class="el" href="classsignals_1_1_signal_data.html" title="Данные и метаданные (данные из .hdr и .bin, данные в double).">SignalData</a> Загруженные данные. </dd></dl>
+<dl class="exception"><dt>Исключения</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::runtime_error</td><td>При ошибках открытия/чтения BIN.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Последовательность работы:</p><ol type="1">
+<li>Создаёт временный <a class="el" href="classsignals_1_1_signal_data.html" title="Данные и метаданные (данные из .hdr и .bin, данные в double).">SignalData</a>.</li>
+<li>Вызывает bin_read с переданным диапазоном.</li>
+<li>Возвращает заполненную структуру. </li>
+</ol>
+
+<p class="definition">См. определение в файле <a class="el" href="test__utils_8cpp_source.html">test_utils.cpp</a> строка <a class="el" href="test__utils_8cpp_source.html#l00209">209</a></p>
+<div class="fragment"><div class="line"><span class="lineno">  210</span>                                                   {</div>
+<div class="line"><span class="lineno">  211</span>        <a class="code hl_class" href="classsignals_1_1_signal_data.html">SignalData</a> ref;</div>
+<div class="line"><span class="lineno">  212</span>        <a class="code hl_function" href="namespacesignals.html#ad4faf87f6cb1e07242d912890a374684">bin_read</a>(source_path, point_offset, point_count, ref);</div>
+<div class="line"><span class="lineno">  213</span>        <span class="keywordflow">return</span> ref;</div>
+<div class="line"><span class="lineno">  214</span>    }</div>
+<div class="ttc" id="aclasssignals_1_1_signal_data_html"><div class="ttname"><a href="classsignals_1_1_signal_data.html">signals::SignalData</a></div><div class="ttdoc">Данные и метаданные (данные из .hdr и .bin, данные в double).</div><div class="ttdef"><b>Определения</b> <a href="signal__common_8hpp_source.html#l00062">signal_common.hpp:62</a></div></div>
+<div class="ttc" id="anamespacesignals_html_ad4faf87f6cb1e07242d912890a374684"><div class="ttname"><a href="namespacesignals.html#ad4faf87f6cb1e07242d912890a374684">signals::bin_read</a></div><div class="ttdeci">void bin_read(const std::filesystem::path &amp;bin_path, int64_t point_off, int64_t point_cnt, SignalData &amp;data)</div><div class="ttdoc">Полностью читает диапазон точек из bin в один SignalData.</div><div class="ttdef"><b>Определения</b> <a href="bin__reader_8cpp_source.html#l00101">bin_reader.cpp:101</a></div></div>
+</div><!-- fragment -->
+<p class="reference">Перекрестные ссылки <a class="el" href="bin__reader_8cpp_source.html#l00101">bin_read()</a>.</p>
+
+<p class="reference">Используется в <a class="el" href="test__duckdb_8cpp_source.html#l00008">main()</a>.</p>
+<div class="dynheader">
+Граф вызовов:</div>
+<div class="dyncontent">
+<div class="center"><img src="group__test__utils_ga9031447ea6d8038c5e22381c040857bd_cgraph.png" border="0" usemap="#agroup__test__utils_ga9031447ea6d8038c5e22381c040857bd_cgraph" loading="lazy" alt=""/></div>
+</div>
+<div class="dynheader">
+Граф вызова функции:</div>
+<div class="dyncontent">
+<div class="center"><img src="group__test__utils_ga9031447ea6d8038c5e22381c040857bd_icgraph.png" border="0" usemap="#agroup__test__utils_ga9031447ea6d8038c5e22381c040857bd_icgraph" loading="lazy" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="gac538c68b5a04ea811a82ff679376bd93" name="gac538c68b5a04ea811a82ff679376bd93"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gac538c68b5a04ea811a82ff679376bd93">&#9670;&#160;</a></span>print_conversion_results()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void signals::print_conversion_results </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>format_name</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>write_time</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t</td>          <td class="paramname"><span class="paramname"><em>output_size_bytes</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>read_time</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classsignals_1_1_signal_data.html">SignalData</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>data</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t</td>          <td class="paramname"><span class="paramname"><em>original_total_size</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Выводит результаты записи/чтения конвертированного формата. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">format_name</td><td>Название формата (duckdb/parquet/hdf5 и т.д.). </td></tr>
+    <tr><td class="paramname">write_time</td><td>Время записи в секундах. </td></tr>
+    <tr><td class="paramname">output_size_bytes</td><td>Размер выходного файла в байтах. </td></tr>
+    <tr><td class="paramname">read_time</td><td>Время чтения в секундах. </td></tr>
+    <tr><td class="paramname">data</td><td>Прочитанные данные после конвертации. </td></tr>
+    <tr><td class="paramname">original_total_size</td><td>Размер исходного набора (.bin и .hdr).</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Последовательность работы:</p><ol type="1">
+<li>Выводит размер, время записи и процент сжатия относительно исходного файла.</li>
+<li>Выводит информацию по чтению: каналы, точки, диапазон, частота и время. </li>
+</ol>
+
+<p class="definition">См. определение в файле <a class="el" href="test__utils_8cpp_source.html">test_utils.cpp</a> строка <a class="el" href="test__utils_8cpp_source.html#l00239">239</a></p>
+<div class="fragment"><div class="line"><span class="lineno">  241</span>                                                                                      {</div>
+<div class="line"><span class="lineno">  242</span>        std::printf(<span class="stringliteral">&quot;Файл %s написан\n&quot;</span>, format_name.c_str());</div>
+<div class="line"><span class="lineno">  243</span>        std::printf(<span class="stringliteral">&quot;Размер: %.1f MB\n&quot;</span>,</div>
+<div class="line"><span class="lineno">  244</span>                    <span class="keyword">static_cast&lt;</span><span class="keywordtype">double</span><span class="keyword">&gt;</span>(output_size_bytes) / (1024.0 * 1024.0));</div>
+<div class="line"><span class="lineno">  245</span>        std::printf(<span class="stringliteral">&quot;Время записи: %.3f сек\n&quot;</span>, write_time);</div>
+<div class="line"><span class="lineno">  246</span>        <span class="keywordflow">if</span> (original_total_size &gt; 0)</div>
+<div class="line"><span class="lineno">  247</span>            std::printf(<span class="stringliteral">&quot;  Сжатие к BIN+HDR: %.1f%%\n&quot;</span>,</div>
+<div class="line"><span class="lineno">  248</span>                        100.0 * (1.0 - (<span class="keyword">static_cast&lt;</span><span class="keywordtype">double</span><span class="keyword">&gt;</span>(output_size_bytes) /</div>
+<div class="line"><span class="lineno">  249</span>                                        <span class="keyword">static_cast&lt;</span><span class="keywordtype">double</span><span class="keyword">&gt;</span>(original_total_size))));</div>
+<div class="line"><span class="lineno">  250</span>        std::printf(<span class="stringliteral">&quot;\n&quot;</span>);</div>
+<div class="line"><span class="lineno">  251</span> </div>
+<div class="line"><span class="lineno">  252</span>        std::printf(<span class="stringliteral">&quot;Чтение из %s...\n&quot;</span>, format_name.c_str());</div>
+<div class="line"><span class="lineno">  253</span>        std::printf(<span class="stringliteral">&quot;Каналов: %d\n&quot;</span>, data.<a class="code hl_variable" href="classsignals_1_1_signal_header.html#a07229a399c52f26674d63ce93dea3631">num_channels</a>);</div>
+<div class="line"><span class="lineno">  254</span>        std::printf(<span class="stringliteral">&quot;Точек: %lld\n&quot;</span>, <span class="keyword">static_cast&lt;</span><span class="keywordtype">long</span> <span class="keywordtype">long</span><span class="keyword">&gt;</span>(data.<a class="code hl_variable" href="classsignals_1_1_signal_data.html#ae3c6a4b60f673f3c9b45e125b197a51a">num_points</a>));</div>
+<div class="line"><span class="lineno">  255</span>        std::printf(<span class="stringliteral">&quot;Диапазон: %lld..%lld\n&quot;</span>, <span class="keyword">static_cast&lt;</span><span class="keywordtype">long</span> <span class="keywordtype">long</span><span class="keyword">&gt;</span>(data.<a class="code hl_variable" href="classsignals_1_1_signal_header.html#ac9cc61fe15af8fad1309be1295b600b8">ifirst_point</a>),</div>
+<div class="line"><span class="lineno">  256</span>                    <span class="keyword">static_cast&lt;</span><span class="keywordtype">long</span> <span class="keywordtype">long</span><span class="keyword">&gt;</span>(data.<a class="code hl_variable" href="classsignals_1_1_signal_header.html#a4003b76fc6492f33eb80f63ae7be02d0">ilast_point</a>));</div>
+<div class="line"><span class="lineno">  257</span>        std::printf(<span class="stringliteral">&quot;Частота: %.1f Гц\n&quot;</span>, data.<a class="code hl_variable" href="classsignals_1_1_signal_header.html#a4f7916d3a80b8650185a63aac2dd59f6">frequency</a>);</div>
+<div class="line"><span class="lineno">  258</span>        std::printf(<span class="stringliteral">&quot;Время чтения: %.3f сек\n&quot;</span>, read_time);</div>
+<div class="line"><span class="lineno">  259</span>        std::printf(<span class="stringliteral">&quot;\n&quot;</span>);</div>
+<div class="line"><span class="lineno">  260</span>    }</div>
+<div class="ttc" id="aclasssignals_1_1_signal_header_html_a4f7916d3a80b8650185a63aac2dd59f6"><div class="ttname"><a href="classsignals_1_1_signal_header.html#a4f7916d3a80b8650185a63aac2dd59f6">signals::SignalHeader::frequency</a></div><div class="ttdeci">double frequency</div><div class="ttdef"><b>Определения</b> <a href="signal__common_8hpp_source.html#l00035">signal_common.hpp:35</a></div></div>
+</div><!-- fragment -->
+<p class="reference">Перекрестные ссылки <a class="el" href="signal__common_8hpp_source.html#l00035">signals::SignalHeader::frequency</a>, <a class="el" href="signal__common_8hpp_source.html#l00037">signals::SignalHeader::ifirst_point</a>, <a class="el" href="signal__common_8hpp_source.html#l00038">signals::SignalHeader::ilast_point</a>, <a class="el" href="signal__common_8hpp_source.html#l00034">signals::SignalHeader::num_channels</a> и <a class="el" href="signal__common_8hpp_source.html#l00064">signals::SignalData::num_points</a>.</p>
+
+<p class="reference">Используется в <a class="el" href="test__duckdb_8cpp_source.html#l00008">main()</a>.</p>
+<div class="dynheader">
+Граф вызова функции:</div>
+<div class="dyncontent">
+<div class="center"><img src="group__test__utils_gac538c68b5a04ea811a82ff679376bd93_icgraph.png" border="0" usemap="#agroup__test__utils_gac538c68b5a04ea811a82ff679376bd93_icgraph" loading="lazy" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="ga098dc20f2c0109243fc4196e193ba292" name="ga098dc20f2c0109243fc4196e193ba292"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga098dc20f2c0109243fc4196e193ba292">&#9670;&#160;</a></span>print_file_info()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void signals::print_file_info </td>
+          <td>(</td>
+          <td class="paramtype">const std::filesystem::path &amp;</td>          <td class="paramname"><span class="paramname"><em>path</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classsignals_1_1_signal_data.html">SignalData</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>data</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>read_time</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Выводит информацию по исходным .bin/.hdr файлам и считанным данным. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">path</td><td>Путь к .bin/.hdr файлам (расширение игнорируется). </td></tr>
+    <tr><td class="paramname">data</td><td>Считанные данные сигнала. </td></tr>
+    <tr><td class="paramname">read_time</td><td>Время чтения в секундах. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>Исключения</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::filesystem::filesystem_error</td><td>Если не удалось получить размер файлов.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Последовательность работы:</p><ol type="1">
+<li>Получает размеры .bin и .hdr через std::filesystem::file_size.</li>
+<li>Выводит число каналов, точек, диапазон и частоту.</li>
+<li>Выводит размер файлов и время чтения. </li>
+</ol>
+
+<p class="definition">См. определение в файле <a class="el" href="test__utils_8cpp_source.html">test_utils.cpp</a> строка <a class="el" href="test__utils_8cpp_source.html#l00216">216</a></p>
+<div class="fragment"><div class="line"><span class="lineno">  217</span>                                           {</div>
+<div class="line"><span class="lineno">  218</span>        <span class="keyword">auto</span> base = std::filesystem::path(path).replace_extension(<span class="stringliteral">&quot;&quot;</span>);</div>
+<div class="line"><span class="lineno">  219</span>        <span class="keyword">auto</span> header_path = base;</div>
+<div class="line"><span class="lineno">  220</span> </div>
+<div class="line"><span class="lineno">  221</span>        header_path.replace_extension(<span class="stringliteral">&quot;.hdr&quot;</span>);</div>
+<div class="line"><span class="lineno">  222</span>        <span class="keyword">const</span> <span class="keywordtype">size_t</span> header_size = std::filesystem::file_size(header_path);</div>
+<div class="line"><span class="lineno">  223</span> </div>
+<div class="line"><span class="lineno">  224</span>        <span class="keyword">auto</span> bin_path = base.replace_extension(<span class="stringliteral">&quot;.bin&quot;</span>);</div>
+<div class="line"><span class="lineno">  225</span>        <span class="keyword">const</span> <span class="keywordtype">size_t</span> bin_size = std::filesystem::file_size(bin_path);</div>
+<div class="line"><span class="lineno">  226</span> </div>
+<div class="line"><span class="lineno">  227</span>        std::printf(<span class="stringliteral">&quot;Исходные данные (BIN):\n&quot;</span>);</div>
+<div class="line"><span class="lineno">  228</span>        std::printf(<span class="stringliteral">&quot;Каналов: %d\n&quot;</span>, data.<a class="code hl_variable" href="classsignals_1_1_signal_header.html#a07229a399c52f26674d63ce93dea3631">num_channels</a>);</div>
+<div class="line"><span class="lineno">  229</span>        std::printf(<span class="stringliteral">&quot;Точек: %lld\n&quot;</span>, <span class="keyword">static_cast&lt;</span><span class="keywordtype">long</span> <span class="keywordtype">long</span><span class="keyword">&gt;</span>(data.<a class="code hl_variable" href="classsignals_1_1_signal_data.html#ae3c6a4b60f673f3c9b45e125b197a51a">num_points</a>));</div>
+<div class="line"><span class="lineno">  230</span>        std::printf(<span class="stringliteral">&quot;Диапазон: %lld..%lld\n&quot;</span>, <span class="keyword">static_cast&lt;</span><span class="keywordtype">long</span> <span class="keywordtype">long</span><span class="keyword">&gt;</span>(data.<a class="code hl_variable" href="classsignals_1_1_signal_header.html#ac9cc61fe15af8fad1309be1295b600b8">ifirst_point</a>),</div>
+<div class="line"><span class="lineno">  231</span>                    <span class="keyword">static_cast&lt;</span><span class="keywordtype">long</span> <span class="keywordtype">long</span><span class="keyword">&gt;</span>(data.<a class="code hl_variable" href="classsignals_1_1_signal_header.html#a4003b76fc6492f33eb80f63ae7be02d0">ilast_point</a>));</div>
+<div class="line"><span class="lineno">  232</span>        std::printf(<span class="stringliteral">&quot;Частота: %.1f Гц\n&quot;</span>, data.<a class="code hl_variable" href="classsignals_1_1_signal_header.html#a4f7916d3a80b8650185a63aac2dd59f6">frequency</a>);</div>
+<div class="line"><span class="lineno">  233</span>        std::printf(<span class="stringliteral">&quot;Размер файлов: BIN=%.1f MB, HDR=%.1f KB\n&quot;</span>,</div>
+<div class="line"><span class="lineno">  234</span>                    <span class="keyword">static_cast&lt;</span><span class="keywordtype">double</span><span class="keyword">&gt;</span>(bin_size) / (1024.0 * 1024.0),</div>
+<div class="line"><span class="lineno">  235</span>                    <span class="keyword">static_cast&lt;</span><span class="keywordtype">double</span><span class="keyword">&gt;</span>(header_size) / 1024.0);</div>
+<div class="line"><span class="lineno">  236</span>        std::printf(<span class="stringliteral">&quot;Время чтения BIN: %.3f сек\n&quot;</span>, read_time);</div>
+<div class="line"><span class="lineno">  237</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">Перекрестные ссылки <a class="el" href="signal__common_8hpp_source.html#l00035">signals::SignalHeader::frequency</a>, <a class="el" href="signal__common_8hpp_source.html#l00037">signals::SignalHeader::ifirst_point</a>, <a class="el" href="signal__common_8hpp_source.html#l00038">signals::SignalHeader::ilast_point</a>, <a class="el" href="signal__common_8hpp_source.html#l00034">signals::SignalHeader::num_channels</a> и <a class="el" href="signal__common_8hpp_source.html#l00064">signals::SignalData::num_points</a>.</p>
+
+<p class="reference">Используется в <a class="el" href="test__duckdb_8cpp_source.html#l00008">main()</a>.</p>
+<div class="dynheader">
+Граф вызова функции:</div>
+<div class="dyncontent">
+<div class="center"><img src="group__test__utils_ga098dc20f2c0109243fc4196e193ba292_icgraph.png" border="0" usemap="#agroup__test__utils_ga098dc20f2c0109243fc4196e193ba292_icgraph" loading="lazy" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="gab5a2185a87f0b5bf47e2d63318631c33" name="gab5a2185a87f0b5bf47e2d63318631c33"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gab5a2185a87f0b5bf47e2d63318631c33">&#9670;&#160;</a></span>print_first_rows()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void signals::print_first_rows </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classsignals_1_1_signal_data.html">SignalData</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>data</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int64_t</td>          <td class="paramname"><span class="paramname"><em>preview_points</em></span><span class="paramdefsep"> = </span><span class="paramdefval"><a class="el" href="test__utils_8cpp.html#a619e5bf8722bd84fc200a18f0cf7e639">TEST_UTILS_PREVIEW_POINTS</a></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Выводит первые и последние строки <a class="el" href="classsignals_1_1_signal_data.html" title="Данные и метаданные (данные из .hdr и .bin, данные в double).">SignalData</a>. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">data</td><td>Данные для вывода. </td></tr>
+    <tr><td class="paramname">preview_points</td><td>Количество строк в верхнем и нижнем блоке.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Последовательность работы:</p><ol type="1">
+<li>Проверяет, есть ли данные для отображения.</li>
+<li>Выводит заголовок таблицы (Row + имена каналов).</li>
+<li>Выводит первые <code class="param">preview_points</code> строк.</li>
+<li>Выводит последние <code class="param">preview_points</code> строк. </li>
+</ol>
+
+<p class="definition">См. определение в файле <a class="el" href="test__utils_8cpp_source.html">test_utils.cpp</a> строка <a class="el" href="test__utils_8cpp_source.html#l00138">138</a></p>
+<div class="fragment"><div class="line"><span class="lineno">  138</span>                                                                          {</div>
+<div class="line"><span class="lineno">  139</span>        <span class="keywordflow">if</span> (data.<a class="code hl_variable" href="classsignals_1_1_signal_data.html#ae3c6a4b60f673f3c9b45e125b197a51a">num_points</a> == 0 || data.<a class="code hl_variable" href="classsignals_1_1_signal_header.html#a07229a399c52f26674d63ce93dea3631">num_channels</a> == 0) {</div>
+<div class="line"><span class="lineno">  140</span>            std::printf(<span class="stringliteral">&quot;Нет данных для отображения\n&quot;</span>);</div>
+<div class="line"><span class="lineno">  141</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  142</span>        }</div>
+<div class="line"><span class="lineno">  143</span> </div>
+<div class="line"><span class="lineno">  144</span>        <span class="keyword">const</span> int64_t pp = std::min&lt;int64_t&gt;(preview_points, data.<a class="code hl_variable" href="classsignals_1_1_signal_data.html#ae3c6a4b60f673f3c9b45e125b197a51a">num_points</a>);</div>
+<div class="line"><span class="lineno">  145</span> </div>
+<div class="line"><span class="lineno">  146</span>        std::printf(<span class="stringliteral">&quot;\n%-6s&quot;</span>, <span class="stringliteral">&quot;Row&quot;</span>);</div>
+<div class="line"><span class="lineno">  147</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> ch = 0; ch &lt; data.<a class="code hl_variable" href="classsignals_1_1_signal_header.html#a07229a399c52f26674d63ce93dea3631">num_channels</a>; ch++) {</div>
+<div class="line"><span class="lineno">  148</span>            <span class="keyword">const</span> std::string channel_name = (<span class="keyword">static_cast&lt;</span><span class="keywordtype">size_t</span><span class="keyword">&gt;</span>(ch) &lt; data.<a class="code hl_variable" href="classsignals_1_1_signal_header.html#a266aa40b8fdfefc97835806b022f7b9a">channel_names</a>.size() &amp;&amp;</div>
+<div class="line"><span class="lineno">  149</span>                                              !data.<a class="code hl_variable" href="classsignals_1_1_signal_header.html#a266aa40b8fdfefc97835806b022f7b9a">channel_names</a>[<span class="keyword">static_cast&lt;</span><span class="keywordtype">size_t</span><span class="keyword">&gt;</span>(ch)].empty())</div>
+<div class="line"><span class="lineno">  150</span>                                                 ? data.<a class="code hl_variable" href="classsignals_1_1_signal_header.html#a266aa40b8fdfefc97835806b022f7b9a">channel_names</a>[<span class="keyword">static_cast&lt;</span><span class="keywordtype">size_t</span><span class="keyword">&gt;</span>(ch)]</div>
+<div class="line"><span class="lineno">  151</span>                                                 : std::format(<span class="stringliteral">&quot;Ch {}&quot;</span>, ch);</div>
+<div class="line"><span class="lineno">  152</span>            std::printf(<span class="stringliteral">&quot;%-14s&quot;</span>, channel_name.c_str());</div>
+<div class="line"><span class="lineno">  153</span>        }</div>
+<div class="line"><span class="lineno">  154</span>        std::printf(<span class="stringliteral">&quot;\n&quot;</span>);</div>
+<div class="line"><span class="lineno">  155</span> </div>
+<div class="line"><span class="lineno">  156</span>        <span class="keywordflow">for</span> (int64_t row = 0; row &lt; pp; row++) {</div>
+<div class="line"><span class="lineno">  157</span>            std::printf(<span class="stringliteral">&quot;%-10lld&quot;</span>, <span class="keyword">static_cast&lt;</span><span class="keywordtype">long</span> <span class="keywordtype">long</span><span class="keyword">&gt;</span>(row + 1));</div>
+<div class="line"><span class="lineno">  158</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> ch = 0; ch &lt; data.<a class="code hl_variable" href="classsignals_1_1_signal_header.html#a07229a399c52f26674d63ce93dea3631">num_channels</a>; ch++)</div>
+<div class="line"><span class="lineno">  159</span>                std::printf(<span class="stringliteral">&quot;%-14.4f&quot;</span>, data.<a class="code hl_function" href="classsignals_1_1_signal_data.html#a46f2f5f6e2e515d487f2661f2962269e">value</a>(ch, row));</div>
+<div class="line"><span class="lineno">  160</span>            std::printf(<span class="stringliteral">&quot;\n&quot;</span>);</div>
+<div class="line"><span class="lineno">  161</span>        }</div>
+<div class="line"><span class="lineno">  162</span> </div>
+<div class="line"><span class="lineno">  163</span>        <span class="keywordflow">if</span> (data.<a class="code hl_variable" href="classsignals_1_1_signal_data.html#ae3c6a4b60f673f3c9b45e125b197a51a">num_points</a> &gt; pp * 2)</div>
+<div class="line"><span class="lineno">  164</span>            std::printf(<span class="stringliteral">&quot;...\n&quot;</span>);</div>
+<div class="line"><span class="lineno">  165</span> </div>
+<div class="line"><span class="lineno">  166</span>        <span class="keyword">const</span> int64_t start_last = std::max&lt;int64_t&gt;(data.<a class="code hl_variable" href="classsignals_1_1_signal_data.html#ae3c6a4b60f673f3c9b45e125b197a51a">num_points</a> - pp, pp);</div>
+<div class="line"><span class="lineno">  167</span>        <span class="keywordflow">for</span> (int64_t row = start_last; row &lt; data.<a class="code hl_variable" href="classsignals_1_1_signal_data.html#ae3c6a4b60f673f3c9b45e125b197a51a">num_points</a>; row++) {</div>
+<div class="line"><span class="lineno">  168</span>            std::printf(<span class="stringliteral">&quot;%-10lld&quot;</span>, <span class="keyword">static_cast&lt;</span><span class="keywordtype">long</span> <span class="keywordtype">long</span><span class="keyword">&gt;</span>(row + 1));</div>
+<div class="line"><span class="lineno">  169</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> ch = 0; ch &lt; data.<a class="code hl_variable" href="classsignals_1_1_signal_header.html#a07229a399c52f26674d63ce93dea3631">num_channels</a>; ch++)</div>
+<div class="line"><span class="lineno">  170</span>                std::printf(<span class="stringliteral">&quot;%-14.4f&quot;</span>, data.<a class="code hl_function" href="classsignals_1_1_signal_data.html#a46f2f5f6e2e515d487f2661f2962269e">value</a>(ch, row));</div>
+<div class="line"><span class="lineno">  171</span>            std::printf(<span class="stringliteral">&quot;\n&quot;</span>);</div>
+<div class="line"><span class="lineno">  172</span>        }</div>
+<div class="line"><span class="lineno">  173</span>    }</div>
+<div class="ttc" id="aclasssignals_1_1_signal_header_html_a266aa40b8fdfefc97835806b022f7b9a"><div class="ttname"><a href="classsignals_1_1_signal_header.html#a266aa40b8fdfefc97835806b022f7b9a">signals::SignalHeader::channel_names</a></div><div class="ttdeci">std::vector&lt; std::string &gt; channel_names</div><div class="ttdef"><b>Определения</b> <a href="signal__common_8hpp_source.html#l00040">signal_common.hpp:40</a></div></div>
+</div><!-- fragment -->
+<p class="reference">Перекрестные ссылки <a class="el" href="signal__common_8hpp_source.html#l00040">signals::SignalHeader::channel_names</a>, <a class="el" href="signal__common_8hpp_source.html#l00034">signals::SignalHeader::num_channels</a>, <a class="el" href="signal__common_8hpp_source.html#l00064">signals::SignalData::num_points</a> и <a class="el" href="signal__common_8hpp_source.html#l00086">signals::SignalData::value()</a>.</p>
+
+<p class="reference">Используется в <a class="el" href="test__duckdb_8cpp_source.html#l00008">main()</a>.</p>
+<div class="dynheader">
+Граф вызовов:</div>
+<div class="dyncontent">
+<div class="center"><img src="group__test__utils_gab5a2185a87f0b5bf47e2d63318631c33_cgraph.png" border="0" usemap="#agroup__test__utils_gab5a2185a87f0b5bf47e2d63318631c33_cgraph" loading="lazy" alt=""/></div>
+</div>
+<div class="dynheader">
+Граф вызова функции:</div>
+<div class="dyncontent">
+<div class="center"><img src="group__test__utils_gab5a2185a87f0b5bf47e2d63318631c33_icgraph.png" border="0" usemap="#agroup__test__utils_gab5a2185a87f0b5bf47e2d63318631c33_icgraph" loading="lazy" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="gaa09de34aa31f12f3bc81ae37e6181c4a" name="gaa09de34aa31f12f3bc81ae37e6181c4a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaa09de34aa31f12f3bc81ae37e6181c4a">&#9670;&#160;</a></span>test_random_chunk_reading()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double signals::test_random_chunk_reading </td>
+          <td>(</td>
+          <td class="paramtype">const std::function&lt; void(const std::filesystem::path &amp;, <a class="el" href="classsignals_1_1_signal_data.html">SignalData</a> &amp;, int64_t, int64_t)&gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>read_signal</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::filesystem::path &amp;</td>          <td class="paramname"><span class="paramname"><em>source_path</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classsignals_1_1_signal_data.html">SignalData</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>reference</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int64_t</td>          <td class="paramname"><span class="paramname"><em>chunk_points</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Тест чтения чанков в случайном порядке. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">read_signal</td><td>Функция чтения диапазона (parquet/hdf5/duckdb). </td></tr>
+    <tr><td class="paramname">source_path</td><td>Путь к файлу для чтения данных. </td></tr>
+    <tr><td class="paramname">reference</td><td>Данные для проверки. </td></tr>
+    <tr><td class="paramname">chunk_points</td><td>Размер чанка; при &lt;= 0 используется весь доступный диапазон за один проход. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>double Время выполнения в секундах. </dd></dl>
+<dl class="exception"><dt>Исключения</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">Любые</td><td>исключения, которые бросает <code class="param">read_signal</code>, а также возможные исключения выделения памяти.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Последовательность работы:</p><ol type="1">
+<li>Нормализует размер чанка и считает число чанков.</li>
+<li>Формирует массив индексов чанков и перемешивает его.</li>
+<li>Читает чанки в порядке из перемешанного массива.</li>
+<li>Возвращает суммарное время чтения. </li>
+</ol>
+
+<p class="definition">См. определение в файле <a class="el" href="test__utils_8cpp_source.html">test_utils.cpp</a> строка <a class="el" href="test__utils_8cpp_source.html#l00054">54</a></p>
+<div class="fragment"><div class="line"><span class="lineno">   58</span>                              {</div>
+<div class="line"><span class="lineno">   59</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="namespacesignals.html#a042bfaf1c760bd72d5d201c55f90b7c5">benchmark_chunk_reading_impl</a>(read_signal, source_path, reference, chunk_points,</div>
+<div class="line"><span class="lineno">   60</span>                                            <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">   61</span>    }</div>
+<div class="ttc" id="anamespacesignals_html_a042bfaf1c760bd72d5d201c55f90b7c5"><div class="ttname"><a href="namespacesignals.html#a042bfaf1c760bd72d5d201c55f90b7c5">signals::benchmark_chunk_reading_impl</a></div><div class="ttdeci">static double benchmark_chunk_reading_impl(const std::function&lt; void(const std::filesystem::path &amp;, SignalData &amp;, int64_t, int64_t)&gt; &amp;read_signal, const std::filesystem::path &amp;source_path, const SignalData &amp;reference, int64_t chunk_points, bool random_order)</div><div class="ttdef"><b>Определения</b> <a href="test__utils_8cpp_source.html#l00455">test_utils.cpp:455</a></div></div>
+</div><!-- fragment -->
+<p class="reference">Перекрестные ссылки <a class="el" href="test__utils_8cpp_source.html#l00455">benchmark_chunk_reading_impl()</a>.</p>
+
+<p class="reference">Используется в <a class="el" href="test__utils_8cpp_source.html#l00109">test_random_chunk_reading_val()</a>.</p>
+<div class="dynheader">
+Граф вызовов:</div>
+<div class="dyncontent">
+<div class="center"><img src="group__test__utils_gaa09de34aa31f12f3bc81ae37e6181c4a_cgraph.png" border="0" usemap="#agroup__test__utils_gaa09de34aa31f12f3bc81ae37e6181c4a_cgraph" loading="lazy" alt=""/></div>
+</div>
+<div class="dynheader">
+Граф вызова функции:</div>
+<div class="dyncontent">
+<div class="center"><img src="group__test__utils_gaa09de34aa31f12f3bc81ae37e6181c4a_icgraph.png" border="0" usemap="#agroup__test__utils_gaa09de34aa31f12f3bc81ae37e6181c4a_icgraph" loading="lazy" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="gaa6d78e3540958f2ac783e9223c195168" name="gaa6d78e3540958f2ac783e9223c195168"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaa6d78e3540958f2ac783e9223c195168">&#9670;&#160;</a></span>test_random_chunk_reading_val()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void signals::test_random_chunk_reading_val </td>
+          <td>(</td>
+          <td class="paramtype">const std::function&lt; void(const std::filesystem::path &amp;, <a class="el" href="classsignals_1_1_signal_data.html">SignalData</a> &amp;, int64_t, int64_t)&gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>read_signal</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::filesystem::path &amp;</td>          <td class="paramname"><span class="paramname"><em>source_path</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classsignals_1_1_signal_data.html">SignalData</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>original_data</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int64_t</td>          <td class="paramname"><span class="paramname"><em>chunk_points</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Запускает тест случайного чтения и выводит статистику. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">read_signal</td><td>Функция чтения диапазона. </td></tr>
+    <tr><td class="paramname">source_path</td><td>Путь к файлу для чтения данных. </td></tr>
+    <tr><td class="paramname">original_data</td><td>Данные для проверки. </td></tr>
+    <tr><td class="paramname">chunk_points</td><td>Размер чанка. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>Исключения</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">Любые</td><td>исключения, которые бросает <code class="param">read_signal</code>, а также возможные исключения выделения памяти.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Последовательность работы:</p><ol type="1">
+<li>Выполняет test_random_chunk_reading.</li>
+<li>Выполняет validate_random_chunk_reading.</li>
+<li>Если валидация успешна, выводит число чанков, время и throughput.</li>
+<li>Если исходные данные пустые, выводит пустую статистику. </li>
+</ol>
+
+<p class="definition">См. определение в файле <a class="el" href="test__utils_8cpp_source.html">test_utils.cpp</a> строка <a class="el" href="test__utils_8cpp_source.html#l00109">109</a></p>
+<div class="fragment"><div class="line"><span class="lineno">  113</span>                              {</div>
+<div class="line"><span class="lineno">  114</span>        <span class="keyword">const</span> <span class="keywordtype">double</span> total_time =</div>
+<div class="line"><span class="lineno">  115</span>            <a class="code hl_function" href="#gaa09de34aa31f12f3bc81ae37e6181c4a">test_random_chunk_reading</a>(read_signal, source_path, original_data, chunk_points);</div>
+<div class="line"><span class="lineno">  116</span> </div>
+<div class="line"><span class="lineno">  117</span>        <span class="keywordflow">if</span> (!<a class="code hl_function" href="#ga4309c17a6f3dddadcc45ee0408670afc">validate_random_chunk_reading</a>(read_signal, source_path, original_data, chunk_points))</div>
+<div class="line"><span class="lineno">  118</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  119</span> </div>
+<div class="line"><span class="lineno">  120</span>        <span class="keywordflow">if</span> (original_data.<a class="code hl_variable" href="classsignals_1_1_signal_data.html#ae3c6a4b60f673f3c9b45e125b197a51a">num_points</a> &lt;= 0 || original_data.<a class="code hl_variable" href="classsignals_1_1_signal_header.html#a07229a399c52f26674d63ce93dea3631">num_channels</a> &lt;= 0) {</div>
+<div class="line"><span class="lineno">  121</span>            std::printf(<span class="stringliteral">&quot;Случайный порядок: 0 чанков, 0.000 сек (0.0 отсчетов/сек)\n&quot;</span>);</div>
+<div class="line"><span class="lineno">  122</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  123</span>        }</div>
+<div class="line"><span class="lineno">  124</span> </div>
+<div class="line"><span class="lineno">  125</span>        <span class="keyword">const</span> int64_t safe_chunk_points =</div>
+<div class="line"><span class="lineno">  126</span>            <a class="code hl_function" href="namespacesignals.html#a430203d44d637569209520187663b107">normalize_chunk_points</a>(chunk_points, original_data.<a class="code hl_variable" href="classsignals_1_1_signal_data.html#ae3c6a4b60f673f3c9b45e125b197a51a">num_points</a>);</div>
+<div class="line"><span class="lineno">  127</span>        <span class="keyword">const</span> int64_t num_chunks =</div>
+<div class="line"><span class="lineno">  128</span>            (original_data.<a class="code hl_variable" href="classsignals_1_1_signal_data.html#ae3c6a4b60f673f3c9b45e125b197a51a">num_points</a> + safe_chunk_points - 1) / safe_chunk_points;</div>
+<div class="line"><span class="lineno">  129</span>        <span class="keyword">const</span> <span class="keywordtype">double</span> samples_per_second =</div>
+<div class="line"><span class="lineno">  130</span>            (total_time &gt; 0.0) ? (<span class="keyword">static_cast&lt;</span><span class="keywordtype">double</span><span class="keyword">&gt;</span>(original_data.<a class="code hl_variable" href="classsignals_1_1_signal_data.html#ae3c6a4b60f673f3c9b45e125b197a51a">num_points</a>) *</div>
+<div class="line"><span class="lineno">  131</span>                                  <span class="keyword">static_cast&lt;</span><span class="keywordtype">double</span><span class="keyword">&gt;</span>(original_data.<a class="code hl_variable" href="classsignals_1_1_signal_header.html#a07229a399c52f26674d63ce93dea3631">num_channels</a>) / total_time)</div>
+<div class="line"><span class="lineno">  132</span>                               : 0.0;</div>
+<div class="line"><span class="lineno">  133</span> </div>
+<div class="line"><span class="lineno">  134</span>        std::printf(<span class="stringliteral">&quot;Случайный порядок: %lld чанков, %.3f сек (%.1f отсчетов/сек)\n&quot;</span>, num_chunks,</div>
+<div class="line"><span class="lineno">  135</span>                    total_time, samples_per_second);</div>
+<div class="line"><span class="lineno">  136</span>    }</div>
+<div class="ttc" id="agroup__test__utils_html_ga4309c17a6f3dddadcc45ee0408670afc"><div class="ttname"><a href="#ga4309c17a6f3dddadcc45ee0408670afc">signals::validate_random_chunk_reading</a></div><div class="ttdeci">bool validate_random_chunk_reading(const std::function&lt; void(const std::filesystem::path &amp;, SignalData &amp;, int64_t, int64_t)&gt; &amp;read_signal, const std::filesystem::path &amp;source_path, const SignalData &amp;reference, int64_t chunk_points)</div><div class="ttdoc">Проверяет корректность чтения чанков в случайном порядке.</div><div class="ttdef"><b>Определения</b> <a href="test__utils_8cpp_source.html#l00072">test_utils.cpp:72</a></div></div>
+<div class="ttc" id="agroup__test__utils_html_gaa09de34aa31f12f3bc81ae37e6181c4a"><div class="ttname"><a href="#gaa09de34aa31f12f3bc81ae37e6181c4a">signals::test_random_chunk_reading</a></div><div class="ttdeci">double test_random_chunk_reading(const std::function&lt; void(const std::filesystem::path &amp;, SignalData &amp;, int64_t, int64_t)&gt; &amp;read_signal, const std::filesystem::path &amp;source_path, const SignalData &amp;reference, int64_t chunk_points)</div><div class="ttdoc">Тест чтения чанков в случайном порядке.</div><div class="ttdef"><b>Определения</b> <a href="test__utils_8cpp_source.html#l00054">test_utils.cpp:54</a></div></div>
+<div class="ttc" id="anamespacesignals_html_a430203d44d637569209520187663b107"><div class="ttname"><a href="namespacesignals.html#a430203d44d637569209520187663b107">signals::normalize_chunk_points</a></div><div class="ttdeci">static int64_t normalize_chunk_points(int64_t chunk_points, int64_t total_points)</div><div class="ttdef"><b>Определения</b> <a href="test__utils_8cpp_source.html#l00398">test_utils.cpp:398</a></div></div>
+</div><!-- fragment -->
+<p class="reference">Перекрестные ссылки <a class="el" href="test__utils_8cpp_source.html#l00398">normalize_chunk_points()</a>, <a class="el" href="signal__common_8hpp_source.html#l00034">signals::SignalHeader::num_channels</a>, <a class="el" href="signal__common_8hpp_source.html#l00064">signals::SignalData::num_points</a>, <a class="el" href="test__utils_8cpp_source.html#l00054">test_random_chunk_reading()</a> и <a class="el" href="test__utils_8cpp_source.html#l00072">validate_random_chunk_reading()</a>.</p>
+
+<p class="reference">Используется в <a class="el" href="test__duckdb_8cpp_source.html#l00008">main()</a>.</p>
+<div class="dynheader">
+Граф вызовов:</div>
+<div class="dyncontent">
+<div class="center"><img src="group__test__utils_gaa6d78e3540958f2ac783e9223c195168_cgraph.png" border="0" usemap="#agroup__test__utils_gaa6d78e3540958f2ac783e9223c195168_cgraph" loading="lazy" alt=""/></div>
+</div>
+<div class="dynheader">
+Граф вызова функции:</div>
+<div class="dyncontent">
+<div class="center"><img src="group__test__utils_gaa6d78e3540958f2ac783e9223c195168_icgraph.png" border="0" usemap="#agroup__test__utils_gaa6d78e3540958f2ac783e9223c195168_icgraph" loading="lazy" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="ga002dece84fa9ae9969687bcfb178af16" name="ga002dece84fa9ae9969687bcfb178af16"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga002dece84fa9ae9969687bcfb178af16">&#9670;&#160;</a></span>test_serial_chunk_reading()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double signals::test_serial_chunk_reading </td>
+          <td>(</td>
+          <td class="paramtype">const std::function&lt; void(const std::filesystem::path &amp;, <a class="el" href="classsignals_1_1_signal_data.html">SignalData</a> &amp;, int64_t, int64_t)&gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>read_signal</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::filesystem::path &amp;</td>          <td class="paramname"><span class="paramname"><em>source_path</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classsignals_1_1_signal_data.html">SignalData</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>reference</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int64_t</td>          <td class="paramname"><span class="paramname"><em>chunk_points</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Тест последовательного чтения диапазона чанками. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">read_signal</td><td>Функция чтения диапазона (parquet/hdf5/duckdb). </td></tr>
+    <tr><td class="paramname">source_path</td><td>Путь к файлу для чтения данных. </td></tr>
+    <tr><td class="paramname">reference</td><td>Данные для проверки. </td></tr>
+    <tr><td class="paramname">chunk_points</td><td>Размер чанка; при &lt;= 0 используется весь доступный диапазон за один проход. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>double Время выполнения в секундах. </dd></dl>
+<dl class="exception"><dt>Исключения</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">Любые</td><td>исключения, которые бросает <code class="param">read_signal</code>, а также возможные исключения выделения памяти.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Последовательность работы:</p><ol type="1">
+<li>Нормализует размер чанка относительно signalData.num_points.</li>
+<li>Делит диапазон на последовательные чанки.</li>
+<li>Для каждого чанка вызывает read_signal(offset, count).</li>
+<li>Возвращает суммарное время чтения. </li>
+</ol>
+
+<p class="definition">См. определение в файле <a class="el" href="test__utils_8cpp_source.html">test_utils.cpp</a> строка <a class="el" href="test__utils_8cpp_source.html#l00045">45</a></p>
+<div class="fragment"><div class="line"><span class="lineno">   49</span>                              {</div>
+<div class="line"><span class="lineno">   50</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="namespacesignals.html#a042bfaf1c760bd72d5d201c55f90b7c5">benchmark_chunk_reading_impl</a>(read_signal, source_path, reference, chunk_points,</div>
+<div class="line"><span class="lineno">   51</span>                                            <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">   52</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">Перекрестные ссылки <a class="el" href="test__utils_8cpp_source.html#l00455">benchmark_chunk_reading_impl()</a>.</p>
+
+<p class="reference">Используется в <a class="el" href="test__utils_8cpp_source.html#l00080">test_serial_chunk_reading_val()</a>.</p>
+<div class="dynheader">
+Граф вызовов:</div>
+<div class="dyncontent">
+<div class="center"><img src="group__test__utils_ga002dece84fa9ae9969687bcfb178af16_cgraph.png" border="0" usemap="#agroup__test__utils_ga002dece84fa9ae9969687bcfb178af16_cgraph" loading="lazy" alt=""/></div>
+</div>
+<div class="dynheader">
+Граф вызова функции:</div>
+<div class="dyncontent">
+<div class="center"><img src="group__test__utils_ga002dece84fa9ae9969687bcfb178af16_icgraph.png" border="0" usemap="#agroup__test__utils_ga002dece84fa9ae9969687bcfb178af16_icgraph" loading="lazy" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="gaabc783a10033d1edfbe124857a332381" name="gaabc783a10033d1edfbe124857a332381"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaabc783a10033d1edfbe124857a332381">&#9670;&#160;</a></span>test_serial_chunk_reading_val()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void signals::test_serial_chunk_reading_val </td>
+          <td>(</td>
+          <td class="paramtype">const std::function&lt; void(const std::filesystem::path &amp;, <a class="el" href="classsignals_1_1_signal_data.html">SignalData</a> &amp;, int64_t, int64_t)&gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>read_signal</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::filesystem::path &amp;</td>          <td class="paramname"><span class="paramname"><em>source_path</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classsignals_1_1_signal_data.html">SignalData</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>original_data</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int64_t</td>          <td class="paramname"><span class="paramname"><em>chunk_points</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Запускает тест последовательного чтения и выводит статистику. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">read_signal</td><td>Функция чтения диапазона. </td></tr>
+    <tr><td class="paramname">source_path</td><td>Путь к файлу для чтения данных. </td></tr>
+    <tr><td class="paramname">original_data</td><td>Данные для проверки. </td></tr>
+    <tr><td class="paramname">chunk_points</td><td>Размер чанка. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>Исключения</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">Любые</td><td>исключения, которые бросает <code class="param">read_signal</code>, а также возможные исключения выделения памяти.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Последовательность работы:</p><ol type="1">
+<li>Выполняет test_serial_chunk_reading.</li>
+<li>Выполняет validate_serial_chunk_reading.</li>
+<li>Если валидация успешна, выводит число чанков, время и throughput.</li>
+<li>Если исходные данные пустые, выводит пустую статистику. </li>
+</ol>
+
+<p class="definition">См. определение в файле <a class="el" href="test__utils_8cpp_source.html">test_utils.cpp</a> строка <a class="el" href="test__utils_8cpp_source.html#l00080">80</a></p>
+<div class="fragment"><div class="line"><span class="lineno">   84</span>                              {</div>
+<div class="line"><span class="lineno">   85</span>        <span class="keyword">const</span> <span class="keywordtype">double</span> total_time =</div>
+<div class="line"><span class="lineno">   86</span>            <a class="code hl_function" href="#ga002dece84fa9ae9969687bcfb178af16">test_serial_chunk_reading</a>(read_signal, source_path, original_data, chunk_points);</div>
+<div class="line"><span class="lineno">   87</span> </div>
+<div class="line"><span class="lineno">   88</span>        <span class="keywordflow">if</span> (!<a class="code hl_function" href="#ga6f442e7b1e92faa55787adf80826936f">validate_serial_chunk_reading</a>(read_signal, source_path, original_data, chunk_points))</div>
+<div class="line"><span class="lineno">   89</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   90</span> </div>
+<div class="line"><span class="lineno">   91</span>        <span class="keywordflow">if</span> (original_data.<a class="code hl_variable" href="classsignals_1_1_signal_data.html#ae3c6a4b60f673f3c9b45e125b197a51a">num_points</a> &lt;= 0 || original_data.<a class="code hl_variable" href="classsignals_1_1_signal_header.html#a07229a399c52f26674d63ce93dea3631">num_channels</a> &lt;= 0) {</div>
+<div class="line"><span class="lineno">   92</span>            std::printf(<span class="stringliteral">&quot;Последовательное чтение: 0 чанков, 0.000 сек (0.0 отсчетов/сек)\n&quot;</span>);</div>
+<div class="line"><span class="lineno">   93</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   94</span>        }</div>
+<div class="line"><span class="lineno">   95</span> </div>
+<div class="line"><span class="lineno">   96</span>        <span class="keyword">const</span> int64_t safe_chunk_points =</div>
+<div class="line"><span class="lineno">   97</span>            <a class="code hl_function" href="namespacesignals.html#a430203d44d637569209520187663b107">normalize_chunk_points</a>(chunk_points, original_data.<a class="code hl_variable" href="classsignals_1_1_signal_data.html#ae3c6a4b60f673f3c9b45e125b197a51a">num_points</a>);</div>
+<div class="line"><span class="lineno">   98</span>        <span class="keyword">const</span> int64_t num_chunks =</div>
+<div class="line"><span class="lineno">   99</span>            (original_data.<a class="code hl_variable" href="classsignals_1_1_signal_data.html#ae3c6a4b60f673f3c9b45e125b197a51a">num_points</a> + safe_chunk_points - 1) / safe_chunk_points;</div>
+<div class="line"><span class="lineno">  100</span>        <span class="keyword">const</span> <span class="keywordtype">double</span> samples_per_second =</div>
+<div class="line"><span class="lineno">  101</span>            (total_time &gt; 0.0) ? (<span class="keyword">static_cast&lt;</span><span class="keywordtype">double</span><span class="keyword">&gt;</span>(original_data.<a class="code hl_variable" href="classsignals_1_1_signal_data.html#ae3c6a4b60f673f3c9b45e125b197a51a">num_points</a>) *</div>
+<div class="line"><span class="lineno">  102</span>                                  <span class="keyword">static_cast&lt;</span><span class="keywordtype">double</span><span class="keyword">&gt;</span>(original_data.<a class="code hl_variable" href="classsignals_1_1_signal_header.html#a07229a399c52f26674d63ce93dea3631">num_channels</a>) / total_time)</div>
+<div class="line"><span class="lineno">  103</span>                               : 0.0;</div>
+<div class="line"><span class="lineno">  104</span> </div>
+<div class="line"><span class="lineno">  105</span>        std::printf(<span class="stringliteral">&quot;Последовательное чтение: %lld чанков, %.3f сек (%.1f отсчетов/сек)\n&quot;</span>,</div>
+<div class="line"><span class="lineno">  106</span>                    num_chunks, total_time, samples_per_second);</div>
+<div class="line"><span class="lineno">  107</span>    }</div>
+<div class="ttc" id="agroup__test__utils_html_ga002dece84fa9ae9969687bcfb178af16"><div class="ttname"><a href="#ga002dece84fa9ae9969687bcfb178af16">signals::test_serial_chunk_reading</a></div><div class="ttdeci">double test_serial_chunk_reading(const std::function&lt; void(const std::filesystem::path &amp;, SignalData &amp;, int64_t, int64_t)&gt; &amp;read_signal, const std::filesystem::path &amp;source_path, const SignalData &amp;reference, int64_t chunk_points)</div><div class="ttdoc">Тест последовательного чтения диапазона чанками.</div><div class="ttdef"><b>Определения</b> <a href="test__utils_8cpp_source.html#l00045">test_utils.cpp:45</a></div></div>
+<div class="ttc" id="agroup__test__utils_html_ga6f442e7b1e92faa55787adf80826936f"><div class="ttname"><a href="#ga6f442e7b1e92faa55787adf80826936f">signals::validate_serial_chunk_reading</a></div><div class="ttdeci">bool validate_serial_chunk_reading(const std::function&lt; void(const std::filesystem::path &amp;, SignalData &amp;, int64_t, int64_t)&gt; &amp;read_signal, const std::filesystem::path &amp;source_path, const SignalData &amp;reference, int64_t chunk_points)</div><div class="ttdoc">Проверяет корректность последовательного чтения чанков.</div><div class="ttdef"><b>Определения</b> <a href="test__utils_8cpp_source.html#l00063">test_utils.cpp:63</a></div></div>
+</div><!-- fragment -->
+<p class="reference">Перекрестные ссылки <a class="el" href="test__utils_8cpp_source.html#l00398">normalize_chunk_points()</a>, <a class="el" href="signal__common_8hpp_source.html#l00034">signals::SignalHeader::num_channels</a>, <a class="el" href="signal__common_8hpp_source.html#l00064">signals::SignalData::num_points</a>, <a class="el" href="test__utils_8cpp_source.html#l00045">test_serial_chunk_reading()</a> и <a class="el" href="test__utils_8cpp_source.html#l00063">validate_serial_chunk_reading()</a>.</p>
+
+<p class="reference">Используется в <a class="el" href="test__duckdb_8cpp_source.html#l00008">main()</a>.</p>
+<div class="dynheader">
+Граф вызовов:</div>
+<div class="dyncontent">
+<div class="center"><img src="group__test__utils_gaabc783a10033d1edfbe124857a332381_cgraph.png" border="0" usemap="#agroup__test__utils_gaabc783a10033d1edfbe124857a332381_cgraph" loading="lazy" alt=""/></div>
+</div>
+<div class="dynheader">
+Граф вызова функции:</div>
+<div class="dyncontent">
+<div class="center"><img src="group__test__utils_gaabc783a10033d1edfbe124857a332381_icgraph.png" border="0" usemap="#agroup__test__utils_gaabc783a10033d1edfbe124857a332381_icgraph" loading="lazy" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="gae86aaff88ef0aabf646892d9867aad15" name="gae86aaff88ef0aabf646892d9867aad15"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gae86aaff88ef0aabf646892d9867aad15">&#9670;&#160;</a></span>try_parse_int64()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool signals::try_parse_int64 </td>
+          <td>(</td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>text</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int64_t &amp;</td>          <td class="paramname"><span class="paramname"><em>value</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Парсит строку в int64. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">text</td><td>Входная строка. </td></tr>
+    <tr><td class="paramname">value</td><td>Выходное значение при успешном парсинге.</td></tr>
+  </table>
+  </dd>
+</dl>
+<ul>
+<li><dl class="section return"><dt>Возвращает</dt><dd>true Если строка является корректным целым числом int64. </dd>
+<dd>
+false Если строка пустая/некорректная или вышла за диапазон.</dd></dl>
+Последовательность работы:</li>
+</ul>
+<ol type="1">
+<li>Проверяет, что строка не пустая.</li>
+<li>Обрабатывает знак +/-.</li>
+<li>Проверяет, что оставшиеся символы только цифры.</li>
+<li>Пытается преобразовать строку через std::stoll.</li>
+<li>Возвращает true при успехе, иначе false. </li>
+</ol>
+
+<p class="definition">См. определение в файле <a class="el" href="test__utils_8cpp_source.html">test_utils.cpp</a> строка <a class="el" href="test__utils_8cpp_source.html#l00262">262</a></p>
+<div class="fragment"><div class="line"><span class="lineno">  262</span>                                                           {</div>
+<div class="line"><span class="lineno">  263</span>        <span class="keywordflow">if</span> (!text || *text == <span class="charliteral">&#39;\0&#39;</span>)</div>
+<div class="line"><span class="lineno">  264</span>            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  265</span> </div>
+<div class="line"><span class="lineno">  266</span>        <span class="keyword">const</span> <span class="keywordtype">char</span> *end = text + strlen(text);</div>
+<div class="line"><span class="lineno">  267</span>        <span class="keyword">auto</span> [ptr, ec] = std::from_chars(text, end, value);</div>
+<div class="line"><span class="lineno">  268</span> </div>
+<div class="line"><span class="lineno">  269</span>        <span class="keywordflow">return</span> ec == std::errc() &amp;&amp; ptr == end;</div>
+<div class="line"><span class="lineno">  270</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">Используется в <a class="el" href="test__duckdb_8cpp_source.html#l00008">main()</a>.</p>
+<div class="dynheader">
+Граф вызова функции:</div>
+<div class="dyncontent">
+<div class="center"><img src="group__test__utils_gae86aaff88ef0aabf646892d9867aad15_icgraph.png" border="0" usemap="#agroup__test__utils_gae86aaff88ef0aabf646892d9867aad15_icgraph" loading="lazy" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="ga4309c17a6f3dddadcc45ee0408670afc" name="ga4309c17a6f3dddadcc45ee0408670afc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga4309c17a6f3dddadcc45ee0408670afc">&#9670;&#160;</a></span>validate_random_chunk_reading()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool signals::validate_random_chunk_reading </td>
+          <td>(</td>
+          <td class="paramtype">const std::function&lt; void(const std::filesystem::path &amp;, <a class="el" href="classsignals_1_1_signal_data.html">SignalData</a> &amp;, int64_t, int64_t)&gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>read_signal</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::filesystem::path &amp;</td>          <td class="paramname"><span class="paramname"><em>source_path</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classsignals_1_1_signal_data.html">SignalData</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>reference</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int64_t</td>          <td class="paramname"><span class="paramname"><em>chunk_points</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Проверяет корректность чтения чанков в случайном порядке. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">read_signal</td><td>Функция чтения диапазона. </td></tr>
+    <tr><td class="paramname">source_path</td><td>Путь к файлу для чтения данных. </td></tr>
+    <tr><td class="paramname">reference</td><td>Данные для проверки. </td></tr>
+    <tr><td class="paramname">chunk_points</td><td>Размер чанка. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>true Если все случайные чанки совпали с исходными. </dd>
+<dd>
+false Если обнаружено несовпадение размеров или значений. </dd></dl>
+<dl class="exception"><dt>Исключения</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">Любые</td><td>исключения, которые бросает <code class="param">read_signal</code>, а также возможные исключения выделения памяти.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Последовательность работы:</p><ol type="1">
+<li>Формирует и перемешивает порядок индексов чанков.</li>
+<li>Читает каждый чанк в этом порядке.</li>
+<li>Сверяет полученный чанк с исходным диапазоном.</li>
+<li>При первой ошибке возвращает false. </li>
+</ol>
+
+<p class="definition">См. определение в файле <a class="el" href="test__utils_8cpp_source.html">test_utils.cpp</a> строка <a class="el" href="test__utils_8cpp_source.html#l00072">72</a></p>
+<div class="fragment"><div class="line"><span class="lineno">   76</span>                              {</div>
+<div class="line"><span class="lineno">   77</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="namespacesignals.html#ac8d0a984a46a68b7ac04b12870f5f970">validate_chunk_reading_impl</a>(read_signal, source_path, reference, chunk_points, <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">   78</span>    }</div>
+<div class="ttc" id="anamespacesignals_html_ac8d0a984a46a68b7ac04b12870f5f970"><div class="ttname"><a href="namespacesignals.html#ac8d0a984a46a68b7ac04b12870f5f970">signals::validate_chunk_reading_impl</a></div><div class="ttdeci">static bool validate_chunk_reading_impl(const std::function&lt; void(const std::filesystem::path &amp;, SignalData &amp;, int64_t point_off, int64_t point_cnt)&gt; &amp;read_signal, const std::filesystem::path &amp;source_path, const SignalData &amp;reference, int64_t chunk_points, bool random_order)</div></div>
+</div><!-- fragment -->
+<p class="reference">Перекрестные ссылки <a class="el" href="namespacesignals.html#ac8d0a984a46a68b7ac04b12870f5f970">validate_chunk_reading_impl()</a>.</p>
+
+<p class="reference">Используется в <a class="el" href="test__utils_8cpp_source.html#l00109">test_random_chunk_reading_val()</a>.</p>
+<div class="dynheader">
+Граф вызовов:</div>
+<div class="dyncontent">
+<div class="center"><img src="group__test__utils_ga4309c17a6f3dddadcc45ee0408670afc_cgraph.png" border="0" usemap="#agroup__test__utils_ga4309c17a6f3dddadcc45ee0408670afc_cgraph" loading="lazy" alt=""/></div>
+</div>
+<div class="dynheader">
+Граф вызова функции:</div>
+<div class="dyncontent">
+<div class="center"><img src="group__test__utils_ga4309c17a6f3dddadcc45ee0408670afc_icgraph.png" border="0" usemap="#agroup__test__utils_ga4309c17a6f3dddadcc45ee0408670afc_icgraph" loading="lazy" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="ga6f442e7b1e92faa55787adf80826936f" name="ga6f442e7b1e92faa55787adf80826936f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga6f442e7b1e92faa55787adf80826936f">&#9670;&#160;</a></span>validate_serial_chunk_reading()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool signals::validate_serial_chunk_reading </td>
+          <td>(</td>
+          <td class="paramtype">const std::function&lt; void(const std::filesystem::path &amp;, <a class="el" href="classsignals_1_1_signal_data.html">SignalData</a> &amp;, int64_t, int64_t)&gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>read_signal</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::filesystem::path &amp;</td>          <td class="paramname"><span class="paramname"><em>source_path</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classsignals_1_1_signal_data.html">SignalData</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>reference</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int64_t</td>          <td class="paramname"><span class="paramname"><em>chunk_points</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Проверяет корректность последовательного чтения чанков. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">read_signal</td><td>Функция чтения диапазона. </td></tr>
+    <tr><td class="paramname">source_path</td><td>Путь к файлу для чтения данных. </td></tr>
+    <tr><td class="paramname">reference</td><td>Данные для проверки. </td></tr>
+    <tr><td class="paramname">chunk_points</td><td>Размер чанка. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>true Если все чанки считаны и совпали с исходными. </dd>
+<dd>
+false Если обнаружено несовпадение размеров или значений. </dd></dl>
+<dl class="exception"><dt>Исключения</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">Любые</td><td>исключения, которые бросает <code class="param">read_signal</code>, а также возможные исключения выделения памяти.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Последовательность работы:</p><ol type="1">
+<li>Делит диапазон исходных данных на последовательные чанки.</li>
+<li>Для каждого чанка читает данные через read_signal.</li>
+<li>Сравнивает канал/точки чанка с соответствующим срезом исходных данных.</li>
+<li>При первой ошибке выводит сообщение и возвращает false. </li>
+</ol>
+
+<p class="definition">См. определение в файле <a class="el" href="test__utils_8cpp_source.html">test_utils.cpp</a> строка <a class="el" href="test__utils_8cpp_source.html#l00063">63</a></p>
+<div class="fragment"><div class="line"><span class="lineno">   67</span>                              {</div>
+<div class="line"><span class="lineno">   68</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="namespacesignals.html#ac8d0a984a46a68b7ac04b12870f5f970">validate_chunk_reading_impl</a>(read_signal, source_path, reference, chunk_points,</div>
+<div class="line"><span class="lineno">   69</span>                                           <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">   70</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">Перекрестные ссылки <a class="el" href="namespacesignals.html#ac8d0a984a46a68b7ac04b12870f5f970">validate_chunk_reading_impl()</a>.</p>
+
+<p class="reference">Используется в <a class="el" href="test__utils_8cpp_source.html#l00080">test_serial_chunk_reading_val()</a>.</p>
+<div class="dynheader">
+Граф вызовов:</div>
+<div class="dyncontent">
+<div class="center"><img src="group__test__utils_ga6f442e7b1e92faa55787adf80826936f_cgraph.png" border="0" usemap="#agroup__test__utils_ga6f442e7b1e92faa55787adf80826936f_cgraph" loading="lazy" alt=""/></div>
+</div>
+<div class="dynheader">
+Граф вызова функции:</div>
+<div class="dyncontent">
+<div class="center"><img src="group__test__utils_ga6f442e7b1e92faa55787adf80826936f_icgraph.png" border="0" usemap="#agroup__test__utils_ga6f442e7b1e92faa55787adf80826936f_icgraph" loading="lazy" alt=""/></div>
+</div>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.16.1 </li>
+  </ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,156 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.16.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Signal Test Converters: Исходный файл internal/hdr/test_hdr_reader.cpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Signal Test Converters
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.16.1 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Поиск',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('test__hdr__reader_8cpp_source.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">test_hdr_reader.cpp</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="test__hdr__reader_8cpp.html">См. документацию.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#include &quot;<a class="code" href="hdr__reader_8hpp.html">hdr_reader.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &lt;chrono&gt;</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &lt;cstdio&gt;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span> </div>
+<div class="foldopen" id="foldopen00006" data-start="{" data-end="}">
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno"><a class="line" href="test__hdr__reader_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97">    6</a></span><span class="keywordtype">int</span> <a class="code hl_function" href="test__hdr__reader_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97">main</a>(<span class="keywordtype">int</span> argc, <span class="keywordtype">char</span> *argv[]) {</div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span>    <span class="keywordflow">if</span> (argc &lt; 2) {</div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span>        std::fprintf(stderr, <span class="stringliteral">&quot;Необходимо передать файл, запуск в формате: %s &lt;file.hdr&gt;\n&quot;</span>,</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>                     argv[0]);</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>        <span class="keywordflow">return</span> 1;</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>    }</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>    <a class="code hl_class" href="classsignals_1_1_signal_header.html">signals::SignalHeader</a> header;</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>    <span class="keyword">const</span> <span class="keyword">auto</span> t0 = std::chrono::steady_clock::now();</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>    <a class="code hl_function" href="namespacesignals.html#a140f30c51aadb96e6c69e812fe102bf3">signals::hdr_read</a>(argv[1], header);</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>    <span class="keyword">const</span> <span class="keywordtype">double</span> t_read =</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>        std::chrono::duration&lt;double&gt;(std::chrono::steady_clock::now() - t0).count();</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span> </div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>    std::printf(<span class="stringliteral">&quot;Чтение — %.3f сек\n&quot;</span>, t_read);</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    std::printf(<span class="stringliteral">&quot;HDR: %s\n&quot;</span>, argv[1]);</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    std::printf(<span class="stringliteral">&quot;Channels:     %d\n&quot;</span>, header.<a class="code hl_variable" href="classsignals_1_1_signal_header.html#a07229a399c52f26674d63ce93dea3631">num_channels</a>);</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    std::printf(<span class="stringliteral">&quot;Point rate:  %.1f Hz\n&quot;</span>, header.<a class="code hl_variable" href="classsignals_1_1_signal_header.html#a4f7916d3a80b8650185a63aac2dd59f6">frequency</a>);</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    std::printf(<span class="stringliteral">&quot;Default LSB:  %.6f\n&quot;</span>, header.<a class="code hl_variable" href="classsignals_1_1_signal_header.html#adbebf166714b731faef302006864d25a">lsb_default</a>);</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    std::printf(<span class="stringliteral">&quot;IStart, IEnd:      %lld - %lld\n&quot;</span>, <span class="keyword">static_cast&lt;</span><span class="keywordtype">long</span> <span class="keywordtype">long</span><span class="keyword">&gt;</span>(header.<a class="code hl_variable" href="classsignals_1_1_signal_header.html#ac9cc61fe15af8fad1309be1295b600b8">ifirst_point</a>),</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>                <span class="keyword">static_cast&lt;</span><span class="keywordtype">long</span> <span class="keywordtype">long</span><span class="keyword">&gt;</span>(header.<a class="code hl_variable" href="classsignals_1_1_signal_header.html#a4003b76fc6492f33eb80f63ae7be02d0">ilast_point</a>));</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    std::printf(<span class="stringliteral">&quot;Time start:   %s\n&quot;</span>, header.<a class="code hl_variable" href="classsignals_1_1_signal_header.html#a12863f007988368581a6300adb5ece45">time_start</a>.c_str());</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    std::printf(<span class="stringliteral">&quot;\nChannel  LSB          Unit   Name\n&quot;</span>);</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; header.<a class="code hl_variable" href="classsignals_1_1_signal_header.html#a07229a399c52f26674d63ce93dea3631">num_channels</a>; i++) {</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>        std::printf(<span class="stringliteral">&quot;  %3d    %11.6f  %-5s  %s\n&quot;</span>, i, header.<a class="code hl_variable" href="classsignals_1_1_signal_header.html#a346ec86b954481c6c41e34ff66cc1612">lsbs</a>[i], header.<a class="code hl_variable" href="classsignals_1_1_signal_header.html#ab62cd0e9f710ef67e5c5b72012cf0664">units</a>[i].c_str(),</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>                    header.<a class="code hl_variable" href="classsignals_1_1_signal_header.html#a266aa40b8fdfefc97835806b022f7b9a">channel_names</a>[i].c_str());</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    }</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>    <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>}</div>
+</div>
+<div class="ttc" id="aclasssignals_1_1_signal_header_html"><div class="ttname"><a href="classsignals_1_1_signal_header.html">signals::SignalHeader</a></div><div class="ttdoc">Метаданные сигнала из .hdr.</div><div class="ttdef"><b>Определения</b> <a href="signal__common_8hpp_source.html#l00032">signal_common.hpp:32</a></div></div>
+<div class="ttc" id="aclasssignals_1_1_signal_header_html_a07229a399c52f26674d63ce93dea3631"><div class="ttname"><a href="classsignals_1_1_signal_header.html#a07229a399c52f26674d63ce93dea3631">signals::SignalHeader::num_channels</a></div><div class="ttdeci">int32_t num_channels</div><div class="ttdef"><b>Определения</b> <a href="signal__common_8hpp_source.html#l00034">signal_common.hpp:34</a></div></div>
+<div class="ttc" id="aclasssignals_1_1_signal_header_html_a12863f007988368581a6300adb5ece45"><div class="ttname"><a href="classsignals_1_1_signal_header.html#a12863f007988368581a6300adb5ece45">signals::SignalHeader::time_start</a></div><div class="ttdeci">std::string time_start</div><div class="ttdef"><b>Определения</b> <a href="signal__common_8hpp_source.html#l00039">signal_common.hpp:39</a></div></div>
+<div class="ttc" id="aclasssignals_1_1_signal_header_html_a266aa40b8fdfefc97835806b022f7b9a"><div class="ttname"><a href="classsignals_1_1_signal_header.html#a266aa40b8fdfefc97835806b022f7b9a">signals::SignalHeader::channel_names</a></div><div class="ttdeci">std::vector&lt; std::string &gt; channel_names</div><div class="ttdef"><b>Определения</b> <a href="signal__common_8hpp_source.html#l00040">signal_common.hpp:40</a></div></div>
+<div class="ttc" id="aclasssignals_1_1_signal_header_html_a346ec86b954481c6c41e34ff66cc1612"><div class="ttname"><a href="classsignals_1_1_signal_header.html#a346ec86b954481c6c41e34ff66cc1612">signals::SignalHeader::lsbs</a></div><div class="ttdeci">std::vector&lt; double &gt; lsbs</div><div class="ttdef"><b>Определения</b> <a href="signal__common_8hpp_source.html#l00041">signal_common.hpp:41</a></div></div>
+<div class="ttc" id="aclasssignals_1_1_signal_header_html_a4003b76fc6492f33eb80f63ae7be02d0"><div class="ttname"><a href="classsignals_1_1_signal_header.html#a4003b76fc6492f33eb80f63ae7be02d0">signals::SignalHeader::ilast_point</a></div><div class="ttdeci">int64_t ilast_point</div><div class="ttdef"><b>Определения</b> <a href="signal__common_8hpp_source.html#l00038">signal_common.hpp:38</a></div></div>
+<div class="ttc" id="aclasssignals_1_1_signal_header_html_a4f7916d3a80b8650185a63aac2dd59f6"><div class="ttname"><a href="classsignals_1_1_signal_header.html#a4f7916d3a80b8650185a63aac2dd59f6">signals::SignalHeader::frequency</a></div><div class="ttdeci">double frequency</div><div class="ttdef"><b>Определения</b> <a href="signal__common_8hpp_source.html#l00035">signal_common.hpp:35</a></div></div>
+<div class="ttc" id="aclasssignals_1_1_signal_header_html_ab62cd0e9f710ef67e5c5b72012cf0664"><div class="ttname"><a href="classsignals_1_1_signal_header.html#ab62cd0e9f710ef67e5c5b72012cf0664">signals::SignalHeader::units</a></div><div class="ttdeci">std::vector&lt; std::string &gt; units</div><div class="ttdef"><b>Определения</b> <a href="signal__common_8hpp_source.html#l00042">signal_common.hpp:42</a></div></div>
+<div class="ttc" id="aclasssignals_1_1_signal_header_html_ac9cc61fe15af8fad1309be1295b600b8"><div class="ttname"><a href="classsignals_1_1_signal_header.html#ac9cc61fe15af8fad1309be1295b600b8">signals::SignalHeader::ifirst_point</a></div><div class="ttdeci">int64_t ifirst_point</div><div class="ttdef"><b>Определения</b> <a href="signal__common_8hpp_source.html#l00037">signal_common.hpp:37</a></div></div>
+<div class="ttc" id="aclasssignals_1_1_signal_header_html_adbebf166714b731faef302006864d25a"><div class="ttname"><a href="classsignals_1_1_signal_header.html#adbebf166714b731faef302006864d25a">signals::SignalHeader::lsb_default</a></div><div class="ttdeci">double lsb_default</div><div class="ttdef"><b>Определения</b> <a href="signal__common_8hpp_source.html#l00036">signal_common.hpp:36</a></div></div>
+<div class="ttc" id="ahdr__reader_8hpp_html"><div class="ttname"><a href="hdr__reader_8hpp.html">hdr_reader.hpp</a></div><div class="ttdoc">Чтение метаданных сигнала из файла .hdr.</div></div>
+<div class="ttc" id="anamespacesignals_html_a140f30c51aadb96e6c69e812fe102bf3"><div class="ttname"><a href="namespacesignals.html#a140f30c51aadb96e6c69e812fe102bf3">signals::hdr_read</a></div><div class="ttdeci">void hdr_read(const std::filesystem::path &amp;bin_path, SignalHeader &amp;header)</div><div class="ttdoc">Читает .hdr и заполняет структуру метаданных сигнала.</div><div class="ttdef"><b>Определения</b> <a href="hdr__reader_8cpp_source.html#l00019">hdr_reader.cpp:19</a></div></div>
+<div class="ttc" id="atest__hdr__reader_8cpp_html_a0ddf1224851353fc92bfbff6f499fa97"><div class="ttname"><a href="test__hdr__reader_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97">main</a></div><div class="ttdeci">int main(int argc, char *argv[])</div><div class="ttdef"><b>Определения</b> <a href="#l00006">test_hdr_reader.cpp:6</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_7374381ecdb819c64ee9b6ea2bd3370d.html">internal</a></li><li class="navelem"><a href="dir_4207c75294deb79fad674a88cdf96f2d.html">hdr</a></li><li class="navelem"><a href="test__hdr__reader_8cpp.html">test_hdr_reader.cpp</a></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.16.1 </li>
+  </ul>
+</div>
+</body>
+</html>

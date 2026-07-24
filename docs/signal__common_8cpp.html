@@ -1,0 +1,140 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.16.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Signal Test Converters: Файл internal/common/signal_common.cpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Signal Test Converters
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.16.1 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Поиск',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('signal__common_8cpp.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Файл signal_common.cpp</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;<a class="el" href="signal__common_8hpp_source.html">signal_common.hpp</a>&quot;</code><br />
+<code>#include &lt;algorithm&gt;</code><br />
+<code>#include &lt;stdexcept&gt;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Граф включаемых заголовочных файлов для signal_common.cpp:</div>
+<div class="dyncontent">
+<div class="center"><img src="signal__common_8cpp__incl.png" border="0" usemap="#ainternal_2common_2signal__common_8cpp" loading="lazy" alt=""/></div>
+</div>
+</div>
+<p><a href="signal__common_8cpp_source.html">См. исходные тексты.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-namespaces" class="groupheader"><a id="namespaces" name="namespaces"></a>
+Пространства имен</h2></td></tr>
+<tr class="memitem:signals" id="r_signals"><td class="memItemLeft">namespace &#160;</td><td class="memItemRight"><a class="el" href="namespacesignals.html">signals</a></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
+Функции</h2></td></tr>
+<tr class="memitem:ga9eea8e4749c86e79bc2be1b13a2d10a1" id="r_ga9eea8e4749c86e79bc2be1b13a2d10a1"><td class="memItemLeft">int64_t&#160;</td><td class="memItemRight"><a class="el" href="group__signal__common.html#ga9eea8e4749c86e79bc2be1b13a2d10a1">signals::normalize_range</a> (int64_t total_points, int64_t point_off, int64_t point_cnt)</td></tr>
+<tr class="memdesc:ga9eea8e4749c86e79bc2be1b13a2d10a1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Нормализует диапазон относительно общего числа точек.  <br /></td></tr>
+<tr class="memitem:ga4e1e468e798f30a41afdc9cdce5f465f" id="r_ga4e1e468e798f30a41afdc9cdce5f465f"><td class="memItemLeft">int64_t&#160;</td><td class="memItemRight"><a class="el" href="group__signal__common.html#ga4e1e468e798f30a41afdc9cdce5f465f">signals::make_header_for_range</a> (const <a class="el" href="classsignals_1_1_signal_header.html">SignalHeader</a> &amp;header, int64_t total_points, int64_t point_off, int64_t point_cnt, <a class="el" href="classsignals_1_1_signal_header.html">SignalHeader</a> &amp;range_header)</td></tr>
+<tr class="memdesc:ga4e1e468e798f30a41afdc9cdce5f465f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Формирует заголовок для заданного диапазона точек (реальный диапазон).  <br /></td></tr>
+<tr class="memitem:ga7b93db2498973248ceb589e9a51ab46b" id="r_ga7b93db2498973248ceb589e9a51ab46b"><td class="memItemLeft">int64_t&#160;</td><td class="memItemRight"><a class="el" href="group__signal__common.html#ga7b93db2498973248ceb589e9a51ab46b">signals::prepare_signal_data_window</a> (const <a class="el" href="classsignals_1_1_signal_header.html">SignalHeader</a> &amp;metadata, int64_t total_points, int64_t point_off, int64_t point_cnt, <a class="el" href="classsignals_1_1_signal_data.html">SignalData</a> &amp;data, bool zero_initialize_storage=false)</td></tr>
+<tr class="memdesc:ga7b93db2498973248ceb589e9a51ab46b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Подготавливает <a class="el" href="classsignals_1_1_signal_data.html" title="Данные и метаданные (данные из .hdr и .bin, данные в double).">SignalData</a> для чтения диапазона.  <br /></td></tr>
+<tr class="memitem:af5382d330af119d382ed41381792eb75" id="r_af5382d330af119d382ed41381792eb75"><td class="memItemLeft">std::string&#160;</td><td class="memItemRight"><a class="el" href="namespacesignals.html#af5382d330af119d382ed41381792eb75">signals::serialize_to_json</a> (const std::map&lt; std::string, std::variant&lt; std::string, double, int64_t &gt;, std::less&lt;&gt; &gt; &amp;dict)</td></tr>
+<tr class="memdesc:af5382d330af119d382ed41381792eb75"><td class="mdescLeft">&#160;</td><td class="mdescRight">Сериализует словарь в JSON-строку.  <br /></td></tr>
+<tr class="memitem:a7e49df730485b6da98aa82ac0e887cf5" id="r_a7e49df730485b6da98aa82ac0e887cf5"><td class="memItemLeft">std::map&lt; std::string, std::variant&lt; std::string, double, int64_t &gt;, std::less&lt;&gt; &gt;&#160;</td><td class="memItemRight"><a class="el" href="namespacesignals.html#a7e49df730485b6da98aa82ac0e887cf5">signals::parse_json</a> (std::string_view json)</td></tr>
+<tr class="memdesc:a7e49df730485b6da98aa82ac0e887cf5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Парсит JSON-строку в словарь.  <br /></td></tr>
+</table>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_7374381ecdb819c64ee9b6ea2bd3370d.html">internal</a></li><li class="navelem"><a href="dir_606840a963236321efb37be2559de8df.html">common</a></li><li class="navelem"><a href="signal__common_8cpp.html">signal_common.cpp</a></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.16.1 </li>
+  </ul>
+</div>
+</body>
+</html>

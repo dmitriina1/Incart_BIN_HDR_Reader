@@ -1,0 +1,38 @@
+digraph "signals::parse_units"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname=Helvetica,fontsize=10,labelfontname=Helvetica,labelfontsize=10];
+  node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
+  rankdir="RL";
+  Node1 [id="Node000001",label="signals::parse_units",height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [id="edge1_Node000001_Node000002",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node2 [id="Node000002",label="signals::hdr_read",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$namespacesignals.html#a140f30c51aadb96e6c69e812fe102bf3",tooltip="Читает .hdr и заполняет структуру метаданных сигнала."];
+  Node2 -> Node3 [id="edge2_Node000002_Node000003",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node3 [id="Node000003",label="signals::bin_open",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$namespacesignals.html#adbe043039905491c6ed2a88556f5aeea",tooltip="Открывает reader для работы с .bin и заполняет метаданные."];
+  Node3 -> Node4 [id="edge3_Node000003_Node000004",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node4 [id="Node000004",label="signals::bin_read",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$namespacesignals.html#ad4faf87f6cb1e07242d912890a374684",tooltip="Полностью читает диапазон точек из bin в один SignalData."];
+  Node4 -> Node5 [id="edge4_Node000004_Node000005",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node5 [id="Node000005",label="signals::load_reference",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$group__test__utils.html#ga9031447ea6d8038c5e22381c040857bd",tooltip="Загружает исходные данные из bin через bin_read."];
+  Node5 -> Node6 [id="edge5_Node000005_Node000006",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node6 [id="Node000006",label="main",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$test__duckdb_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97",tooltip=" "];
+  Node4 -> Node7 [id="edge6_Node000004_Node000007",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node7 [id="Node000007",label="main",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$test__bin__reader_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97",tooltip=" "];
+  Node3 -> Node8 [id="edge7_Node000003_Node000008",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node8 [id="Node000008",label="signals::duckdb_write\l_signal_data_chunked",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$namespacesignals.html#a137be4478776f05eca946eae5b73be48",tooltip=" "];
+  Node8 -> Node9 [id="edge8_Node000008_Node000009",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node9 [id="Node000009",label="signals::duckdb_write\l_signal_data_like_stream",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$group__duckdb__converter.html#ga594b260820055430e7e623ff8a5d9255",tooltip="Потоково записывает диапазон точек в DuckDB через filepath с периодическими commit."];
+  Node9 -> Node6 [id="edge9_Node000009_Node000006",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node3 -> Node10 [id="edge10_Node000003_Node000010",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node10 [id="Node000010",label="signals::hdf5_write\l_signals_data",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$group__hdf5__converter.html#gabde096e8626c40139bab33c18102eea1",tooltip="Конвертирует диапазон точек из .bin в HDF5."];
+  Node10 -> Node11 [id="edge11_Node000010_Node000011",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node11 [id="Node000011",label="main",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$test__hdf5__converter_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97",tooltip=" "];
+  Node3 -> Node12 [id="edge12_Node000003_Node000012",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node12 [id="Node000012",label="signals::parquet_write\l_signals_data",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$group__parquet__converter.html#ga284d66229582fcdb5aaa1d0b5e192e05",tooltip="Записывает диапазон точек из .bin в Parquet."];
+  Node12 -> Node13 [id="edge13_Node000012_Node000013",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node13 [id="Node000013",label="main",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$test__parquet__converter_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97",tooltip=" "];
+  Node12 -> Node14 [id="edge14_Node000012_Node000014",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node14 [id="Node000014",label="signals::parquet_write\l_signal_data_like_stream",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$group__parquet__converter.html#ga8b3a97d46cdac57241a9c5ffe79b97e2",tooltip="Обёртка над parquet_write_signals_data с исключением при ошибке."];
+  Node2 -> Node15 [id="edge15_Node000002_Node000015",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node15 [id="Node000015",label="main",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$test__hdr__reader_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97",tooltip=" "];
+}

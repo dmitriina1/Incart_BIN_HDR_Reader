@@ -1,0 +1,274 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.16.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Signal Test Converters: Файл internal/bin/test_bin_reader.cpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Signal Test Converters
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.16.1 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Поиск',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('test__bin__reader_8cpp.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Файл test_bin_reader.cpp</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;<a class="el" href="bin__reader_8hpp_source.html">bin_reader.hpp</a>&quot;</code><br />
+<code>#include &lt;algorithm&gt;</code><br />
+<code>#include &lt;chrono&gt;</code><br />
+<code>#include &lt;cstdio&gt;</code><br />
+<code>#include &lt;cstdlib&gt;</code><br />
+<code>#include &lt;exception&gt;</code><br />
+<code>#include &lt;stdexcept&gt;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Граф включаемых заголовочных файлов для test_bin_reader.cpp:</div>
+<div class="dyncontent">
+<div class="center"><img src="test__bin__reader_8cpp__incl.png" border="0" usemap="#ainternal_2bin_2test__bin__reader_8cpp" loading="lazy" alt=""/></div>
+</div>
+</div>
+<p><a href="test__bin__reader_8cpp_source.html">См. исходные тексты.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
+Функции</h2></td></tr>
+<tr class="memitem:a0ddf1224851353fc92bfbff6f499fa97" id="r_a0ddf1224851353fc92bfbff6f499fa97"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#a0ddf1224851353fc92bfbff6f499fa97">main</a> (int argc, char *argv[])</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-var-members" class="groupheader"><a id="var-members" name="var-members"></a>
+Переменные</h2></td></tr>
+<tr class="memitem:ad0c2507afafff635352b9497141d3440" id="r_ad0c2507afafff635352b9497141d3440"><td class="memItemLeft">static constexpr int64_t&#160;</td><td class="memItemRight"><a class="el" href="#ad0c2507afafff635352b9497141d3440">PREVIEW_POINTS</a> = 10</td></tr>
+</table>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Функции</h2>
+<a id="a0ddf1224851353fc92bfbff6f499fa97" name="a0ddf1224851353fc92bfbff6f499fa97"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0ddf1224851353fc92bfbff6f499fa97">&#9670;&#160;</a></span>main()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int main </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>argc</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *</td>          <td class="paramname"><span class="paramname"><em>argv</em></span>[]&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="test__bin__reader_8cpp_source.html">test_bin_reader.cpp</a> строка <a class="el" href="test__bin__reader_8cpp_source.html#l00012">12</a></p>
+<div class="fragment"><div class="line"><span class="lineno">   12</span>                                 {</div>
+<div class="line"><span class="lineno">   13</span>    <span class="keywordflow">if</span> (argc &lt; 2) {</div>
+<div class="line"><span class="lineno">   14</span>        std::fprintf(stderr, <span class="stringliteral">&quot;Необходимо передать файл, запуск: %s &lt;file&gt; [offset] [count]\n&quot;</span>,</div>
+<div class="line"><span class="lineno">   15</span>                     argv[0]);</div>
+<div class="line"><span class="lineno">   16</span>        std::fprintf(stderr, <span class="stringliteral">&quot;  offset - индекс начала чтения (по умолчанию: 0)\n&quot;</span>);</div>
+<div class="line"><span class="lineno">   17</span>        std::fprintf(stderr, <span class="stringliteral">&quot;  count  - количество точек для чтения     (по умолчанию: все)\n&quot;</span>);</div>
+<div class="line"><span class="lineno">   18</span>        <span class="keywordflow">return</span> 1;</div>
+<div class="line"><span class="lineno">   19</span>    }</div>
+<div class="line"><span class="lineno">   20</span> </div>
+<div class="line"><span class="lineno">   21</span>    int64_t point_offset = 0;</div>
+<div class="line"><span class="lineno">   22</span>    int64_t point_count = -1;</div>
+<div class="line"><span class="lineno">   23</span>    <span class="keywordflow">try</span> {</div>
+<div class="line"><span class="lineno">   24</span>        <span class="keywordflow">if</span> (argc &gt;= 3)</div>
+<div class="line"><span class="lineno">   25</span>            point_offset = std::stoll(argv[2]);</div>
+<div class="line"><span class="lineno">   26</span> </div>
+<div class="line"><span class="lineno">   27</span>        <span class="keywordflow">if</span> (argc &gt;= 4)</div>
+<div class="line"><span class="lineno">   28</span>            point_count = std::stoll(argv[3]);</div>
+<div class="line"><span class="lineno">   29</span>    } <span class="keywordflow">catch</span> (...) {</div>
+<div class="line"><span class="lineno">   30</span>        std::fprintf(stderr, <span class="stringliteral">&quot;Ошибка чтения offset/count\n&quot;</span>);</div>
+<div class="line"><span class="lineno">   31</span>        <span class="keywordflow">return</span> 1;</div>
+<div class="line"><span class="lineno">   32</span>    }</div>
+<div class="line"><span class="lineno">   33</span> </div>
+<div class="line"><span class="lineno">   34</span>    <a class="code hl_class" href="classsignals_1_1_signal_data.html">signals::SignalData</a> data;</div>
+<div class="line"><span class="lineno">   35</span>    <span class="keyword">const</span> <span class="keyword">auto</span> t0 = std::chrono::steady_clock::now();</div>
+<div class="line"><span class="lineno">   36</span>    <span class="keywordflow">try</span> {</div>
+<div class="line"><span class="lineno">   37</span>        <a class="code hl_function" href="namespacesignals.html#ad4faf87f6cb1e07242d912890a374684">signals::bin_read</a>(argv[1], point_offset, point_count, data);</div>
+<div class="line"><span class="lineno">   38</span>    } <span class="keywordflow">catch</span> (<span class="keyword">const</span> std::exception &amp;e) {</div>
+<div class="line"><span class="lineno">   39</span>        std::fprintf(stderr, <span class="stringliteral">&quot;Ошибка: %s\n&quot;</span>, e.what());</div>
+<div class="line"><span class="lineno">   40</span>        <span class="keywordflow">return</span> 1;</div>
+<div class="line"><span class="lineno">   41</span>    }</div>
+<div class="line"><span class="lineno">   42</span> </div>
+<div class="line"><span class="lineno">   43</span>    <span class="keyword">const</span> <span class="keywordtype">double</span> t_read =</div>
+<div class="line"><span class="lineno">   44</span>        std::chrono::duration&lt;double&gt;(std::chrono::steady_clock::now() - t0).count();</div>
+<div class="line"><span class="lineno">   45</span>    std::printf(<span class="stringliteral">&quot;Чтение — %.3f сек\n&quot;</span>, t_read);</div>
+<div class="line"><span class="lineno">   46</span> </div>
+<div class="line"><span class="lineno">   47</span>    std::printf(<span class="stringliteral">&quot;BIN: %s\n&quot;</span>, argv[1]);</div>
+<div class="line"><span class="lineno">   48</span>    std::printf(<span class="stringliteral">&quot;Каналов:    %d\n&quot;</span>, data.<a class="code hl_variable" href="classsignals_1_1_signal_header.html#a07229a399c52f26674d63ce93dea3631">num_channels</a>);</div>
+<div class="line"><span class="lineno">   49</span>    std::printf(<span class="stringliteral">&quot;Частота: %.1f Hz\n&quot;</span>, data.<a class="code hl_variable" href="classsignals_1_1_signal_header.html#a4f7916d3a80b8650185a63aac2dd59f6">frequency</a>);</div>
+<div class="line"><span class="lineno">   50</span>    std::printf(<span class="stringliteral">&quot;Время начала:  %s\n&quot;</span>, data.<a class="code hl_variable" href="classsignals_1_1_signal_header.html#a12863f007988368581a6300adb5ece45">time_start</a>.c_str());</div>
+<div class="line"><span class="lineno">   51</span>    std::printf(<span class="stringliteral">&quot;Точек:     %lld\n&quot;</span>, <span class="keyword">static_cast&lt;</span><span class="keywordtype">long</span> <span class="keywordtype">long</span><span class="keyword">&gt;</span>(data.<a class="code hl_variable" href="classsignals_1_1_signal_data.html#ae3c6a4b60f673f3c9b45e125b197a51a">num_points</a>));</div>
+<div class="line"><span class="lineno">   52</span> </div>
+<div class="line"><span class="lineno">   53</span>    std::printf(<span class="stringliteral">&quot;\n Количество точек %lld:\n&quot;</span>, <span class="keyword">static_cast&lt;</span><span class="keywordtype">long</span> <span class="keywordtype">long</span><span class="keyword">&gt;</span>(<a class="code hl_variable" href="#ad0c2507afafff635352b9497141d3440">PREVIEW_POINTS</a>));</div>
+<div class="line"><span class="lineno">   54</span>    std::printf(<span class="stringliteral">&quot;%-6s&quot;</span>, <span class="stringliteral">&quot;Row&quot;</span>);</div>
+<div class="line"><span class="lineno">   55</span>    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> ch = 0; ch &lt; data.<a class="code hl_variable" href="classsignals_1_1_signal_header.html#a07229a399c52f26674d63ce93dea3631">num_channels</a>; ch++) {</div>
+<div class="line"><span class="lineno">   56</span>        <span class="keyword">const</span> std::string channel_name = (<span class="keyword">static_cast&lt;</span><span class="keywordtype">size_t</span><span class="keyword">&gt;</span>(ch) &lt; data.<a class="code hl_variable" href="classsignals_1_1_signal_header.html#a266aa40b8fdfefc97835806b022f7b9a">channel_names</a>.size() &amp;&amp;</div>
+<div class="line"><span class="lineno">   57</span>                                          !data.<a class="code hl_variable" href="classsignals_1_1_signal_header.html#a266aa40b8fdfefc97835806b022f7b9a">channel_names</a>[<span class="keyword">static_cast&lt;</span><span class="keywordtype">size_t</span><span class="keyword">&gt;</span>(ch)].empty())</div>
+<div class="line"><span class="lineno">   58</span>                                             ? data.<a class="code hl_variable" href="classsignals_1_1_signal_header.html#a266aa40b8fdfefc97835806b022f7b9a">channel_names</a>[<span class="keyword">static_cast&lt;</span><span class="keywordtype">size_t</span><span class="keyword">&gt;</span>(ch)]</div>
+<div class="line"><span class="lineno">   59</span>                                             : (<span class="stringliteral">&quot;Ch&quot;</span> + std::to_string(ch));</div>
+<div class="line"><span class="lineno">   60</span>        std::printf(<span class="stringliteral">&quot;%-14s&quot;</span>, channel_name.c_str());</div>
+<div class="line"><span class="lineno">   61</span>    }</div>
+<div class="line"><span class="lineno">   62</span>    std::printf(<span class="stringliteral">&quot;\n&quot;</span>);</div>
+<div class="line"><span class="lineno">   63</span> </div>
+<div class="line"><span class="lineno">   64</span>    <span class="keywordflow">for</span> (int64_t row = 0; row &lt; <a class="code hl_variable" href="#ad0c2507afafff635352b9497141d3440">PREVIEW_POINTS</a>; row++) {</div>
+<div class="line"><span class="lineno">   65</span>        std::printf(<span class="stringliteral">&quot;%-10lld&quot;</span>, row + 1);</div>
+<div class="line"><span class="lineno">   66</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> ch = 0; ch &lt; data.<a class="code hl_variable" href="classsignals_1_1_signal_header.html#a07229a399c52f26674d63ce93dea3631">num_channels</a>; ch++) {</div>
+<div class="line"><span class="lineno">   67</span>            std::printf(<span class="stringliteral">&quot;%-14.4f&quot;</span>, data.<a class="code hl_function" href="classsignals_1_1_signal_data.html#a46f2f5f6e2e515d487f2661f2962269e">value</a>(ch, row));</div>
+<div class="line"><span class="lineno">   68</span>        }</div>
+<div class="line"><span class="lineno">   69</span>        std::printf(<span class="stringliteral">&quot;\n&quot;</span>);</div>
+<div class="line"><span class="lineno">   70</span>    }</div>
+<div class="line"><span class="lineno">   71</span> </div>
+<div class="line"><span class="lineno">   72</span>    std::printf(<span class="stringliteral">&quot;=================================================\n&quot;</span>);</div>
+<div class="line"><span class="lineno">   73</span> </div>
+<div class="line"><span class="lineno">   74</span>    <span class="keywordflow">for</span> (int64_t row = data.<a class="code hl_variable" href="classsignals_1_1_signal_data.html#ae3c6a4b60f673f3c9b45e125b197a51a">num_points</a> - <a class="code hl_variable" href="#ad0c2507afafff635352b9497141d3440">PREVIEW_POINTS</a>; row &lt; data.<a class="code hl_variable" href="classsignals_1_1_signal_data.html#ae3c6a4b60f673f3c9b45e125b197a51a">num_points</a>; row++) {</div>
+<div class="line"><span class="lineno">   75</span>        std::printf(<span class="stringliteral">&quot;%-10lld&quot;</span>, row + 1);</div>
+<div class="line"><span class="lineno">   76</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> ch = 0; ch &lt; data.<a class="code hl_variable" href="classsignals_1_1_signal_header.html#a07229a399c52f26674d63ce93dea3631">num_channels</a>; ch++) {</div>
+<div class="line"><span class="lineno">   77</span>            std::printf(<span class="stringliteral">&quot;%-14.4f&quot;</span>, data.<a class="code hl_function" href="classsignals_1_1_signal_data.html#a46f2f5f6e2e515d487f2661f2962269e">value</a>(ch, row));</div>
+<div class="line"><span class="lineno">   78</span>        }</div>
+<div class="line"><span class="lineno">   79</span>        std::printf(<span class="stringliteral">&quot;\n&quot;</span>);</div>
+<div class="line"><span class="lineno">   80</span>    }</div>
+<div class="line"><span class="lineno">   81</span> </div>
+<div class="line"><span class="lineno">   82</span>    <span class="keywordflow">return</span> 0;</div>
+<div class="line"><span class="lineno">   83</span>}</div>
+<div class="ttc" id="aclasssignals_1_1_signal_data_html"><div class="ttname"><a href="classsignals_1_1_signal_data.html">signals::SignalData</a></div><div class="ttdoc">Данные и метаданные (данные из .hdr и .bin, данные в double).</div><div class="ttdef"><b>Определения</b> <a href="signal__common_8hpp_source.html#l00062">signal_common.hpp:62</a></div></div>
+<div class="ttc" id="aclasssignals_1_1_signal_data_html_a46f2f5f6e2e515d487f2661f2962269e"><div class="ttname"><a href="classsignals_1_1_signal_data.html#a46f2f5f6e2e515d487f2661f2962269e">signals::SignalData::value</a></div><div class="ttdeci">double value(int ch, int64_t point) const</div><div class="ttdoc">Возвращает физическое значение точки канала: raw * lsb.</div><div class="ttdef"><b>Определения</b> <a href="signal__common_8hpp_source.html#l00086">signal_common.hpp:86</a></div></div>
+<div class="ttc" id="aclasssignals_1_1_signal_data_html_ae3c6a4b60f673f3c9b45e125b197a51a"><div class="ttname"><a href="classsignals_1_1_signal_data.html#ae3c6a4b60f673f3c9b45e125b197a51a">signals::SignalData::num_points</a></div><div class="ttdeci">int64_t num_points</div><div class="ttdef"><b>Определения</b> <a href="signal__common_8hpp_source.html#l00064">signal_common.hpp:64</a></div></div>
+<div class="ttc" id="aclasssignals_1_1_signal_header_html_a07229a399c52f26674d63ce93dea3631"><div class="ttname"><a href="classsignals_1_1_signal_header.html#a07229a399c52f26674d63ce93dea3631">signals::SignalHeader::num_channels</a></div><div class="ttdeci">int32_t num_channels</div><div class="ttdef"><b>Определения</b> <a href="signal__common_8hpp_source.html#l00034">signal_common.hpp:34</a></div></div>
+<div class="ttc" id="aclasssignals_1_1_signal_header_html_a12863f007988368581a6300adb5ece45"><div class="ttname"><a href="classsignals_1_1_signal_header.html#a12863f007988368581a6300adb5ece45">signals::SignalHeader::time_start</a></div><div class="ttdeci">std::string time_start</div><div class="ttdef"><b>Определения</b> <a href="signal__common_8hpp_source.html#l00039">signal_common.hpp:39</a></div></div>
+<div class="ttc" id="aclasssignals_1_1_signal_header_html_a266aa40b8fdfefc97835806b022f7b9a"><div class="ttname"><a href="classsignals_1_1_signal_header.html#a266aa40b8fdfefc97835806b022f7b9a">signals::SignalHeader::channel_names</a></div><div class="ttdeci">std::vector&lt; std::string &gt; channel_names</div><div class="ttdef"><b>Определения</b> <a href="signal__common_8hpp_source.html#l00040">signal_common.hpp:40</a></div></div>
+<div class="ttc" id="aclasssignals_1_1_signal_header_html_a4f7916d3a80b8650185a63aac2dd59f6"><div class="ttname"><a href="classsignals_1_1_signal_header.html#a4f7916d3a80b8650185a63aac2dd59f6">signals::SignalHeader::frequency</a></div><div class="ttdeci">double frequency</div><div class="ttdef"><b>Определения</b> <a href="signal__common_8hpp_source.html#l00035">signal_common.hpp:35</a></div></div>
+<div class="ttc" id="anamespacesignals_html_ad4faf87f6cb1e07242d912890a374684"><div class="ttname"><a href="namespacesignals.html#ad4faf87f6cb1e07242d912890a374684">signals::bin_read</a></div><div class="ttdeci">void bin_read(const std::filesystem::path &amp;bin_path, int64_t point_off, int64_t point_cnt, SignalData &amp;data)</div><div class="ttdoc">Полностью читает диапазон точек из bin в один SignalData.</div><div class="ttdef"><b>Определения</b> <a href="bin__reader_8cpp_source.html#l00101">bin_reader.cpp:101</a></div></div>
+<div class="ttc" id="atest__bin__reader_8cpp_html_ad0c2507afafff635352b9497141d3440"><div class="ttname"><a href="#ad0c2507afafff635352b9497141d3440">PREVIEW_POINTS</a></div><div class="ttdeci">static constexpr int64_t PREVIEW_POINTS</div><div class="ttdef"><b>Определения</b> <a href="test__bin__reader_8cpp_source.html#l00010">test_bin_reader.cpp:10</a></div></div>
+</div><!-- fragment -->
+<p class="reference">Перекрестные ссылки <a class="el" href="bin__reader_8cpp_source.html#l00101">signals::bin_read()</a>, <a class="el" href="signal__common_8hpp_source.html#l00040">signals::SignalHeader::channel_names</a>, <a class="el" href="signal__common_8hpp_source.html#l00035">signals::SignalHeader::frequency</a>, <a class="el" href="signal__common_8hpp_source.html#l00034">signals::SignalHeader::num_channels</a>, <a class="el" href="signal__common_8hpp_source.html#l00064">signals::SignalData::num_points</a>, <a class="el" href="test__bin__reader_8cpp_source.html#l00010">PREVIEW_POINTS</a>, <a class="el" href="signal__common_8hpp_source.html#l00039">signals::SignalHeader::time_start</a> и <a class="el" href="signal__common_8hpp_source.html#l00086">signals::SignalData::value()</a>.</p>
+<div class="dynheader">
+Граф вызовов:</div>
+<div class="dyncontent">
+<div class="center"><img src="test__bin__reader_8cpp_a0ddf1224851353fc92bfbff6f499fa97_cgraph.png" border="0" usemap="#atest__bin__reader_8cpp_a0ddf1224851353fc92bfbff6f499fa97_cgraph" loading="lazy" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a name="doc-var-members" id="doc-var-members"></a><h2 id="header-doc-var-members" class="groupheader">Переменные</h2>
+<a id="ad0c2507afafff635352b9497141d3440" name="ad0c2507afafff635352b9497141d3440"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad0c2507afafff635352b9497141d3440">&#9670;&#160;</a></span>PREVIEW_POINTS</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int64_t PREVIEW_POINTS = 10</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span><span class="mlabel constexpr">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="test__bin__reader_8cpp_source.html">test_bin_reader.cpp</a> строка <a class="el" href="test__bin__reader_8cpp_source.html#l00010">10</a></p>
+
+<p class="reference">Используется в <a class="el" href="test__bin__reader_8cpp_source.html#l00012">main()</a>.</p>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_7374381ecdb819c64ee9b6ea2bd3370d.html">internal</a></li><li class="navelem"><a href="dir_09ed5d9d08e954e11bc42b76082bc854.html">bin</a></li><li class="navelem"><a href="test__bin__reader_8cpp.html">test_bin_reader.cpp</a></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.16.1 </li>
+  </ul>
+</div>
+</body>
+</html>

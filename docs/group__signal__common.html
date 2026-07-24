@@ -1,0 +1,382 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.16.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Signal Test Converters: Signal Common</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Signal Test Converters
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.16.1 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Поиск',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('group__signal__common.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Signal Common </div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Общие структуры и методы для работы с сигналами  
+<a href="#details">Подробнее...</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
+Функции</h2></td></tr>
+<tr class="memitem:ga9eea8e4749c86e79bc2be1b13a2d10a1" id="r_ga9eea8e4749c86e79bc2be1b13a2d10a1"><td class="memItemLeft">int64_t&#160;</td><td class="memItemRight"><a class="el" href="#ga9eea8e4749c86e79bc2be1b13a2d10a1">signals::normalize_range</a> (int64_t total_points, int64_t point_off, int64_t point_cnt)</td></tr>
+<tr class="memdesc:ga9eea8e4749c86e79bc2be1b13a2d10a1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Нормализует диапазон относительно общего числа точек.  <br /></td></tr>
+<tr class="memitem:ga4e1e468e798f30a41afdc9cdce5f465f" id="r_ga4e1e468e798f30a41afdc9cdce5f465f"><td class="memItemLeft">int64_t&#160;</td><td class="memItemRight"><a class="el" href="#ga4e1e468e798f30a41afdc9cdce5f465f">signals::make_header_for_range</a> (const <a class="el" href="classsignals_1_1_signal_header.html">SignalHeader</a> &amp;header, int64_t total_points, int64_t point_off, int64_t point_cnt, <a class="el" href="classsignals_1_1_signal_header.html">SignalHeader</a> &amp;range_header)</td></tr>
+<tr class="memdesc:ga4e1e468e798f30a41afdc9cdce5f465f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Формирует заголовок для заданного диапазона точек (реальный диапазон).  <br /></td></tr>
+<tr class="memitem:ga7b93db2498973248ceb589e9a51ab46b" id="r_ga7b93db2498973248ceb589e9a51ab46b"><td class="memItemLeft">int64_t&#160;</td><td class="memItemRight"><a class="el" href="#ga7b93db2498973248ceb589e9a51ab46b">signals::prepare_signal_data_window</a> (const <a class="el" href="classsignals_1_1_signal_header.html">SignalHeader</a> &amp;metadata, int64_t total_points, int64_t point_off, int64_t point_cnt, <a class="el" href="classsignals_1_1_signal_data.html">SignalData</a> &amp;data, bool zero_initialize_storage=false)</td></tr>
+<tr class="memdesc:ga7b93db2498973248ceb589e9a51ab46b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Подготавливает <a class="el" href="classsignals_1_1_signal_data.html" title="Данные и метаданные (данные из .hdr и .bin, данные в double).">SignalData</a> для чтения диапазона.  <br /></td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Подробное описание</h2>
+<div class="textblock"><p>Общие структуры и методы для работы с сигналами </p>
+</div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Функции</h2>
+<a id="ga4e1e468e798f30a41afdc9cdce5f465f" name="ga4e1e468e798f30a41afdc9cdce5f465f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga4e1e468e798f30a41afdc9cdce5f465f">&#9670;&#160;</a></span>make_header_for_range()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int64_t signals::make_header_for_range </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classsignals_1_1_signal_header.html">SignalHeader</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>header</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int64_t</td>          <td class="paramname"><span class="paramname"><em>total_points</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int64_t</td>          <td class="paramname"><span class="paramname"><em>point_off</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int64_t</td>          <td class="paramname"><span class="paramname"><em>point_cnt</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classsignals_1_1_signal_header.html">SignalHeader</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>range_header</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Формирует заголовок для заданного диапазона точек (реальный диапазон). </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">header</td><td>Исходный заголовок сигнала. </td></tr>
+    <tr><td class="paramname">total_points</td><td>Общее число точек. </td></tr>
+    <tr><td class="paramname">point_off</td><td>Смещение от начала диапазона. </td></tr>
+    <tr><td class="paramname">point_cnt</td><td>Количество точек для чтения; если &lt; 0, берётся доступный диапазон. </td></tr>
+    <tr><td class="paramname">range_header</td><td>Выходной заголовок с обновлёнными ifirst/ilast. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>int64_t Реальное количество точек в диапазоне.</dd></dl>
+<p>Последовательность работы:</p><ol type="1">
+<li>Нормализует запрошенный диапазон (с учётом total_points и границ).</li>
+<li>Копирует header в range_header.</li>
+<li>Пересчитывает range_header.ifirst_point и range_header.ilast_point.</li>
+<li>Возвращает рассчитанное число точек в диапазоне. </li>
+</ol>
+
+<p class="definition">См. определение в файле <a class="el" href="signal__common_8cpp_source.html">signal_common.cpp</a> строка <a class="el" href="signal__common_8cpp_source.html#l00017">17</a></p>
+<div class="fragment"><div class="line"><span class="lineno">   19</span>                                                              {</div>
+<div class="line"><span class="lineno">   20</span>        <span class="keyword">const</span> int64_t points_in_range = <a class="code hl_function" href="#ga9eea8e4749c86e79bc2be1b13a2d10a1">normalize_range</a>(total_points, point_off, point_cnt);</div>
+<div class="line"><span class="lineno">   21</span>        range_header = header;</div>
+<div class="line"><span class="lineno">   22</span>        range_header.<a class="code hl_variable" href="classsignals_1_1_signal_header.html#ac9cc61fe15af8fad1309be1295b600b8">ifirst_point</a> = header.<a class="code hl_variable" href="classsignals_1_1_signal_header.html#ac9cc61fe15af8fad1309be1295b600b8">ifirst_point</a> + point_off;</div>
+<div class="line"><span class="lineno">   23</span>        range_header.<a class="code hl_variable" href="classsignals_1_1_signal_header.html#a4003b76fc6492f33eb80f63ae7be02d0">ilast_point</a> = (points_in_range &gt; 0)</div>
+<div class="line"><span class="lineno">   24</span>                                       ? (range_header.<a class="code hl_variable" href="classsignals_1_1_signal_header.html#ac9cc61fe15af8fad1309be1295b600b8">ifirst_point</a> + points_in_range - 1)</div>
+<div class="line"><span class="lineno">   25</span>                                       : (range_header.<a class="code hl_variable" href="classsignals_1_1_signal_header.html#ac9cc61fe15af8fad1309be1295b600b8">ifirst_point</a> - 1);</div>
+<div class="line"><span class="lineno">   26</span>        <span class="keywordflow">return</span> points_in_range;</div>
+<div class="line"><span class="lineno">   27</span>    }</div>
+<div class="ttc" id="aclasssignals_1_1_signal_header_html_a4003b76fc6492f33eb80f63ae7be02d0"><div class="ttname"><a href="classsignals_1_1_signal_header.html#a4003b76fc6492f33eb80f63ae7be02d0">signals::SignalHeader::ilast_point</a></div><div class="ttdeci">int64_t ilast_point</div><div class="ttdef"><b>Определения</b> <a href="signal__common_8hpp_source.html#l00038">signal_common.hpp:38</a></div></div>
+<div class="ttc" id="aclasssignals_1_1_signal_header_html_ac9cc61fe15af8fad1309be1295b600b8"><div class="ttname"><a href="classsignals_1_1_signal_header.html#ac9cc61fe15af8fad1309be1295b600b8">signals::SignalHeader::ifirst_point</a></div><div class="ttdeci">int64_t ifirst_point</div><div class="ttdef"><b>Определения</b> <a href="signal__common_8hpp_source.html#l00037">signal_common.hpp:37</a></div></div>
+<div class="ttc" id="agroup__signal__common_html_ga9eea8e4749c86e79bc2be1b13a2d10a1"><div class="ttname"><a href="#ga9eea8e4749c86e79bc2be1b13a2d10a1">signals::normalize_range</a></div><div class="ttdeci">int64_t normalize_range(int64_t total_points, int64_t point_off, int64_t point_cnt)</div><div class="ttdoc">Нормализует диапазон относительно общего числа точек.</div><div class="ttdef"><b>Определения</b> <a href="signal__common_8cpp_source.html#l00007">signal_common.cpp:7</a></div></div>
+</div><!-- fragment -->
+<p class="reference">Перекрестные ссылки <a class="el" href="signal__common_8hpp_source.html#l00037">signals::SignalHeader::ifirst_point</a>, <a class="el" href="signal__common_8hpp_source.html#l00038">signals::SignalHeader::ilast_point</a> и <a class="el" href="signal__common_8cpp_source.html#l00007">normalize_range()</a>.</p>
+
+<p class="reference">Используется в <a class="el" href="duckdb__converter_8cpp_source.html#l00153">duckdb_write_signal_data_chunked()</a>, <a class="el" href="hdf5__converter_8cpp_source.html#l00202">hdf5_write_signals_data()</a>, <a class="el" href="parquet__converter_8cpp_source.html#l00065">parquet_write_signals_data()</a> и <a class="el" href="signal__common_8cpp_source.html#l00029">prepare_signal_data_window()</a>.</p>
+<div class="dynheader">
+Граф вызовов:</div>
+<div class="dyncontent">
+<div class="center"><img src="group__signal__common_ga4e1e468e798f30a41afdc9cdce5f465f_cgraph.png" border="0" usemap="#agroup__signal__common_ga4e1e468e798f30a41afdc9cdce5f465f_cgraph" loading="lazy" alt=""/></div>
+</div>
+<div class="dynheader">
+Граф вызова функции:</div>
+<div class="dyncontent">
+<div class="center"><img src="group__signal__common_ga4e1e468e798f30a41afdc9cdce5f465f_icgraph.png" border="0" usemap="#agroup__signal__common_ga4e1e468e798f30a41afdc9cdce5f465f_icgraph" loading="lazy" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="ga9eea8e4749c86e79bc2be1b13a2d10a1" name="ga9eea8e4749c86e79bc2be1b13a2d10a1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga9eea8e4749c86e79bc2be1b13a2d10a1">&#9670;&#160;</a></span>normalize_range()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int64_t signals::normalize_range </td>
+          <td>(</td>
+          <td class="paramtype">int64_t</td>          <td class="paramname"><span class="paramname"><em>total_points</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int64_t</td>          <td class="paramname"><span class="paramname"><em>point_off</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int64_t</td>          <td class="paramname"><span class="paramname"><em>point_cnt</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Нормализует диапазон относительно общего числа точек. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">total_points</td><td>Общее количество точек. </td></tr>
+    <tr><td class="paramname">point_off</td><td>Смещение от диапазона. </td></tr>
+    <tr><td class="paramname">point_cnt</td><td>Количество точек для чтения; если &lt; 0, берётся доступный диапазон. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>int64_t Количество точек, которое реально можно прочитать.</dd></dl>
+<p>Последовательность работы:</p><ol type="1">
+<li>Ограничивает total_points, чтобы нельзя было поставить меньше 0.</li>
+<li>Если смещение point_off за пределами диапазона, возвращает 0.</li>
+<li>Вычисляет доступный диапазон total_points - point_off.</li>
+<li>Возвращает весь диапазон (если point_cnt &lt; 0) или минимум из point_cnt и доступного диапазона. </li>
+</ol>
+
+<p class="definition">См. определение в файле <a class="el" href="signal__common_8cpp_source.html">signal_common.cpp</a> строка <a class="el" href="signal__common_8cpp_source.html#l00007">7</a></p>
+<div class="fragment"><div class="line"><span class="lineno">    7</span>                                                                                        {</div>
+<div class="line"><span class="lineno">    8</span>        <span class="keyword">const</span> int64_t safe_total_points = std::max&lt;int64_t&gt;(0, total_points);</div>
+<div class="line"><span class="lineno">    9</span>        <span class="keywordflow">if</span> (point_off &gt;= safe_total_points) {</div>
+<div class="line"><span class="lineno">   10</span>            <span class="keywordflow">return</span> 0;</div>
+<div class="line"><span class="lineno">   11</span>        }</div>
+<div class="line"><span class="lineno">   12</span> </div>
+<div class="line"><span class="lineno">   13</span>        <span class="keyword">const</span> int64_t available = safe_total_points - point_off;</div>
+<div class="line"><span class="lineno">   14</span>        <span class="keywordflow">return</span> (point_cnt &lt; 0) ? available : std::min(point_cnt, available);</div>
+<div class="line"><span class="lineno">   15</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">Используется в <a class="el" href="bin__reader_8cpp_source.html#l00101">bin_read()</a>, <a class="el" href="bin__reader_8cpp_source.html#l00077">bin_read_data_chunk()</a>, <a class="el" href="hdf5__converter_8cpp_source.html#l00113">hdf5_write_bin_data()</a> и <a class="el" href="signal__common_8cpp_source.html#l00017">make_header_for_range()</a>.</p>
+<div class="dynheader">
+Граф вызова функции:</div>
+<div class="dyncontent">
+<div class="center"><img src="group__signal__common_ga9eea8e4749c86e79bc2be1b13a2d10a1_icgraph.png" border="0" usemap="#agroup__signal__common_ga9eea8e4749c86e79bc2be1b13a2d10a1_icgraph" loading="lazy" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="ga7b93db2498973248ceb589e9a51ab46b" name="ga7b93db2498973248ceb589e9a51ab46b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga7b93db2498973248ceb589e9a51ab46b">&#9670;&#160;</a></span>prepare_signal_data_window()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int64_t signals::prepare_signal_data_window </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classsignals_1_1_signal_header.html">SignalHeader</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>metadata</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int64_t</td>          <td class="paramname"><span class="paramname"><em>total_points</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int64_t</td>          <td class="paramname"><span class="paramname"><em>point_off</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int64_t</td>          <td class="paramname"><span class="paramname"><em>point_cnt</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classsignals_1_1_signal_data.html">SignalData</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>data</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>zero_initialize_storage</em></span><span class="paramdefsep"> = </span><span class="paramdefval">false</span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Подготавливает <a class="el" href="classsignals_1_1_signal_data.html" title="Данные и метаданные (данные из .hdr и .bin, данные в double).">SignalData</a> для чтения диапазона. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">metadata</td><td>Исходные метаданные сигнала. </td></tr>
+    <tr><td class="paramname">total_points</td><td>Общее число точек. </td></tr>
+    <tr><td class="paramname">point_off</td><td>Смещение от начала диапазона. </td></tr>
+    <tr><td class="paramname">point_cnt</td><td>Количество точек для чтения; если &lt; 0, берётся доступный диапазон. </td></tr>
+    <tr><td class="paramname">data</td><td>Выходной <a class="el" href="classsignals_1_1_signal_data.html" title="Данные и метаданные (данные из .hdr и .bin, данные в double).">SignalData</a> с подготовленным storage.</td></tr>
+    <tr><td class="paramname">zero_initialize_storage</td><td>Если true, storage заполняется нулями. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>int64_t Реальное количество точек в диапазоне. </dd></dl>
+<dl class="exception"><dt>Исключения</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::bad_alloc</td><td>При ошибке выделения памяти под storage.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Последовательность работы:</p><ol type="1">
+<li>Нормализует запрошенный диапазон (с учётом total_points и границ).</li>
+<li>Сбрасывает data и копирует в него заголовок диапазона. 3. Записывает num_points.</li>
+<li>Если диапазон пустой или каналов нет, завершает работу, в ином случае - выделяет storage нужного размера. </li>
+</ol>
+
+<p class="definition">См. определение в файле <a class="el" href="signal__common_8cpp_source.html">signal_common.cpp</a> строка <a class="el" href="signal__common_8cpp_source.html#l00029">29</a></p>
+<div class="fragment"><div class="line"><span class="lineno">   31</span>                                                                     {</div>
+<div class="line"><span class="lineno">   32</span>        <a class="code hl_class" href="classsignals_1_1_signal_header.html">SignalHeader</a> ranged_header;</div>
+<div class="line"><span class="lineno">   33</span>        <span class="keyword">const</span> int64_t points_in_range =</div>
+<div class="line"><span class="lineno">   34</span>            <a class="code hl_function" href="#ga4e1e468e798f30a41afdc9cdce5f465f">make_header_for_range</a>(metadata, total_points, point_off, point_cnt, ranged_header);</div>
+<div class="line"><span class="lineno">   35</span> </div>
+<div class="line"><span class="lineno">   36</span>        data = <a class="code hl_class" href="classsignals_1_1_signal_data.html">SignalData</a>{};</div>
+<div class="line"><span class="lineno">   37</span>        <span class="keyword">static_cast&lt;</span>SignalHeader &amp;<span class="keyword">&gt;</span>(data) = ranged_header;</div>
+<div class="line"><span class="lineno">   38</span>        data.<a class="code hl_variable" href="classsignals_1_1_signal_data.html#ae3c6a4b60f673f3c9b45e125b197a51a">num_points</a> = points_in_range;</div>
+<div class="line"><span class="lineno">   39</span> </div>
+<div class="line"><span class="lineno">   40</span>        <span class="keywordflow">if</span> (points_in_range &lt;= 0 || data.<a class="code hl_variable" href="classsignals_1_1_signal_header.html#a07229a399c52f26674d63ce93dea3631">num_channels</a> &lt;= 0) {</div>
+<div class="line"><span class="lineno">   41</span>            <span class="keywordflow">return</span> points_in_range;</div>
+<div class="line"><span class="lineno">   42</span>        }</div>
+<div class="line"><span class="lineno">   43</span> </div>
+<div class="line"><span class="lineno">   44</span>        <span class="keyword">const</span> <span class="keywordtype">size_t</span> storage_size =</div>
+<div class="line"><span class="lineno">   45</span>            <span class="keyword">static_cast&lt;</span><span class="keywordtype">size_t</span><span class="keyword">&gt;</span>(data.<a class="code hl_variable" href="classsignals_1_1_signal_header.html#a07229a399c52f26674d63ce93dea3631">num_channels</a>) * <span class="keyword">static_cast&lt;</span><span class="keywordtype">size_t</span><span class="keyword">&gt;</span>(data.<a class="code hl_variable" href="classsignals_1_1_signal_data.html#ae3c6a4b60f673f3c9b45e125b197a51a">num_points</a>);</div>
+<div class="line"><span class="lineno">   46</span>        <span class="keywordflow">if</span> (zero_initialize_storage) {</div>
+<div class="line"><span class="lineno">   47</span>            data.<a class="code hl_variable" href="classsignals_1_1_signal_data.html#a1cde6810290f14cd51f932f5ee4583f9">storage</a>.assign(storage_size, 0);</div>
+<div class="line"><span class="lineno">   48</span>        } <span class="keywordflow">else</span> {</div>
+<div class="line"><span class="lineno">   49</span>            data.<a class="code hl_variable" href="classsignals_1_1_signal_data.html#a1cde6810290f14cd51f932f5ee4583f9">storage</a>.resize(storage_size);</div>
+<div class="line"><span class="lineno">   50</span>        }</div>
+<div class="line"><span class="lineno">   51</span> </div>
+<div class="line"><span class="lineno">   52</span>        <span class="keywordflow">return</span> points_in_range;</div>
+<div class="line"><span class="lineno">   53</span>    }</div>
+<div class="ttc" id="aclasssignals_1_1_signal_data_html"><div class="ttname"><a href="classsignals_1_1_signal_data.html">signals::SignalData</a></div><div class="ttdoc">Данные и метаданные (данные из .hdr и .bin, данные в double).</div><div class="ttdef"><b>Определения</b> <a href="signal__common_8hpp_source.html#l00062">signal_common.hpp:62</a></div></div>
+<div class="ttc" id="aclasssignals_1_1_signal_data_html_a1cde6810290f14cd51f932f5ee4583f9"><div class="ttname"><a href="classsignals_1_1_signal_data.html#a1cde6810290f14cd51f932f5ee4583f9">signals::SignalData::storage</a></div><div class="ttdeci">std::vector&lt; int32_t &gt; storage</div><div class="ttdef"><b>Определения</b> <a href="signal__common_8hpp_source.html#l00066">signal_common.hpp:66</a></div></div>
+<div class="ttc" id="aclasssignals_1_1_signal_data_html_ae3c6a4b60f673f3c9b45e125b197a51a"><div class="ttname"><a href="classsignals_1_1_signal_data.html#ae3c6a4b60f673f3c9b45e125b197a51a">signals::SignalData::num_points</a></div><div class="ttdeci">int64_t num_points</div><div class="ttdef"><b>Определения</b> <a href="signal__common_8hpp_source.html#l00064">signal_common.hpp:64</a></div></div>
+<div class="ttc" id="aclasssignals_1_1_signal_header_html"><div class="ttname"><a href="classsignals_1_1_signal_header.html">signals::SignalHeader</a></div><div class="ttdoc">Метаданные сигнала из .hdr.</div><div class="ttdef"><b>Определения</b> <a href="signal__common_8hpp_source.html#l00032">signal_common.hpp:32</a></div></div>
+<div class="ttc" id="aclasssignals_1_1_signal_header_html_a07229a399c52f26674d63ce93dea3631"><div class="ttname"><a href="classsignals_1_1_signal_header.html#a07229a399c52f26674d63ce93dea3631">signals::SignalHeader::num_channels</a></div><div class="ttdeci">int32_t num_channels</div><div class="ttdef"><b>Определения</b> <a href="signal__common_8hpp_source.html#l00034">signal_common.hpp:34</a></div></div>
+<div class="ttc" id="agroup__signal__common_html_ga4e1e468e798f30a41afdc9cdce5f465f"><div class="ttname"><a href="#ga4e1e468e798f30a41afdc9cdce5f465f">signals::make_header_for_range</a></div><div class="ttdeci">int64_t make_header_for_range(const SignalHeader &amp;header, int64_t total_points, int64_t point_off, int64_t point_cnt, SignalHeader &amp;range_header)</div><div class="ttdoc">Формирует заголовок для заданного диапазона точек (реальный диапазон).</div><div class="ttdef"><b>Определения</b> <a href="signal__common_8cpp_source.html#l00017">signal_common.cpp:17</a></div></div>
+</div><!-- fragment -->
+<p class="reference">Перекрестные ссылки <a class="el" href="signal__common_8cpp_source.html#l00017">make_header_for_range()</a>, <a class="el" href="signal__common_8hpp_source.html#l00034">signals::SignalHeader::num_channels</a>, <a class="el" href="signal__common_8hpp_source.html#l00064">signals::SignalData::num_points</a> и <a class="el" href="signal__common_8hpp_source.html#l00066">signals::SignalData::storage</a>.</p>
+
+<p class="reference">Используется в <a class="el" href="duckdb__converter_8cpp_source.html#l00066">duckdb_read_signal_data_like_stream_conn()</a>, <a class="el" href="hdf5__converter_8cpp_source.html#l00336">hdf5_read_signal_data_like_stream()</a> и <a class="el" href="parquet__converter_8cpp_source.html#l00166">parquet_read_signal_data_like_stream()</a>.</p>
+<div class="dynheader">
+Граф вызовов:</div>
+<div class="dyncontent">
+<div class="center"><img src="group__signal__common_ga7b93db2498973248ceb589e9a51ab46b_cgraph.png" border="0" usemap="#agroup__signal__common_ga7b93db2498973248ceb589e9a51ab46b_cgraph" loading="lazy" alt=""/></div>
+</div>
+<div class="dynheader">
+Граф вызова функции:</div>
+<div class="dyncontent">
+<div class="center"><img src="group__signal__common_ga7b93db2498973248ceb589e9a51ab46b_icgraph.png" border="0" usemap="#agroup__signal__common_ga7b93db2498973248ceb589e9a51ab46b_icgraph" loading="lazy" alt=""/></div>
+</div>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.16.1 </li>
+  </ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,179 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.16.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Signal Test Converters: Файл internal/bin/bin_reader.cpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Signal Test Converters
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.16.1 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Поиск',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('bin__reader_8cpp.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Файл bin_reader.cpp</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;<a class="el" href="bin__reader_8hpp_source.html">bin_reader.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="hdr__reader_8hpp_source.html">../hdr/hdr_reader.hpp</a>&quot;</code><br />
+<code>#include &lt;algorithm&gt;</code><br />
+<code>#include &lt;cerrno&gt;</code><br />
+<code>#include &lt;fstream&gt;</code><br />
+<code>#include &lt;stdexcept&gt;</code><br />
+<code>#include &lt;system_error&gt;</code><br />
+<code>#include &lt;vector&gt;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Граф включаемых заголовочных файлов для bin_reader.cpp:</div>
+<div class="dyncontent">
+<div class="center"><img src="bin__reader_8cpp__incl.png" border="0" usemap="#ainternal_2bin_2bin__reader_8cpp" loading="lazy" alt=""/></div>
+</div>
+</div>
+<p><a href="bin__reader_8cpp_source.html">См. исходные тексты.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-namespaces" class="groupheader"><a id="namespaces" name="namespaces"></a>
+Пространства имен</h2></td></tr>
+<tr class="memitem:signals" id="r_signals"><td class="memItemLeft">namespace &#160;</td><td class="memItemRight"><a class="el" href="namespacesignals.html">signals</a></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
+Функции</h2></td></tr>
+<tr class="memitem:a75487a8f05be9fc4263a327d57e01a23" id="r_a75487a8f05be9fc4263a327d57e01a23"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="namespacesignals.html#a75487a8f05be9fc4263a327d57e01a23">signals::allocate_storage</a> (<a class="el" href="classsignals_1_1_signal_data.html">SignalData</a> &amp;data, int64_t len)</td></tr>
+<tr class="memitem:a6add23c94a862d36bf097cfb4383c44f" id="r_a6add23c94a862d36bf097cfb4383c44f"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="namespacesignals.html#a6add23c94a862d36bf097cfb4383c44f">signals::read_block</a> (std::ifstream &amp;file, std::vector&lt; int32_t &gt; &amp;block_buf, int64_t points_to_read, int64_t num_channels)</td></tr>
+<tr class="memitem:ab6967cd19cf1de0b817aecddafc82d64" id="r_ab6967cd19cf1de0b817aecddafc82d64"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="namespacesignals.html#ab6967cd19cf1de0b817aecddafc82d64">signals::copy_raw_data</a> (const std::vector&lt; int32_t &gt; &amp;block_buf, <a class="el" href="classsignals_1_1_signal_data.html">SignalData</a> &amp;data, int64_t dest_offset, int64_t points_in_block)</td></tr>
+<tr class="memitem:adbe043039905491c6ed2a88556f5aeea" id="r_adbe043039905491c6ed2a88556f5aeea"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="namespacesignals.html#adbe043039905491c6ed2a88556f5aeea">signals::bin_open</a> (const std::filesystem::path &amp;bin_path, <a class="el" href="structsignals_1_1_bin_reader.html">BinReader</a> &amp;reader)</td></tr>
+<tr class="memdesc:adbe043039905491c6ed2a88556f5aeea"><td class="mdescLeft">&#160;</td><td class="mdescRight">Открывает reader для работы с .bin и заполняет метаданные.  <br /></td></tr>
+<tr class="memitem:a0458e133123a9cf43a72b3ae9affe3b1" id="r_a0458e133123a9cf43a72b3ae9affe3b1"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="namespacesignals.html#a0458e133123a9cf43a72b3ae9affe3b1">signals::bin_close</a> (<a class="el" href="structsignals_1_1_bin_reader.html">BinReader</a> &amp;reader)</td></tr>
+<tr class="memdesc:a0458e133123a9cf43a72b3ae9affe3b1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Закрывает reader и очищает его.  <br /></td></tr>
+<tr class="memitem:aa22a3e002c3665a40014429f2e78adb3" id="r_aa22a3e002c3665a40014429f2e78adb3"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="namespacesignals.html#aa22a3e002c3665a40014429f2e78adb3">signals::bin_seek</a> (<a class="el" href="structsignals_1_1_bin_reader.html">BinReader</a> &amp;reader, int64_t point_off)</td></tr>
+<tr class="memdesc:aa22a3e002c3665a40014429f2e78adb3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Перемещает позицию чтения на заданную позицию по смещению.  <br /></td></tr>
+<tr class="memitem:a57c130208856e1408e37cda0d526b9d5" id="r_a57c130208856e1408e37cda0d526b9d5"><td class="memItemLeft">int64_t&#160;</td><td class="memItemRight"><a class="el" href="namespacesignals.html#a57c130208856e1408e37cda0d526b9d5">signals::bin_read_data_chunk</a> (<a class="el" href="structsignals_1_1_bin_reader.html">BinReader</a> &amp;reader, int64_t point_cnt, std::vector&lt; int32_t &gt; &amp;block_buf)</td></tr>
+<tr class="memdesc:a57c130208856e1408e37cda0d526b9d5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Читает чанк сырых int32-данных.  <br /></td></tr>
+<tr class="memitem:ad4faf87f6cb1e07242d912890a374684" id="r_ad4faf87f6cb1e07242d912890a374684"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="namespacesignals.html#ad4faf87f6cb1e07242d912890a374684">signals::bin_read</a> (const std::filesystem::path &amp;bin_path, int64_t point_off, int64_t point_cnt, <a class="el" href="classsignals_1_1_signal_data.html">SignalData</a> &amp;data)</td></tr>
+<tr class="memdesc:ad4faf87f6cb1e07242d912890a374684"><td class="mdescLeft">&#160;</td><td class="mdescRight">Полностью читает диапазон точек из bin в один <a class="el" href="classsignals_1_1_signal_data.html" title="Данные и метаданные (данные из .hdr и .bin, данные в double).">SignalData</a>.  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-var-members" class="groupheader"><a id="var-members" name="var-members"></a>
+Переменные</h2></td></tr>
+<tr class="memitem:acb1f70e5e69a0c85d98765fa0e6c5c3d" id="r_acb1f70e5e69a0c85d98765fa0e6c5c3d"><td class="memItemLeft">static constexpr int64_t&#160;</td><td class="memItemRight"><a class="el" href="#acb1f70e5e69a0c85d98765fa0e6c5c3d">BIN_READ_CHUNK_SIZE</a> = 100000</td></tr>
+</table>
+<a name="doc-var-members" id="doc-var-members"></a><h2 id="header-doc-var-members" class="groupheader">Переменные</h2>
+<a id="acb1f70e5e69a0c85d98765fa0e6c5c3d" name="acb1f70e5e69a0c85d98765fa0e6c5c3d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acb1f70e5e69a0c85d98765fa0e6c5c3d">&#9670;&#160;</a></span>BIN_READ_CHUNK_SIZE</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int64_t BIN_READ_CHUNK_SIZE = 100000</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span><span class="mlabel constexpr">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="bin__reader_8cpp_source.html">bin_reader.cpp</a> строка <a class="el" href="bin__reader_8cpp_source.html#l00013">13</a></p>
+
+<p class="reference">Используется в <a class="el" href="bin__reader_8cpp_source.html#l00101">signals::bin_read()</a>.</p>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_7374381ecdb819c64ee9b6ea2bd3370d.html">internal</a></li><li class="navelem"><a href="dir_09ed5d9d08e954e11bc42b76082bc854.html">bin</a></li><li class="navelem"><a href="bin__reader_8cpp.html">bin_reader.cpp</a></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.16.1 </li>
+  </ul>
+</div>
+</body>
+</html>

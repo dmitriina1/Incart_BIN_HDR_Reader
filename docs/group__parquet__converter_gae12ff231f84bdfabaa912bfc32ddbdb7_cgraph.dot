@@ -1,0 +1,23 @@
+digraph "signals::parquet_read_signal_data_like_stream"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname=Helvetica,fontsize=10,labelfontname=Helvetica,labelfontsize=10];
+  node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
+  rankdir="LR";
+  Node1 [id="Node000001",label="signals::parquet_read\l_signal_data_like_stream",height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip="Потоково читает диапазон точек через ParquetReader."];
+  Node1 -> Node2 [id="edge1_Node000001_Node000002",color="steelblue1",style="solid",tooltip=" "];
+  Node2 [id="Node000002",label="signals::copy_column\l_from_table",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$namespacesignals.html#a5900e1322c30e60b077a42825018f6f8",tooltip=" "];
+  Node2 -> Node3 [id="edge2_Node000002_Node000003",color="steelblue1",style="solid",tooltip=" "];
+  Node3 [id="Node000003",label="signals::SignalData\l::raw_channel",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classsignals_1_1_signal_data.html#a3788f4881f848c984f3cbef31d1aaac0",tooltip="Возвращает указатель на начало сырых int32 данных канала."];
+  Node1 -> Node4 [id="edge3_Node000001_Node000004",color="steelblue1",style="solid",tooltip=" "];
+  Node4 [id="Node000004",label="signals::prepare_signal\l_data_window",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$group__signal__common.html#ga7b93db2498973248ceb589e9a51ab46b",tooltip="Подготавливает SignalData для чтения диапазона."];
+  Node4 -> Node5 [id="edge4_Node000004_Node000005",color="steelblue1",style="solid",tooltip=" "];
+  Node5 [id="Node000005",label="signals::make_header\l_for_range",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$group__signal__common.html#ga4e1e468e798f30a41afdc9cdce5f465f",tooltip="Формирует заголовок для заданного диапазона точек (реальный диапазон)."];
+  Node5 -> Node6 [id="edge5_Node000005_Node000006",color="steelblue1",style="solid",tooltip=" "];
+  Node6 [id="Node000006",label="signals::normalize\l_range",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$group__signal__common.html#ga9eea8e4749c86e79bc2be1b13a2d10a1",tooltip="Нормализует диапазон относительно общего числа точек."];
+  Node1 -> Node7 [id="edge6_Node000001_Node000007",color="steelblue1",style="solid",tooltip=" "];
+  Node7 [id="Node000007",label="signals::read_parquet\l_metadata",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$namespacesignals.html#ad021468edf2b00696f4aecd37102a63b",tooltip=" "];
+  Node1 -> Node8 [id="edge7_Node000001_Node000008",color="steelblue1",style="solid",tooltip=" "];
+  Node8 [id="Node000008",label="signals::read_row_group",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$namespacesignals.html#a7dcc2d0bd513ceeb4dd9a7469510183e",tooltip=" "];
+}

@@ -1,0 +1,25 @@
+var searchData=
+[
+  ['test_20utils_0',['Test Utils',['../group__test__utils.html',1,'']]],
+  ['test_5fbin_5freader_2ecpp_1',['test_bin_reader.cpp',['../test__bin__reader_8cpp.html',1,'']]],
+  ['test_5fduckdb_2ecpp_2',['test_duckdb.cpp',['../test__duckdb_8cpp.html',1,'']]],
+  ['test_5fhdf5_5fconverter_2ecpp_3',['test_hdf5_converter.cpp',['../test__hdf5__converter_8cpp.html',1,'']]],
+  ['test_5fhdr_5freader_2ecpp_4',['test_hdr_reader.cpp',['../test__hdr__reader_8cpp.html',1,'']]],
+  ['test_5fparquet_5fconverter_2ecpp_5',['test_parquet_converter.cpp',['../test__parquet__converter_8cpp.html',1,'']]],
+  ['test_5frandom_5fchunk_5freading_6',['test_random_chunk_reading',['../group__test__utils.html#gaa09de34aa31f12f3bc81ae37e6181c4a',1,'signals']]],
+  ['test_5frandom_5fchunk_5freading_5fval_7',['test_random_chunk_reading_val',['../group__test__utils.html#gaa6d78e3540958f2ac783e9223c195168',1,'signals']]],
+  ['test_5fserial_5fchunk_5freading_8',['test_serial_chunk_reading',['../group__test__utils.html#ga002dece84fa9ae9969687bcfb178af16',1,'signals']]],
+  ['test_5fserial_5fchunk_5freading_5fval_9',['test_serial_chunk_reading_val',['../group__test__utils.html#gaabc783a10033d1edfbe124857a332381',1,'signals']]],
+  ['test_5fsignal_5fbase_5fpath_10',['test_signal_base_path',['../namespacesignals.html#a7c849ba8b5a26873527649fd4ef9dd0f',1,'signals']]],
+  ['test_5fsignal_5fchannels_11',['TEST_SIGNAL_CHANNELS',['../namespacesignals.html#aa58b6522a425505f48ec91250da84b2e',1,'signals']]],
+  ['test_5fsignal_5ffrequency_12',['TEST_SIGNAL_FREQUENCY',['../namespacesignals.html#a46d5ad46ca75f332fdb2bce0659a5ec3',1,'signals']]],
+  ['test_5fsignal_5flsb_13',['TEST_SIGNAL_LSB',['../namespacesignals.html#a48420da6d93eabe3e0b880a7401484de',1,'signals']]],
+  ['test_5fsignal_5fpoints_14',['TEST_SIGNAL_POINTS',['../namespacesignals.html#a7fe318014ca6934090cf56a68afea481',1,'signals']]],
+  ['test_5futils_2ecpp_15',['test_utils.cpp',['../test__utils_8cpp.html',1,'']]],
+  ['test_5futils_2ehpp_16',['test_utils.hpp',['../test__utils_8hpp.html',1,'']]],
+  ['test_5futils_5fpreview_5fpoints_17',['TEST_UTILS_PREVIEW_POINTS',['../test__utils_8cpp.html#a619e5bf8722bd84fc200a18f0cf7e639',1,'TEST_UTILS_PREVIEW_POINTS:&#160;test_utils.cpp'],['../test__utils_8hpp.html#a619e5bf8722bd84fc200a18f0cf7e639',1,'TEST_UTILS_PREVIEW_POINTS:&#160;test_utils.cpp']]],
+  ['time_5fstart_18',['time_start',['../classsignals_1_1_signal_header.html#a12863f007988368581a6300adb5ece45',1,'signals::SignalHeader']]],
+  ['total_5fpoints_19',['total_points',['../structsignals_1_1_bin_reader.html#a405d0017da117244214d362644dba292',1,'signals::BinReader::total_points'],['../classsignals_1_1_signal_header.html#a48c267b2a89d0bfc59e019d6ddca71d9',1,'signals::SignalHeader::total_points()']]],
+  ['transfer_5fchunk_5fto_5fchannel_5fdata_20',['transfer_chunk_to_channel_data',['../namespacesignals.html#ae084afcf197377810674f56982606b98',1,'signals']]],
+  ['try_5fparse_5fint64_21',['try_parse_int64',['../group__test__utils.html#gae86aaff88ef0aabf646892d9867aad15',1,'signals']]]
+];

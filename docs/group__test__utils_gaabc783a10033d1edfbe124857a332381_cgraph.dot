@@ -1,0 +1,24 @@
+digraph "signals::test_serial_chunk_reading_val"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname=Helvetica,fontsize=10,labelfontname=Helvetica,labelfontsize=10];
+  node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
+  rankdir="LR";
+  Node1 [id="Node000001",label="signals::test_serial\l_chunk_reading_val",height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip="Запускает тест последовательного чтения и выводит статистику."];
+  Node1 -> Node2 [id="edge1_Node000001_Node000002",color="steelblue1",style="solid",tooltip=" "];
+  Node2 [id="Node000002",label="signals::normalize\l_chunk_points",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$namespacesignals.html#a430203d44d637569209520187663b107",tooltip=" "];
+  Node1 -> Node3 [id="edge2_Node000001_Node000003",color="steelblue1",style="solid",tooltip=" "];
+  Node3 [id="Node000003",label="signals::test_serial\l_chunk_reading",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$group__test__utils.html#ga002dece84fa9ae9969687bcfb178af16",tooltip="Тест последовательного чтения диапазона чанками."];
+  Node3 -> Node4 [id="edge3_Node000003_Node000004",color="steelblue1",style="solid",tooltip=" "];
+  Node4 [id="Node000004",label="signals::benchmark\l_chunk_reading_impl",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$namespacesignals.html#a042bfaf1c760bd72d5d201c55f90b7c5",tooltip=" "];
+  Node4 -> Node5 [id="edge4_Node000004_Node000005",color="steelblue1",style="solid",tooltip=" "];
+  Node5 [id="Node000005",label="signals::make_chunk\l_order",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$namespacesignals.html#aac27bbb8b2d24ed2cce0513f31a13718",tooltip=" "];
+  Node5 -> Node6 [id="edge5_Node000005_Node000006",color="steelblue1",style="solid",tooltip=" "];
+  Node6 [id="Node000006",label="signals::chunk_rng",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$namespacesignals.html#ad816c610d4bc8f3ce2032c0d767ec428",tooltip=" "];
+  Node4 -> Node2 [id="edge6_Node000004_Node000002",color="steelblue1",style="solid",tooltip=" "];
+  Node1 -> Node7 [id="edge7_Node000001_Node000007",color="steelblue1",style="solid",tooltip=" "];
+  Node7 [id="Node000007",label="signals::validate_serial\l_chunk_reading",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$group__test__utils.html#ga6f442e7b1e92faa55787adf80826936f",tooltip="Проверяет корректность последовательного чтения чанков."];
+  Node7 -> Node8 [id="edge8_Node000007_Node000008",color="steelblue1",style="solid",tooltip=" "];
+  Node8 [id="Node000008",label="signals::validate_chunk\l_reading_impl",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$namespacesignals.html#ac8d0a984a46a68b7ac04b12870f5f970",tooltip=" "];
+}
